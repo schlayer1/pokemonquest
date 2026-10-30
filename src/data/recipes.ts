@@ -1,5 +1,6 @@
-import { IngredientKey, Recipe } from '../types/quest';
-import { INGREDIENTS } from './ingredients';
+import { IngredientKey, Recipe, PotTier } from '../types/quest';
+import { INGREDIENTS, POTS } from './ingredients';
+import { POKEMON_BY_ID } from './pokemon';
 
 export interface RecipeCounts {
   red: number;
@@ -333,5 +334,106 @@ export function evaluateRecipe(slots: IngredientKey[]) {
     qualityLabel,
     counts: c,
     attractedPokemonIds: attractedPool
+  };
+}
+
+export interface RecipePreset {
+  slots: IngredientKey[];
+  key: string;
+  qualityKey: 'Normal' | 'Good' | 'Very Good' | 'Special';
+  points: number;
+}
+
+export const PRESETS: RecipePreset[] = [];
+
+// Pre-generate all 2,002 ingredient combinations for 0ms lookup
+(function initPresets() {
+  const keys = Object.keys(INGREDIENTS) as IngredientKey[];
+  function walk(slots: IngredientKey[], start: number) {
+    if (slots.length === 5) {
+      const e = evaluateRecipe(slots);
+      PRESETS.push({
+        slots: [...slots],
+        key: e.recipe.key,
+        qualityKey: e.qualityKey,
+        points: e.points
+      });
+      return;
+    }
+    for (let i = start; i < keys.length; i++) {
+      walk([...slots, keys[i]], i);
+    }
+  }
+  walk([], 0);
+})();
+
+export function canAffordSlots(
+  slots: IngredientKey[],
+  stock?: Record<IngredientKey, number>,
+  potTier: PotTier = 'iron'
+): boolean {
+  if (!stock) return false;
+  const units = POTS[potTier]?.units || 3;
+  const needed: Record<string, number> = {};
+  for (const s of slots) {
+    needed[s] = (needed[s] || 0) + units;
+  }
+  for (const [k, count] of Object.entries(needed)) {
+    if ((stock[k as IngredientKey] || 0) < count) {
+      return false;
+    }
+  }
+  return true;
+}
+
+export function recipeForPokemon(
+  id: number,
+  stock?: Record<IngredientKey, number>,
+  potTier: PotTier = 'iron',
+  stockReady: boolean = false
+): InternalRecipe & { qualityKey: string; points: number; unavailable?: boolean } {
+  const p = POKEMON_BY_ID.get(id);
+  if (!p) return { ...RECIPES[0], unavailable: true, qualityKey: 'Normal', points: 5 };
+  const base = POKEMON_BY_ID.get(p.base) || p;
+  const preferred = FAVORITE_RECIPES[base.id];
+
+  const candidates = PRESETS.filter(x =>
+    base.recipes.includes(x.key) &&
+    RECIPE_POOLS[x.key]?.[x.qualityKey]?.includes(base.id)
+  );
+
+  const score = (x: RecipePreset) => {
+    let s = 0;
+    if (stockReady && stock && canAffordSlots(x.slots, stock, potTier)) {
+      s += 1000;
+    }
+    if (x.key === preferred) {
+      s += 100;
+    }
+    if (x.key !== 'mulliganstewalacube') {
+      s += 20;
+    }
+    const qBonus: Record<string, number> = { Normal: 0, Good: 4, 'Very Good': 12, Special: 10 };
+    s += qBonus[x.qualityKey] || 0;
+    s -= (x.points / 100);
+    return s;
+  };
+
+  candidates.sort((a, b) => score(b) - score(a));
+  const best = candidates[0];
+
+  if (!best) {
+    const fallbackKey = base.recipes.find(k => k !== 'mulliganstewalacube') || base.recipes[0] || 'mulliganstewalacube';
+    const r = RECIPES.find(x => x.key === fallbackKey) || RECIPES[0];
+    return { ...r, slots: [...r.slots], qualityKey: 'Good', points: 6, unavailable: false };
+  }
+
+  const r = RECIPES.find(x => x.key === best.key) || RECIPES[0];
+  return {
+    ...r,
+    slots: [...best.slots],
+    qualityKey: best.qualityKey,
+    points: best.points,
+    unavailable: false
   };
 }

@@ -38,7 +38,9 @@ const defaultState: QuestStoreState = {
     0: { hpValue: 1200, atkValue: 1800, hitHealingPercent: 5.0, critRatePercent: 10.0 },
     1: { hpValue: 1100, atkValue: 1900, hitHealingPercent: 6.2, critRatePercent: 12.0 },
     2: { hpValue: 2500, atkValue: 800, hitHealingPercent: 8.5, critRatePercent: 5.0 }
-  }
+  },
+  targetPokemonId: null,
+  queuedRecipeSlots: null
 };
 
 function loadStoredState(): QuestStoreState {
@@ -262,6 +264,29 @@ export const questStore = {
         [slotIndex]: { ...current, ...stones }
       }
     };
+    notify();
+  },
+
+  queueRecipe(slots: IngredientKey[], targetPokemonId?: number | null) {
+    globalState = {
+      ...globalState,
+      queuedRecipeSlots: [...slots],
+      targetPokemonId: targetPokemonId !== undefined ? targetPokemonId : globalState.targetPokemonId
+    };
+    notify();
+  },
+
+  consumeQueuedRecipe(): IngredientKey[] | null {
+    const queued = globalState.queuedRecipeSlots;
+    if (queued) {
+      globalState = { ...globalState, queuedRecipeSlots: null };
+      notify();
+    }
+    return queued;
+  },
+
+  setTargetPokemon(id: number | null) {
+    globalState = { ...globalState, targetPokemonId: id };
     notify();
   },
 

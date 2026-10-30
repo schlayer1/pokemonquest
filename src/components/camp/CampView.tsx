@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { useQuestStore } from '../../store/useQuestStore';
 import { POKEMON, POKEMON_BY_ID } from '../../data/pokemon';
 import { INGREDIENTS } from '../../data/ingredients';
+import { recipeForPokemon } from '../../data/recipes';
 import { IngredientKey, TeamMember } from '../../types/quest';
 import { DecorationAdvisor } from './DecorationAdvisor';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
 import { getPokemonSprite } from '../../utils/pokemonSprite';
-import { Check, Star, Shield, Swords, Sparkles, Plus, Trash2, Heart, Award, HelpCircle, Landmark } from 'lucide-react';
+import { Check, Star, Shield, Swords, Sparkles, Plus, Trash2, Heart, Award, HelpCircle, Landmark, ChefHat } from 'lucide-react';
 
-export const CampView: React.FC = () => {
+interface CampViewProps {
+  onLoadRecipeToPot?: (slots: IngredientKey[], targetPokemonId?: number) => void;
+}
+
+export const CampView: React.FC<CampViewProps> = ({ onLoadRecipeToPot }) => {
   const [state, store] = useQuestStore();
   const [subTab, setSubTab] = useState<'album' | 'team' | 'wishlist' | 'inventory' | 'decorations'>('album');
   const [showTeamDoctor, setShowTeamDoctor] = useState(false);
@@ -47,6 +52,22 @@ export const CampView: React.FC = () => {
     }
     const names = members.map(m => POKEMON_BY_ID.get(m.id)?.name || '').join(', ');
     ttsService.speakText(`Dein Team: ${names}. Bereit für das Abenteuer!`, state.voicePersona, state.voice);
+  };
+
+  const handleLoadRecipe = (pokemonId: number) => {
+    const p = POKEMON_BY_ID.get(pokemonId);
+    if (!p) return;
+    const match = recipeForPokemon(pokemonId, state.stock, state.pot, state.stockReady);
+    if (!match) {
+      soundService.play('fail');
+      ttsService.speakText(`Kein Rezept für ${p.name} gefunden`, state.voicePersona, state.voice);
+      return;
+    }
+    soundService.play('victory');
+    ttsService.speakText(`Rezept für ${p.name} in den Kochtopf geladen!`, state.voicePersona, state.voice);
+    if (onLoadRecipeToPot) {
+      onLoadRecipeToPot(match.slots, pokemonId);
+    }
   };
 
   // Team Doctor Analysis
@@ -318,6 +339,15 @@ export const CampView: React.FC = () => {
                             ))}
                           </div>
                         </div>
+
+                        {/* Rezept kochen Button */}
+                        <button
+                          onClick={() => handleLoadRecipe(p.id)}
+                          className="w-full quest-btn quest-btn-green text-xs py-1.5 flex items-center justify-center gap-1.5 font-black shadow-xs mt-1"
+                          title={`Rezept für ${p.name} in den Topf laden`}
+                        >
+                          <ChefHat className="w-3.5 h-3.5" /> 🍲 Rezept kochen
+                        </button>
                       </div>
                     ) : (
                       <div className="h-48 flex flex-col items-center justify-center text-center">
@@ -375,8 +405,15 @@ export const CampView: React.FC = () => {
                       {p.name}
                     </div>
                     <button
+                      onClick={() => handleLoadRecipe(p.id)}
+                      className="w-full mt-1 quest-btn quest-btn-yellow text-[10px] py-1 px-1 flex items-center justify-center gap-1 font-black"
+                      title={`Rezept für ${p.name} in den Topf laden`}
+                    >
+                      <ChefHat className="w-3 h-3" /> 🍲 Rezept
+                    </button>
+                    <button
                       onClick={() => store.toggleWishlist(id)}
-                      className="text-[10px] text-rose-500 font-bold hover:underline"
+                      className="text-[10px] text-rose-500 font-bold hover:underline mt-1"
                     >
                       Entfernen
                     </button>

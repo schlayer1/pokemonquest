@@ -137,4 +137,6 @@ export interface QuestStoreState {
   pmTickets: number;
   targetDecorationId: string | null;
   detailedStones: Record<number, DetailedMemberStones>; // slot index -> stones
+  targetPokemonId: number | null;
+  queuedRecipeSlots: IngredientKey[] | null;
 }

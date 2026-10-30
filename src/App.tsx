@@ -7,9 +7,18 @@ import { CampView } from './components/camp/CampView';
 import { WorldAtlas } from './components/worlds/WorldAtlas';
 import { TrainingCamp } from './components/training/TrainingCamp';
 import { EscapeTrainer } from './components/escape/EscapeTrainer';
+import { useQuestStore } from './store/useQuestStore';
+import { IngredientKey } from './types/quest';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabKey>('cooking');
+  const [, store] = useQuestStore();
+
+  const handleLoadRecipeToPot = (slots: IngredientKey[], targetPokemonId?: number) => {
+    store.queueRecipe(slots, targetPokemonId);
+    setActiveTab('cooking');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-amber-50 selection:bg-amber-200">
@@ -18,8 +27,8 @@ export const App: React.FC = () => {
 
       <main className="max-w-6xl w-full mx-auto px-4 py-4 sm:py-6 flex-1">
         {activeTab === 'cooking' && <CookingPot />}
-        {activeTab === 'pokedex' && <PokedexGrid />}
-        {activeTab === 'camp' && <CampView />}
+        {activeTab === 'pokedex' && <PokedexGrid onLoadRecipeToPot={handleLoadRecipeToPot} />}
+        {activeTab === 'camp' && <CampView onLoadRecipeToPot={handleLoadRecipeToPot} />}
         {activeTab === 'worlds' && <WorldAtlas />}
         {activeTab === 'training' && <TrainingCamp />}
         {activeTab === 'escape' && <EscapeTrainer />}

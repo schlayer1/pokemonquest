@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { POKEMON, POKEMON_BY_ID } from '../../data/pokemon';
 import { TYPES } from '../../data/ingredients';
-import { RECIPES } from '../../data/recipes';
-import { Pokemon, PokemonType } from '../../types/quest';
+import { RECIPES, recipeForPokemon } from '../../data/recipes';
+import { Pokemon, PokemonType, IngredientKey } from '../../types/quest';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
 import { getPokemonSprite } from '../../utils/pokemonSprite';
-import { Search, Star, Check, Volume2, TrendingUp, Sparkles, X } from 'lucide-react';
+import { Search, Star, Check, Volume2, TrendingUp, Sparkles, X, ChefHat } from 'lucide-react';
 
 interface PokedexGridProps {
-  onLoadRecipeToPot?: (slots: string[]) => void;
+  onLoadRecipeToPot?: (slots: IngredientKey[], targetPokemonId?: number) => void;
 }
 
 export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) => {
@@ -53,6 +53,24 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
     soundService.play('tap');
     setActiveEvoPokemon(p);
     setCurrentLevel(15);
+  };
+
+  const handleLoadRecipe = (id: number) => {
+    soundService.play('victory');
+    const p = POKEMON_BY_ID.get(id);
+    if (!p) return;
+    const rec = recipeForPokemon(id, state.stock, state.pot, state.stockReady);
+    store.queueRecipe(rec.slots, id);
+
+    const base = POKEMON_BY_ID.get(p.base) || p;
+    const msg = `Rezept für ${base.name} vorbereitet! ${
+      p.id !== p.base ? `${p.name} entsteht durch Entwicklung. ` : ''
+    }Ab in die Küche!`;
+    ttsService.speakText(msg, state.voicePersona, state.voice);
+
+    if (onLoadRecipeToPot) {
+      onLoadRecipeToPot(rec.slots, id);
+    }
   };
 
   // Filter Pokemon list
@@ -295,6 +313,15 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
                     <Volume2 className="w-3 h-3" /> Vorlesen
                   </button>
                 </div>
+
+                <button
+                  onClick={() => handleLoadRecipe(p.id)}
+                  className="w-full py-1.5 px-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-xs font-black flex items-center justify-center gap-1 shadow-xs transition-all hover:scale-102"
+                  title={`Rezept für ${p.name} in den Kochtopf laden`}
+                >
+                  <ChefHat className="w-3.5 h-3.5" />
+                  <span>{p.id !== p.base ? 'Basis-Rezept' : 'Rezept in Topf'}</span>
+                </button>
               </div>
             </div>
           );
@@ -399,12 +426,24 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
               )}
             </div>
 
-            <button
-              onClick={() => setActiveEvoPokemon(null)}
-              className="w-full py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl font-bold text-xs"
-            >
-              Fertig
-            </button>
+            <div className="flex gap-2 mt-4">
+              <button
+                onClick={() => {
+                  handleLoadRecipe(activeEvoPokemon.id);
+                  setActiveEvoPokemon(null);
+                }}
+                className="flex-1 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-black text-xs flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <ChefHat className="w-4 h-4" />
+                <span>Rezept in den Topf laden</span>
+              </button>
+              <button
+                onClick={() => setActiveEvoPokemon(null)}
+                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl font-bold text-xs"
+              >
+                Fertig
+              </button>
+            </div>
           </div>
         </div>
       )}

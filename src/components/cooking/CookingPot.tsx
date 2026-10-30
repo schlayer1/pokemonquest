@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuestStore } from '../../store/useQuestStore';
 import { INGREDIENTS, POTS } from '../../data/ingredients';
-import { RECIPES, evaluateRecipe } from '../../data/recipes';
-import { POKEMON_BY_ID } from '../../data/pokemon';
+import { RECIPES, evaluateRecipe, recipeForPokemon } from '../../data/recipes';
+import { POKEMON, POKEMON_BY_ID } from '../../data/pokemon';
 import { IngredientKey, PotTier } from '../../types/quest';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
 import { getPokemonSprite } from '../../utils/pokemonSprite';
 import confetti from 'canvas-confetti';
-import { Flame, Trash2, Undo2, Check, Sparkles, AlertCircle, Plus, Minus, Search } from 'lucide-react';
+import { Flame, Trash2, Undo2, Check, Sparkles, AlertCircle, Plus, Minus, Search, Target, ChefHat } from 'lucide-react';
 
 export const CookingPot: React.FC = () => {
   const [state, store] = useQuestStore();
@@ -16,8 +16,19 @@ export const CookingPot: React.FC = () => {
   const [isCooking, setIsCooking] = useState(false);
   const [cookResult, setCookResult] = useState<ReturnType<typeof evaluateRecipe> | null>(null);
   const [lastDeducted, setLastDeducted] = useState<IngredientKey[] | null>(null);
-  const [targetPokemonId, setTargetPokemonId] = useState<number | null>(null);
+  const [targetPokemonId, setTargetPokemonId] = useState<number | null>(state.targetPokemonId || null);
   const [searchPokemon, setSearchPokemon] = useState('');
+
+  // Check for queued recipes from Pokedex or Camp
+  useEffect(() => {
+    const queued = store.consumeQueuedRecipe();
+    if (queued && queued.length === 5) {
+      setPotIngredients([...queued]);
+    }
+    if (state.targetPokemonId) {
+      setTargetPokemonId(state.targetPokemonId);
+    }
+  }, [state.queuedRecipeSlots, state.targetPokemonId]);
 
   const currentPot = POTS[state.pot];
 
@@ -56,6 +67,7 @@ export const CookingPot: React.FC = () => {
     soundService.play('empty');
     setPotIngredients([]);
     setTargetPokemonId(null);
+    store.setTargetPokemon(null);
     ttsService.playKey('pot_empty', state.voicePersona, state.voice);
   };
 
@@ -120,14 +132,18 @@ export const CookingPot: React.FC = () => {
     const p = POKEMON_BY_ID.get(id);
     if (!p) return;
     setTargetPokemonId(id);
+    store.setTargetPokemon(id);
     setSearchPokemon('');
 
-    // Find best recipe that attracts this pokemon
-    const bestRecipeKey = p.recipes[0] || 'mulliganstewalacube';
-    const r = RECIPES.find(x => x.key === bestRecipeKey);
-    if (r) {
-      handleFillPreset(r.slots, r.name);
-    }
+    // Find best proven recipe that attracts this pokemon!
+    const rec = recipeForPokemon(id, state.stock, state.pot, state.stockReady);
+    handleFillPreset(rec.slots, rec.name);
+
+    const base = POKEMON_BY_ID.get(p.base) || p;
+    const msg = `${rec.name} für ${base.name} vorbereitet! ${
+      p.id !== p.base ? `${p.name} entsteht durch Entwicklung. ` : ''
+    }Fünf Zutaten liegen im Topf.`;
+    ttsService.speakText(msg, state.voicePersona, state.voice);
   };
 
   return (
@@ -176,6 +192,42 @@ export const CookingPot: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Target Pokemon Banner */}
+          {targetPokemonId && (() => {
+            const p = POKEMON_BY_ID.get(targetPokemonId);
+            if (!p) return null;
+            const rec = recipeForPokemon(targetPokemonId, state.stock, state.pot, state.stockReady);
+            return (
+              <div className="flex items-center justify-between gap-3 bg-white/95 border-2 border-amber-400 p-2.5 px-4 rounded-2xl w-full max-w-md mb-3 shadow-xs">
+                <div className="flex items-center gap-2.5">
+                  <img
+                    src={getPokemonSprite(p.id, state.spriteStyle)}
+                    alt={p.name}
+                    className="w-10 h-10 object-contain drop-shadow-xs"
+                  />
+                  <div className="text-left">
+                    <div className="text-xs font-black text-amber-950 flex items-center gap-1">
+                      <span>🎯</span> Wunsch-Pokémon: {p.name} (#{p.id})
+                    </div>
+                    <div className="text-[11px] font-bold text-amber-800">
+                      Gericht: {rec.name} ({rec.qualityKey === 'Special' ? 'Spezial' : rec.qualityKey === 'Very Good' ? 'Sehr gut' : 'Gut'})
+                    </div>
+                  </div>
+                </div>
+                <button
+                  onClick={() => {
+                    setTargetPokemonId(null);
+                    store.setTargetPokemon(null);
+                  }}
+                  className="text-xs text-amber-700 hover:text-amber-950 font-black p-1 hover:bg-amber-100 rounded-lg"
+                  title="Wunsch entfernen"
+                >
+                  ✕
+                </button>
+              </div>
+            );
+          })()}
 
           {/* Die 5 Slots */}
           <div className="flex items-center justify-center gap-2 sm:gap-4 my-2">
@@ -322,14 +374,19 @@ export const CookingPot: React.FC = () => {
             { id: 66, name: 'Machollo', icon: '🥊' },
             { id: 95, name: 'Onix', icon: '🪨' },
             { id: 133, name: 'Evoli', icon: '🦊' },
-            { id: 147, name: 'Dratini', icon: '🐉' }
+            { id: 147, name: 'Dratini', icon: '🐉' },
+            { id: 63, name: 'Abra', icon: '🔮' },
+            { id: 113, name: 'Chaneira', icon: '🥚' },
+            { id: 94, name: 'Gengar', icon: '👻' },
+            { id: 143, name: 'Relaxo', icon: '💤' },
+            { id: 150, name: 'Mewtu', icon: '✨' }
           ].map(p => (
             <button
               key={p.id}
               onClick={() => handleSelectTargetPokemon(p.id)}
               className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs flex items-center gap-1.5 transition-all ${
                 targetPokemonId === p.id
-                  ? 'bg-amber-400 border-amber-600 text-amber-950 scale-105'
+                  ? 'bg-amber-400 border-amber-600 text-amber-950 scale-105 shadow-xs'
                   : 'bg-amber-50 hover:bg-amber-100 border-amber-200 text-amber-900'
               }`}
             >
@@ -341,6 +398,60 @@ export const CookingPot: React.FC = () => {
               <span>{p.name}</span>
             </button>
           ))}
+        </div>
+
+        {/* 151 Pokemon Suchfeld für alle weiteren Pokémon */}
+        <div className="relative mt-2 max-w-md">
+          <div className="flex items-center gap-2 bg-amber-50/90 border-2 border-amber-300 rounded-2xl px-3 py-1.5 focus-within:border-amber-500 focus-within:bg-white transition-all">
+            <Search className="w-4 h-4 text-amber-600 shrink-0" />
+            <input
+              type="text"
+              value={searchPokemon}
+              onChange={e => setSearchPokemon(e.target.value)}
+              placeholder="Anderes Pokémon suchen (z.B. Vulpix, Sichlor, Abra)..."
+              className="w-full bg-transparent outline-none text-xs font-bold text-slate-800 placeholder:text-slate-400"
+            />
+            {searchPokemon && (
+              <button
+                onClick={() => setSearchPokemon('')}
+                className="text-slate-400 hover:text-slate-600 text-xs px-1"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+
+          {searchPokemon.trim() && (
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white border-2 border-amber-300 rounded-2xl shadow-xl max-h-56 overflow-y-auto p-1.5 z-20 space-y-1">
+              {POKEMON.filter(p =>
+                p.name.toLowerCase().includes(searchPokemon.toLowerCase().trim()) ||
+                String(p.id) === searchPokemon.trim()
+              ).slice(0, 10).map(p => (
+                <button
+                  key={p.id}
+                  onClick={() => handleSelectTargetPokemon(p.id)}
+                  className="w-full p-2 hover:bg-amber-50 rounded-xl flex items-center justify-between gap-2 text-left text-xs font-bold transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={getPokemonSprite(p.id, state.spriteStyle)}
+                      alt={p.name}
+                      className="w-7 h-7 object-contain"
+                    />
+                    <div>
+                      <div className="text-slate-900 font-black">{p.name} (#{p.id})</div>
+                      <div className="text-[10px] text-slate-400">
+                        {p.id !== p.base ? `Basis: ${POKEMON_BY_ID.get(p.base)?.name}` : 'Basisform'}
+                      </div>
+                    </div>
+                  </div>
+                  <span className="text-[11px] text-emerald-800 font-black bg-emerald-100 px-2.5 py-1 rounded-lg flex items-center gap-1">
+                    <ChefHat className="w-3.5 h-3.5" /> In Topf
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -456,10 +567,15 @@ export const CookingPot: React.FC = () => {
                 {cookResult.attractedPokemonIds.map(id => {
                   const p = POKEMON_BY_ID.get(id);
                   if (!p) return null;
+                  const isTarget = targetPokemonId != null && (p.id === targetPokemonId || p.base === targetPokemonId);
                   return (
                     <div
                       key={id}
-                      className="flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-xl border border-amber-200 shadow-2xs text-xs font-bold text-slate-700"
+                      className={`flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-bold transition-all ${
+                        isTarget
+                          ? 'bg-amber-300 text-amber-950 border-2 border-amber-500 shadow-sm ring-2 ring-amber-400 scale-105 font-black'
+                          : 'bg-white text-slate-700 border border-amber-200 shadow-2xs'
+                      }`}
                     >
                       <img
                         src={getPokemonSprite(p.id, state.spriteStyle)}
@@ -468,6 +584,11 @@ export const CookingPot: React.FC = () => {
                         loading="lazy"
                       />
                       <span>{p.name}</span>
+                      {isTarget && (
+                        <span className="text-[10px] bg-amber-500 text-white px-1.5 py-0.5 rounded-md ml-1 font-black">
+                          ⭐ Dein Wunsch!
+                        </span>
+                      )}
                     </div>
                   );
                 })}
