@@ -135,6 +135,26 @@
     "sticker_removed": {
       "file": "/audio/voice/killian/sticker_removed.m4a",
       "text": "Sticker wieder aus dem Album entfernt."
+    },
+    "bingo_godroll": {
+      "file": "/audio/voice/killian/bingo_godroll.m4a",
+      "text": "Boah Levi! Ein Fünf-Sterne Bingo! Dieses Pokémon ist perfekt für dein Team!"
+    },
+    "power_warning": {
+      "file": "/audio/voice/killian/power_warning.m4a",
+      "text": "Achtung Levi! Diese Welt ist sehr stark. Trainiere dein Team lieber noch ein wenig!"
+    },
+    "power_ready": {
+      "file": "/audio/voice/killian/power_ready.m4a",
+      "text": "Klasse! Dein Team ist stark genug für dieses Abenteuer!"
+    },
+    "deko_goal_reached": {
+      "file": "/audio/voice/killian/deko_goal_reached.m4a",
+      "text": "Super gemacht! Du hast genug Tickets für deine nächste Statue!"
+    },
+    "move_training_tip": {
+      "file": "/audio/voice/killian/move_training_tip.m4a",
+      "text": "Wähle gleiche Pokémon oder denselben Typ, um die Erfolgschance beim Attacken-Training zu steigern!"
     }
   },
   "katja": {
@@ -273,6 +293,26 @@
     "sticker_removed": {
       "file": "/audio/voice/katja/sticker_removed.m4a",
       "text": "Sticker wieder aus dem Album entfernt."
+    },
+    "bingo_godroll": {
+      "file": "/audio/voice/katja/bingo_godroll.m4a",
+      "text": "Boah Levi! Ein Fünf-Sterne Bingo! Dieses Pokémon ist perfekt für dein Team!"
+    },
+    "power_warning": {
+      "file": "/audio/voice/katja/power_warning.m4a",
+      "text": "Achtung Levi! Diese Welt ist sehr stark. Trainiere dein Team lieber noch ein wenig!"
+    },
+    "power_ready": {
+      "file": "/audio/voice/katja/power_ready.m4a",
+      "text": "Klasse! Dein Team ist stark genug für dieses Abenteuer!"
+    },
+    "deko_goal_reached": {
+      "file": "/audio/voice/katja/deko_goal_reached.m4a",
+      "text": "Super gemacht! Du hast genug Tickets für deine nächste Statue!"
+    },
+    "move_training_tip": {
+      "file": "/audio/voice/katja/move_training_tip.m4a",
+      "text": "Wähle gleiche Pokémon oder denselben Typ, um die Erfolgschance beim Attacken-Training zu steigern!"
     }
   }
 }

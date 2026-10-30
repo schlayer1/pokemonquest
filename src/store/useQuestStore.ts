@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IngredientKey, PotTier, QuestStoreState, TeamMember, VoicePersona } from '../types/quest';
+import { IngredientKey, PotTier, QuestStoreState, TeamMember, VoicePersona, DetailedMemberStones } from '../types/quest';
 import { POTS } from '../data/ingredients';
 
 const STORAGE_KEY = 'levi_quest_handbook_v3';
@@ -29,7 +29,15 @@ const defaultState: QuestStoreState = {
   sound: true,
   voice: true,
   voicePersona: 'killian',
-  bestEscapeTime: null
+  bestEscapeTime: null,
+  ownedDecorations: [],
+  pmTickets: 50,
+  targetDecorationId: 'charizard_torch',
+  detailedStones: {
+    0: { hpValue: 1200, atkValue: 1800, hitHealingPercent: 5.0, critRatePercent: 10.0 },
+    1: { hpValue: 1100, atkValue: 1900, hitHealingPercent: 6.2, critRatePercent: 12.0 },
+    2: { hpValue: 2500, atkValue: 800, hitHealingPercent: 8.5, critRatePercent: 5.0 }
+  }
 };
 
 function loadStoredState(): QuestStoreState {
@@ -202,6 +210,44 @@ export const questStore = {
       globalState = { ...globalState, bestEscapeTime: ms };
       notify();
     }
+  },
+
+  toggleDecoration(id: string) {
+    const has = globalState.ownedDecorations.includes(id);
+    globalState = {
+      ...globalState,
+      ownedDecorations: has
+        ? globalState.ownedDecorations.filter(x => x !== id)
+        : [...globalState.ownedDecorations, id]
+    };
+    notify();
+  },
+
+  setPmTickets(amount: number) {
+    globalState = { ...globalState, pmTickets: Math.max(0, amount) };
+    notify();
+  },
+
+  setTargetDecoration(id: string | null) {
+    globalState = { ...globalState, targetDecorationId: id };
+    notify();
+  },
+
+  setDetailedStones(slotIndex: number, stones: Partial<DetailedMemberStones>) {
+    const current = globalState.detailedStones[slotIndex] || {
+      hpValue: 1000,
+      atkValue: 1000,
+      hitHealingPercent: 0,
+      critRatePercent: 0
+    };
+    globalState = {
+      ...globalState,
+      detailedStones: {
+        ...globalState.detailedStones,
+        [slotIndex]: { ...current, ...stones }
+      }
+    };
+    notify();
   },
 
   exportJSON(): string {

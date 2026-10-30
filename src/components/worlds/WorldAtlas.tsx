@@ -3,6 +3,7 @@ import { WORLDS } from '../../data/worlds';
 import { TYPES } from '../../data/ingredients';
 import { POKEMON_BY_ID } from '../../data/pokemon';
 import { PokemonType } from '../../types/quest';
+import { ExpeditionPowerCalculator } from './ExpeditionPowerCalculator';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
@@ -191,6 +192,9 @@ export const WorldAtlas: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Expeditions-Stärkerechner */}
+      <ExpeditionPowerCalculator />
     </div>
   );
 };

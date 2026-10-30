@@ -106,6 +106,13 @@ export interface MoveInfo {
 
 export type VoicePersona = 'killian' | 'katja';
 
+export interface DetailedMemberStones {
+  hpValue: number;
+  atkValue: number;
+  hitHealingPercent: number;
+  critRatePercent: number;
+}
+
 export interface QuestStoreState {
   stock: Record<IngredientKey, number>;
   stockReady: boolean;
@@ -119,4 +126,9 @@ export interface QuestStoreState {
   voice: boolean;
   voicePersona: VoicePersona;
   bestEscapeTime: number | null;
+  // New features
+  ownedDecorations: string[];
+  pmTickets: number;
+  targetDecorationId: string | null;
+  detailedStones: Record<number, DetailedMemberStones>; // slot index -> stones
 }

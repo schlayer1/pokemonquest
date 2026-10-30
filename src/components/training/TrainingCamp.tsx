@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { KNOWLEDGE } from '../../data/knowledge';
 import { TOP_MOVES, MOVE_STONES } from '../../data/moves';
+import { MoveTrainingAssistant } from './MoveTrainingAssistant';
+import { BingoInspector } from './BingoInspector';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
-import { Volume2, Award, Swords, Sparkles, HelpCircle } from 'lucide-react';
+import { Volume2, Award, Swords, Sparkles, HelpCircle, Trophy } from 'lucide-react';
 
 export const TrainingCamp: React.FC = () => {
   const [state] = useQuestStore();
-  const [activeSection, setActiveSection] = useState<'stones' | 'moves' | 'tips'>('stones');
+  const [activeSection, setActiveSection] = useState<'stones' | 'moves' | 'training' | 'bingos' | 'tips'>('stones');
 
   const speakTip = (title: string, desc: string) => {
     soundService.play('tap');
@@ -25,11 +27,11 @@ export const TrainingCamp: React.FC = () => {
               <span>💎</span> Levis Trainingslager
             </h2>
             <p className="text-xs text-slate-600">
-              Lerne alles über Kraftsteine, Move-Steine und die stärksten Attacken im Spiel.
+              Kraftsteine, Move-Steine, Attacken-Training und der Bingo-God-Roll-Prüfer!
             </p>
           </div>
 
-          <div className="flex items-center gap-1 bg-purple-50 p-1 rounded-2xl border-2 border-purple-200">
+          <div className="flex items-center gap-1 bg-purple-50 p-1 rounded-2xl border-2 border-purple-200 flex-wrap">
             <button
               onClick={() => { soundService.play('tap'); setActiveSection('stones'); }}
               className={`px-3 py-1.5 rounded-xl font-black text-xs transition-all ${
@@ -47,12 +49,28 @@ export const TrainingCamp: React.FC = () => {
               ⭐ Attacken
             </button>
             <button
+              onClick={() => { soundService.play('tap'); setActiveSection('training'); }}
+              className={`px-3 py-1.5 rounded-xl font-black text-xs transition-all ${
+                activeSection === 'training' ? 'bg-amber-500 text-white shadow-xs' : 'text-amber-900 hover:bg-amber-100'
+              }`}
+            >
+              🥊 Move-Training
+            </button>
+            <button
+              onClick={() => { soundService.play('tap'); setActiveSection('bingos'); }}
+              className={`px-3 py-1.5 rounded-xl font-black text-xs transition-all ${
+                activeSection === 'bingos' ? 'bg-emerald-600 text-white shadow-xs' : 'text-emerald-900 hover:bg-emerald-100'
+              }`}
+            >
+              🏆 Bingo-Prüfer
+            </button>
+            <button
               onClick={() => { soundService.play('tap'); setActiveSection('tips'); }}
               className={`px-3 py-1.5 rounded-xl font-black text-xs transition-all ${
                 activeSection === 'tips' ? 'bg-purple-600 text-white shadow-xs' : 'text-purple-900 hover:bg-purple-100'
               }`}
             >
-              🏆 Profi-Tipps
+              💡 Tipps
             </button>
           </div>
         </div>
@@ -141,7 +159,17 @@ export const TrainingCamp: React.FC = () => {
           </div>
         )}
 
-        {/* SECTION 3: PROFI-TIPPS */}
+        {/* SECTION 3: ATTACKEN-TRAINING ASSISTENT */}
+        {activeSection === 'training' && (
+          <MoveTrainingAssistant />
+        )}
+
+        {/* SECTION 4: BINGO-PRÜFER */}
+        {activeSection === 'bingos' && (
+          <BingoInspector />
+        )}
+
+        {/* SECTION 5: PROFI-TIPPS */}
         {activeSection === 'tips' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {KNOWLEDGE.tips.map((c, i) => (

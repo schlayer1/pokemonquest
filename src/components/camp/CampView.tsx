@@ -3,13 +3,14 @@ import { useQuestStore } from '../../store/useQuestStore';
 import { POKEMON, POKEMON_BY_ID } from '../../data/pokemon';
 import { INGREDIENTS } from '../../data/ingredients';
 import { IngredientKey, TeamMember } from '../../types/quest';
+import { DecorationAdvisor } from './DecorationAdvisor';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
-import { Check, Star, Shield, Swords, Sparkles, Plus, Trash2, Heart, Award, HelpCircle } from 'lucide-react';
+import { Check, Star, Shield, Swords, Sparkles, Plus, Trash2, Heart, Award, HelpCircle, Landmark } from 'lucide-react';
 
 export const CampView: React.FC = () => {
   const [state, store] = useQuestStore();
-  const [subTab, setSubTab] = useState<'album' | 'team' | 'wishlist' | 'inventory'>('album');
+  const [subTab, setSubTab] = useState<'album' | 'team' | 'wishlist' | 'inventory' | 'decorations'>('album');
   const [showTeamDoctor, setShowTeamDoctor] = useState(false);
   const [editingSlot, setEditingSlot] = useState<number | null>(null);
 
@@ -129,6 +130,14 @@ export const CampView: React.FC = () => {
               }`}
             >
               🧺 Vorrat
+            </button>
+            <button
+              onClick={() => { soundService.play('tap'); setSubTab('decorations'); }}
+              className={`px-3 py-1.5 rounded-xl font-black text-xs transition-all ${
+                subTab === 'decorations' ? 'bg-amber-600 text-white shadow-xs' : 'text-amber-900 hover:bg-amber-100'
+              }`}
+            >
+              🏛️ Deko-Laden
             </button>
           </div>
         </div>
@@ -427,6 +436,13 @@ export const CampView: React.FC = () => {
               );
             })}
           </div>
+        </div>
+      )}
+
+      {/* SUBTAB 5: DEKO- & STATUEN-BERATER */}
+      {subTab === 'decorations' && (
+        <div className="quest-box p-4 sm:p-5 bg-white">
+          <DecorationAdvisor />
         </div>
       )}
 

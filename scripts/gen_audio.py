@@ -62,7 +62,14 @@ VOICE_TEXTS = {
     "team_saved": "Super Levi! Dein Team ist startklar für die nächste Expedition!",
     "team_doctor_tip": "Tipp vom Team-Doktor: Ein Pokémon mit Protzer und drei Teilungs-Steinen stärkt dein ganzes Team!",
     "sticker_added": "Klasse Levi! Ein neuer Sticker für dein Album!",
-    "sticker_removed": "Sticker wieder aus dem Album entfernt."
+    "sticker_removed": "Sticker wieder aus dem Album entfernt.",
+
+    # 4 Neue Features Ansagen
+    "bingo_godroll": "Boah Levi! Ein Fünf-Sterne Bingo! Dieses Pokémon ist perfekt für dein Team!",
+    "power_warning": "Achtung Levi! Diese Welt ist sehr stark. Trainiere dein Team lieber noch ein wenig!",
+    "power_ready": "Klasse! Dein Team ist stark genug für dieses Abenteuer!",
+    "deko_goal_reached": "Super gemacht! Du hast genug Tickets für deine nächste Statue!",
+    "move_training_tip": "Wähle gleiche Pokémon oder denselben Typ, um die Erfolgschance beim Attacken-Training zu steigern!"
 }
 
 def transcode_to_m4a(mp3_path, m4a_path):
