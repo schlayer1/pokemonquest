@@ -15,6 +15,15 @@ class SoundService {
     return this.ctx;
   }
 
+  unlock() {
+    try {
+      const c = this.getContext();
+      if (c && c.state === 'suspended') {
+        c.resume().catch(() => {});
+      }
+    } catch {}
+  }
+
   play(effect: 'tap' | 'drop' | 'empty' | 'victory' | 'dodge' | 'alarm' | 'fail' | 'boil') {
     try {
       const c = this.getContext();

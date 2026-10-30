@@ -7,11 +7,13 @@ import { CampView } from './components/camp/CampView';
 import { WorldAtlas } from './components/worlds/WorldAtlas';
 import { TrainingCamp } from './components/training/TrainingCamp';
 import { EscapeTrainer } from './components/escape/EscapeTrainer';
+import { AppPreloader } from './components/common/AppPreloader';
 import { useQuestStore } from './store/useQuestStore';
 import { IngredientKey } from './types/quest';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabKey>('cooking');
+  const [isAppReady, setIsAppReady] = useState(false);
   const [, store] = useQuestStore();
 
   const handleLoadRecipeToPot = (slots: IngredientKey[], targetPokemonId?: number) => {
@@ -22,6 +24,11 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-amber-50 selection:bg-amber-200">
+      {/* Startup Asset & Voice Preloader Check */}
+      {!isAppReady && (
+        <AppPreloader onStart={() => setIsAppReady(true)} />
+      )}
+
       <Header />
       <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
 

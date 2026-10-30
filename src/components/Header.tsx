@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useQuestStore } from '../store/useQuestStore';
 import { soundService } from '../services/sound';
 import { ttsService } from '../services/tts';
-import { Volume2, VolumeX, Bell, BellOff, Download, Upload, Sparkles, User, RefreshCw } from 'lucide-react';
+import { Volume2, VolumeX, Bell, BellOff, Download, Upload, Sparkles, User, RefreshCw, Activity } from 'lucide-react';
+import { AssetHealthModal } from './common/AssetHealthModal';
 
 export const Header: React.FC = () => {
   const [state, store] = useQuestStore();
   const [showBackup, setShowBackup] = useState(false);
+  const [showHealthModal, setShowHealthModal] = useState(false);
   const [importText, setImportText] = useState('');
   const [backupMessage, setBackupMessage] = useState('');
 
@@ -163,6 +165,19 @@ export const Header: React.FC = () => {
             {state.sound ? <Bell className="w-4 h-4" /> : <BellOff className="w-4 h-4" />}
           </button>
 
+          {/* Asset Health Check Button */}
+          <button
+            onClick={() => {
+              soundService.play('tap');
+              setShowHealthModal(true);
+            }}
+            className="p-2 bg-white/90 hover:bg-white rounded-xl border-2 border-emerald-400 text-emerald-900 font-bold text-xs flex items-center gap-1 shadow-xs transition-all"
+            title="Dateien & Stimmen prüfen"
+          >
+            <Activity className="w-4 h-4 text-emerald-600" />
+            <span className="hidden sm:inline">Check</span>
+          </button>
+
           {/* Backup Dialog Button */}
           <button
             onClick={() => {
@@ -234,6 +249,10 @@ export const Header: React.FC = () => {
             </button>
           </div>
         </div>
+      )}
+      {/* Asset Health Check Modal */}
+      {showHealthModal && (
+        <AssetHealthModal onClose={() => setShowHealthModal(false)} />
       )}
     </header>
   );
