@@ -4,6 +4,7 @@ import { POKEMON_BY_ID } from '../../data/pokemon';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import { ShieldCheck, ShieldAlert, ChevronDown, ChevronUp, Wrench, Heart, Swords, Sparkles, Volume2 } from 'lucide-react';
 
 export const ExpeditionPowerCalculator: React.FC = () => {
@@ -173,8 +174,17 @@ export const ExpeditionPowerCalculator: React.FC = () => {
 
                 return (
                   <div key={slotIdx} className="p-3 bg-white rounded-xl border border-slate-300 space-y-2">
-                    <div className="text-xs font-black text-slate-800">
-                      Platz {slotIdx + 1}: {p ? p.name : 'Kein Pokémon'}
+                    <div className="flex items-center gap-2">
+                      {p && (
+                        <img
+                          src={getPokemonSprite(p.id, state.spriteStyle)}
+                          alt={p.name}
+                          className="w-6 h-6 object-contain"
+                        />
+                      )}
+                      <div className="text-xs font-black text-slate-800">
+                        Platz {slotIdx + 1}: {p ? p.name : 'Kein Pokémon'}
+                      </div>
                     </div>
 
                     <div>

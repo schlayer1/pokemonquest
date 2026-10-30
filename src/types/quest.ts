@@ -48,10 +48,13 @@ export type IngredientKey =
   | 'rainbow'
   | 'mystic_shell';
 
+export type SpriteStyle = 'classic' | 'kubo';
+
 export interface Ingredient {
   id: IngredientKey;
   name: string;
   icon: string;
+  image: string;
   color: 'red' | 'blue' | 'yellow' | 'gray' | 'rainbow' | 'mystic' | 'none';
   texture: 'soft' | 'hard' | 'special' | 'none';
   kind: 'mushroom' | 'sweet' | 'plant' | 'mineral' | 'mystical' | 'precious';
@@ -62,6 +65,7 @@ export interface Recipe {
   key: string;
   name: string;
   hint: string;
+  image?: string;
   slots: IngredientKey[];
   colorTheme?: string;
 }
@@ -84,6 +88,7 @@ export interface World {
   bosses: number[];
   recommendedPower: number;
   description: string;
+  image?: string;
 }
 
 export interface TeamMember {
@@ -125,6 +130,7 @@ export interface QuestStoreState {
   sound: boolean;
   voice: boolean;
   voicePersona: VoicePersona;
+  spriteStyle: SpriteStyle;
   bestEscapeTime: number | null;
   // New features
   ownedDecorations: string[];

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import confetti from 'canvas-confetti';
 import { Play, Pause, RotateCcw, Zap, Trophy, ShieldAlert, Award } from 'lucide-react';
 
@@ -167,13 +168,18 @@ export const EscapeTrainer: React.FC = () => {
                 handleStop();
                 setSelectedBossId(b.id);
               }}
-              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all ${
+              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all flex items-center gap-1.5 ${
                 selectedBossId === b.id
                   ? 'bg-rose-500 text-white border-rose-700 shadow-xs scale-105'
                   : 'bg-slate-50 hover:bg-rose-50 border-slate-200 text-slate-700'
               }`}
             >
-              {b.name} ({b.attack})
+              <img
+                src={getPokemonSprite(b.id, state.spriteStyle)}
+                alt={b.name}
+                className="w-5 h-5 object-contain"
+              />
+              <span>{b.name}</span>
             </button>
           ))}
         </div>
@@ -199,7 +205,7 @@ export const EscapeTrainer: React.FC = () => {
               <div className="absolute -inset-2 rounded-full bg-amber-400/30 animate-pulse" />
             )}
             <img
-              src={`/assets/bosses/boss_${boss.id}.png`}
+              src={getPokemonSprite(boss.id, state.spriteStyle)}
               alt={boss.name}
               className={`w-36 h-36 object-contain drop-shadow-lg transition-transform duration-200 ${
                 phase === 'charging'

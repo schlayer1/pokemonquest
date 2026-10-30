@@ -3,6 +3,7 @@ import { BINGO_GUIDES } from '../../data/bingos';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import confetti from 'canvas-confetti';
 import { Star, AlertTriangle, Sparkles, Trophy } from 'lucide-react';
 
@@ -62,13 +63,18 @@ export const BingoInspector: React.FC = () => {
                 setSlot2Choice(g.slots.slot2[0].id);
                 setSlot3Choice(g.slots.slot3[0].id);
               }}
-              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all ${
+              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all flex items-center gap-1.5 ${
                 selectedPokemonId === g.pokemonId
                   ? 'bg-amber-500 text-white border-amber-700 shadow-xs scale-105'
                   : 'bg-white hover:bg-amber-100 border-amber-200 text-amber-900'
               }`}
             >
-              {g.name}
+              <img
+                src={getPokemonSprite(g.pokemonId, state.spriteStyle)}
+                alt={g.name}
+                className="w-5 h-5 object-contain"
+              />
+              <span>{g.name}</span>
             </button>
           ))}
         </div>

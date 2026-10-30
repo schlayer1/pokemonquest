@@ -1,16 +1,16 @@
 import { Ingredient, IngredientKey, PotConfig, PotTier, PokemonType } from '../types/quest';
 
 export const INGREDIENTS: Record<IngredientKey, Ingredient> = {
-  red_mini: { id: 'red_mini', name: 'Minipilz', icon: '🍄', color: 'red', texture: 'soft', kind: 'mushroom', points: 1 },
-  blue_mini: { id: 'blue_mini', name: 'Morbbeere', icon: '🫐', color: 'blue', texture: 'soft', kind: 'sweet', points: 1 },
-  yellow_mini: { id: 'yellow_mini', name: 'Aprikoko', icon: '🌰', color: 'yellow', texture: 'hard', kind: 'plant', points: 1 },
-  gray_mini: { id: 'gray_mini', name: 'Fossil', icon: '🪨', color: 'gray', texture: 'hard', kind: 'mineral', points: 1 },
-  red_root: { id: 'red_root', name: 'Großwurzel', icon: '🌱', color: 'red', texture: 'soft', kind: 'plant', points: 2 },
-  blue_ice: { id: 'blue_ice', name: 'Eisbrocken', icon: '🧊', color: 'blue', texture: 'hard', kind: 'mineral', points: 2 },
-  yellow_honey: { id: 'yellow_honey', name: 'Honig', icon: '🍯', color: 'yellow', texture: 'soft', kind: 'sweet', points: 2 },
-  gray_shroom: { id: 'gray_shroom', name: 'Duftpilz', icon: '🌸', color: 'gray', texture: 'soft', kind: 'mushroom', points: 2 },
-  rainbow: { id: 'rainbow', name: 'Regenbogentropfen', icon: '🌈', color: 'rainbow', texture: 'special', kind: 'precious', points: 3 },
-  mystic_shell: { id: 'mystic_shell', name: 'Wundermuschel', icon: '🐚', color: 'mystic', texture: 'special', kind: 'mystical', points: 4 }
+  red_mini: { id: 'red_mini', name: 'Minipilz', icon: '🍄', image: '/assets/ingredients/red_mini.png', color: 'red', texture: 'soft', kind: 'mushroom', points: 1 },
+  blue_mini: { id: 'blue_mini', name: 'Morbbeere', icon: '🫐', image: '/assets/ingredients/blue_mini.png', color: 'blue', texture: 'soft', kind: 'sweet', points: 1 },
+  yellow_mini: { id: 'yellow_mini', name: 'Aprikoko', icon: '🌰', image: '/assets/ingredients/yellow_mini.png', color: 'yellow', texture: 'hard', kind: 'plant', points: 1 },
+  gray_mini: { id: 'gray_mini', name: 'Fossil', icon: '🪨', image: '/assets/ingredients/gray_mini.png', color: 'gray', texture: 'hard', kind: 'mineral', points: 1 },
+  red_root: { id: 'red_root', name: 'Großwurzel', icon: '🌱', image: '/assets/ingredients/red_root.png', color: 'red', texture: 'soft', kind: 'plant', points: 2 },
+  blue_ice: { id: 'blue_ice', name: 'Eisbrocken', icon: '🧊', image: '/assets/ingredients/blue_ice.png', color: 'blue', texture: 'hard', kind: 'mineral', points: 2 },
+  yellow_honey: { id: 'yellow_honey', name: 'Honig', icon: '🍯', image: '/assets/ingredients/yellow_honey.png', color: 'yellow', texture: 'soft', kind: 'sweet', points: 2 },
+  gray_shroom: { id: 'gray_shroom', name: 'Duftpilz', icon: '🌸', image: '/assets/ingredients/gray_shroom.png', color: 'gray', texture: 'soft', kind: 'mushroom', points: 2 },
+  rainbow: { id: 'rainbow', name: 'Regenbogentropfen', icon: '🌈', image: '/assets/ingredients/rainbow.png', color: 'rainbow', texture: 'special', kind: 'precious', points: 3 },
+  mystic_shell: { id: 'mystic_shell', name: 'Wundermuschel', icon: '🐚', image: '/assets/ingredients/mystic_shell.png', color: 'mystic', texture: 'special', kind: 'mystical', points: 4 }
 };
 
 export const POTS: Record<PotTier, PotConfig> = {

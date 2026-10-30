@@ -4,6 +4,7 @@ export interface Decoration {
   germanName: string;
   pokemon: string;
   icon: string;
+  image: string;
   cost: number; // PM Tickets
   priority: 1 | 2 | 3; // 1 = Must-have, 2 = Sehr gut, 3 = Luxus
   category: 'ingredients' | 'expedition' | 'training' | 'pokemon';
@@ -11,7 +12,7 @@ export interface Decoration {
   multiplierText: string;
 }
 
-export const DECORATIONS: Decoration[] = [
+const RAW_DECORATIONS: Omit<Decoration, 'image'>[] = [
   // --- TIER 1: MUST-HAVES (Zutaten verdoppeln & mehr Kochen) ---
   {
     id: 'charizard_torch',
@@ -222,3 +223,8 @@ export const DECORATIONS: Decoration[] = [
     multiplierText: 'Reanimation x1.5'
   }
 ];
+
+export const DECORATIONS: Decoration[] = RAW_DECORATIONS.map(d => ({
+  ...d,
+  image: `/assets/decorations/${d.id}.png`
+}));

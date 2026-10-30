@@ -77,6 +77,38 @@ export const Header: React.FC = () => {
 
         {/* Audio & Settings Toolbar */}
         <div className="flex items-center flex-wrap justify-center gap-2">
+          {/* Sprite Style Switcher (2D Klassisch vs 3D Kubo) */}
+          <div className="bg-white/80 backdrop-blur-xs p-1 rounded-xl border-2 border-amber-400 flex items-center gap-1 shadow-xs">
+            <button
+              onClick={() => {
+                soundService.play('tap');
+                store.setSpriteStyle('classic');
+              }}
+              className={`px-2 py-1 rounded-lg text-xs font-black transition-all flex items-center gap-1 ${
+                state.spriteStyle === 'classic'
+                  ? 'bg-amber-500 text-white shadow-xs'
+                  : 'text-amber-800 hover:bg-amber-100'
+              }`}
+              title="2D Klassische Zeichnungen (Standard)"
+            >
+              <span>🎨</span> <span className="hidden sm:inline">2D</span> Zeichnung
+            </button>
+            <button
+              onClick={() => {
+                soundService.play('tap');
+                store.setSpriteStyle('kubo');
+              }}
+              className={`px-2 py-1 rounded-lg text-xs font-black transition-all flex items-center gap-1 ${
+                state.spriteStyle === 'kubo'
+                  ? 'bg-amber-500 text-white shadow-xs'
+                  : 'text-amber-800 hover:bg-amber-100'
+              }`}
+              title="3D Kubo-Würfelgrafik wie im Spiel"
+            >
+              <span>🧊</span> 3D <span className="hidden sm:inline">Kubo</span>
+            </button>
+          </div>
+
           {/* Voice Persona Switcher */}
           <div className="bg-white/80 backdrop-blur-xs p-1 rounded-xl border-2 border-amber-400 flex items-center gap-1 shadow-xs">
             <span className="text-[11px] font-bold text-amber-900 px-1 hidden sm:inline">Stimme:</span>

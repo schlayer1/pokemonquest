@@ -7,6 +7,7 @@ import { ExpeditionPowerCalculator } from './ExpeditionPowerCalculator';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import { Check, Volume2, ShieldAlert, Award } from 'lucide-react';
 
 export const WorldAtlas: React.FC = () => {
@@ -67,7 +68,7 @@ export const WorldAtlas: React.FC = () => {
             <button
               key={w.id}
               onClick={() => handleSelectWorld(w.id)}
-              className={`p-3 rounded-3xl border-3 text-left transition-all relative flex flex-col justify-between ${
+              className={`p-3 rounded-3xl border-3 text-left transition-all relative flex flex-col justify-between overflow-hidden ${
                 isSelected
                   ? 'bg-indigo-50 border-indigo-500 shadow-md scale-102 ring-2 ring-indigo-300'
                   : 'bg-white border-slate-200 hover:border-indigo-300'
@@ -84,6 +85,17 @@ export const WorldAtlas: React.FC = () => {
                     </span>
                   )}
                 </div>
+
+                {w.image && (
+                  <div className="w-full h-14 rounded-xl overflow-hidden mb-2 border border-slate-200/80 bg-slate-100">
+                    <img
+                      src={w.image}
+                      alt={w.germanName}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
 
                 <div className="text-xs font-black text-slate-800 truncate mb-1">
                   {w.germanName}
@@ -111,14 +123,23 @@ export const WorldAtlas: React.FC = () => {
       {activeWorld && (
         <div className="quest-box p-4 sm:p-6 bg-gradient-to-b from-indigo-50 to-white">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
-            <div>
-              <span className="text-xs font-black text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded-full uppercase">
-                Aktuell ausgewählt
-              </span>
-              <h3 className="text-2xl font-black text-indigo-950 mt-1">
-                Welt {activeWorld.id}: {activeWorld.germanName}
-              </h3>
-              <p className="text-xs text-slate-600 mt-0.5">{activeWorld.description}</p>
+            <div className="flex items-center gap-4">
+              {activeWorld.image && (
+                <img
+                  src={activeWorld.image}
+                  alt={activeWorld.germanName}
+                  className="w-20 h-14 sm:w-28 sm:h-20 object-cover rounded-2xl border-2 border-indigo-300 shadow-xs shrink-0"
+                />
+              )}
+              <div>
+                <span className="text-xs font-black text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded-full uppercase">
+                  Aktuell ausgewählt
+                </span>
+                <h3 className="text-2xl font-black text-indigo-950 mt-1">
+                  Welt {activeWorld.id}: {activeWorld.germanName}
+                </h3>
+                <p className="text-xs text-slate-600 mt-0.5">{activeWorld.description}</p>
+              </div>
             </div>
 
             <div className="flex items-center gap-2">
@@ -174,7 +195,7 @@ export const WorldAtlas: React.FC = () => {
                   return (
                     <div key={id} className="flex items-center gap-2">
                       <img
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                        src={getPokemonSprite(p.id, state.spriteStyle)}
                         alt={p.name}
                         className="w-14 h-14 object-contain"
                       />

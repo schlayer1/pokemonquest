@@ -1,6 +1,6 @@
 import { World } from "../types/quest";
 
-export const WORLDS: World[] = [
+const RAW_WORLDS: World[] = [
   {
     "id": 1,
     "slug": "firststeppe",
@@ -151,3 +151,8 @@ export const WORLDS: World[] = [
     "description": "Auf Die Zufallsinsel wartet am Ende ein mächtiger Boss. Pokémon vom Typ None erhalten einen starken Stärkeschub!"
   }
 ];
+
+export const WORLDS: World[] = RAW_WORLDS.map(w => ({
+  ...w,
+  image: `/assets/worlds/${w.id}.png`
+}));

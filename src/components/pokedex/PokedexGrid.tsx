@@ -6,6 +6,7 @@ import { Pokemon, PokemonType } from '../../types/quest';
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import { Search, Star, Check, Volume2, TrendingUp, Sparkles, X } from 'lucide-react';
 
 interface PokedexGridProps {
@@ -142,7 +143,22 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
         </div>
 
         {/* Quick Toggles */}
-        <div className="flex items-center gap-2 pt-2 border-t border-slate-100 text-xs">
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 text-xs">
+          <button
+            onClick={() => {
+              soundService.play('tap');
+              store.toggleSpriteStyle();
+            }}
+            className={`px-3 py-1 rounded-xl font-bold border-2 transition-all flex items-center gap-1.5 ${
+              state.spriteStyle === 'kubo'
+                ? 'bg-blue-100 border-blue-400 text-blue-900 shadow-xs'
+                : 'bg-amber-100 border-amber-300 text-amber-900'
+            }`}
+            title="Zwischen klassischer 2D-Zeichnung und 3D-Kubo-Spielgrafik wechseln"
+          >
+            <span>{state.spriteStyle === 'kubo' ? '🧊' : '🎨'}</span>
+            <span>Grafik: {state.spriteStyle === 'kubo' ? '3D Kubo' : '2D Klassisch'}</span>
+          </button>
           <button
             onClick={() => setFilterWishlistOnly(!filterWishlistOnly)}
             className={`px-3 py-1 rounded-xl font-bold border-2 transition-all flex items-center gap-1 ${
@@ -218,7 +234,7 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
                 {/* Pokemon Sprite */}
                 <div className="w-full h-24 flex items-center justify-center p-1 my-1">
                   <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                    src={getPokemonSprite(p.id, state.spriteStyle)}
                     alt={p.name}
                     className="max-h-full max-w-full object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
                     loading="lazy"
@@ -297,7 +313,7 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
             <div className="flex items-center justify-center gap-3 my-4">
               <div className="flex flex-col items-center">
                 <img
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${activeEvoPokemon.id}.png`}
+                  src={getPokemonSprite(activeEvoPokemon.id, state.spriteStyle)}
                   alt={activeEvoPokemon.name}
                   className="w-16 h-16 object-contain"
                 />
@@ -319,7 +335,7 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
 
                     <div className="flex flex-col items-center">
                       <img
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${n.id}.png`}
+                        src={getPokemonSprite(n.id, state.spriteStyle)}
                         alt={target?.name || ''}
                         className="w-16 h-16 object-contain"
                       />

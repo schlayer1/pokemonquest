@@ -4,6 +4,7 @@ import { QUEST_MOVES, LEARNABLE_MOVES_BY_POKEMON, calculateMoveTrainingSuccess }
 import { useQuestStore } from '../../store/useQuestStore';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import { Swords, ShieldAlert, Sparkles, AlertTriangle, ChefHat, Volume2 } from 'lucide-react';
 
 export const MoveTrainingAssistant: React.FC = () => {
@@ -74,13 +75,18 @@ export const MoveTrainingAssistant: React.FC = () => {
                 const moves = LEARNABLE_MOVES_BY_POKEMON[p.id] || [];
                 if (moves.length > 0) setSelectedMoveKey(moves[0]);
               }}
-              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all ${
+              className={`px-3 py-1.5 rounded-xl border-2 font-black text-xs transition-all flex items-center gap-1.5 ${
                 targetId === p.id
                   ? 'bg-purple-600 text-white border-purple-800 shadow-xs scale-105'
                   : 'bg-white hover:bg-purple-50 border-purple-200 text-purple-900'
               }`}
             >
-              {p.name}
+              <img
+                src={getPokemonSprite(p.id, state.spriteStyle)}
+                alt={p.name}
+                className="w-5 h-5 object-contain"
+              />
+              <span>{p.name}</span>
             </button>
           ))}
         </div>

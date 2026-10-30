@@ -93,7 +93,13 @@ export const DecorationAdvisor: React.FC = () => {
         {/* Selected Goal Card */}
         <div className="bg-white p-4 rounded-2xl border-2 border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <span className="text-3xl">{targetDeco.icon}</span>
+            <div className="w-14 h-14 shrink-0 rounded-2xl bg-amber-50 border-2 border-amber-200 p-1 flex items-center justify-center shadow-xs">
+              <img
+                src={targetDeco.image}
+                alt={targetDeco.germanName}
+                className="w-12 h-12 object-contain drop-shadow-xs"
+              />
+            </div>
             <div>
               <div className="text-sm font-black text-slate-800">
                 Sparziel: {targetDeco.germanName} ({targetDeco.cost} Tickets)
@@ -198,7 +204,14 @@ export const DecorationAdvisor: React.FC = () => {
                 }`}
               >
                 <div className="flex items-start gap-3 flex-1">
-                  <span className="text-3xl mt-0.5">{d.icon}</span>
+                  <div className="w-12 h-12 shrink-0 rounded-2xl bg-amber-50 border-2 border-amber-200/80 p-1 flex items-center justify-center">
+                    <img
+                      src={d.image}
+                      alt={d.germanName}
+                      className="w-10 h-10 object-contain drop-shadow-xs"
+                      loading="lazy"
+                    />
+                  </div>
                   <div>
                     <div className="flex items-center gap-1.5 flex-wrap">
                       <span className="text-xs font-black text-slate-800">{d.germanName}</span>

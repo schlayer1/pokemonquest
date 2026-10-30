@@ -24,6 +24,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'mulliganstewalacube',
     name: 'Kubo-Suppe',
     hint: 'Eine freie Mischung verschiedenster Zutaten',
+    image: '/assets/recipes/1.png',
     slots: ['red_mini', 'blue_mini', 'yellow_mini', 'gray_mini', 'red_root'],
     colorTheme: '#fbbf24',
     rule: () => true
@@ -32,6 +33,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'redstewalacube',
     name: 'Roter Kubo-Eintopf',
     hint: 'Mindestens 4 rote Zutaten (z.B. Minipilze & Großwurzeln)',
+    image: '/assets/recipes/2.png',
     slots: ['red_root', 'red_root', 'red_root', 'red_root', 'red_root'],
     colorTheme: '#f87171',
     rule: c => c.red >= 4
@@ -40,6 +42,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'bluesodaalacube',
     name: 'Blauer Kubo-Saft',
     hint: 'Mindestens 4 blaue Zutaten (Morbbeeren & Eisbrocken)',
+    image: '/assets/recipes/3.png',
     slots: ['blue_ice', 'blue_ice', 'blue_ice', 'blue_ice', 'blue_ice'],
     colorTheme: '#60a5fa',
     rule: c => c.blue >= 4
@@ -48,6 +51,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'yellowcurryalacube',
     name: 'Gelbes Kubo-Curry',
     hint: 'Mindestens 4 gelbe Zutaten (Aprikokos & Honig)',
+    image: '/assets/recipes/4.png',
     slots: ['yellow_honey', 'yellow_honey', 'yellow_honey', 'yellow_honey', 'yellow_honey'],
     colorTheme: '#facc15',
     rule: c => c.yellow >= 4
@@ -56,6 +60,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'grayporridgealacube',
     name: 'Weißer Kubo-Auflauf',
     hint: 'Mindestens 4 graue Zutaten (Fossilien & Duftpilze)',
+    image: '/assets/recipes/5.png',
     slots: ['gray_shroom', 'gray_shroom', 'gray_shroom', 'gray_shroom', 'gray_shroom'],
     colorTheme: '#94a3b8',
     rule: c => c.gray >= 4
@@ -64,6 +69,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'mouth-wateringdipalacube',
     name: 'Kubo-Wasserbrei',
     hint: 'Mindestens 4 weiche und 3 blaue Zutaten',
+    image: '/assets/recipes/6.png',
     slots: ['blue_mini', 'blue_mini', 'blue_ice', 'yellow_honey', 'yellow_honey'],
     colorTheme: '#38bdf8',
     rule: c => c.soft >= 4 && c.blue >= 3
@@ -72,6 +78,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'plaincrepealacube',
     name: 'Kubo-Seidencrêpe',
     hint: 'Mindestens 3 süße und 2 graue Zutaten',
+    image: '/assets/recipes/7.png',
     slots: ['yellow_honey', 'yellow_honey', 'yellow_honey', 'gray_shroom', 'gray_shroom'],
     colorTheme: '#e2e8f0',
     rule: c => c.sweet >= 3 && c.gray >= 2
@@ -80,6 +87,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'sludgesoupalacube',
     name: 'Kubo-Schleimbrühe',
     hint: 'Mindestens 4 Pilze und 3 weiche Zutaten',
+    image: '/assets/recipes/8.png',
     slots: ['red_mini', 'red_mini', 'red_mini', 'gray_shroom', 'yellow_mini'],
     colorTheme: '#c084fc',
     rule: c => c.mushroom >= 4 && c.soft >= 3
@@ -88,6 +96,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'mudpiealacube',
     name: 'Kubo-Lehmbouillon',
     hint: 'Mindestens 2 Mineralien und 3 weiche Zutaten',
+    image: '/assets/recipes/9.png',
     slots: ['gray_mini', 'gray_mini', 'red_mini', 'red_mini', 'blue_mini'],
     colorTheme: '#fb923c',
     rule: c => c.mineral >= 2 && c.soft >= 3
@@ -96,6 +105,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'veggiesmoothiealacube',
     name: 'Kubo-Vitalsmoothie',
     hint: 'Mindestens 4 Pflanzen und 2 weiche Zutaten',
+    image: '/assets/recipes/10.png',
     slots: ['yellow_mini', 'yellow_mini', 'yellow_mini', 'red_root', 'red_root'],
     colorTheme: '#4ade80',
     rule: c => c.plant >= 4 && c.soft >= 2
@@ -104,6 +114,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'honeynectaralacube',
     name: 'Kubo-Honigfondue',
     hint: 'Mindestens 4 süße und 3 gelbe Zutaten',
+    image: '/assets/recipes/11.png',
     slots: ['yellow_honey', 'yellow_honey', 'yellow_honey', 'blue_mini', 'red_mini'],
     colorTheme: '#a3e635',
     rule: c => c.sweet >= 4 && c.yellow >= 3
@@ -112,6 +123,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'brainfoodalacube',
     name: 'Kubo-Mentalgeschnetzeltes',
     hint: 'Mindestens 3 süße und 2 harte Zutaten',
+    image: '/assets/recipes/12.png',
     slots: ['blue_mini', 'blue_mini', 'yellow_honey', 'gray_mini', 'yellow_mini'],
     colorTheme: '#f472b6',
     rule: c => c.sweet >= 3 && c.hard >= 2
@@ -120,6 +132,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'stonesoupalacube',
     name: 'Kubo-Felsengulasch',
     hint: 'Mindestens 4 harte Zutaten und 2 Mineralien',
+    image: '/assets/recipes/13.png',
     slots: ['gray_mini', 'gray_mini', 'blue_ice', 'yellow_mini', 'yellow_mini'],
     colorTheme: '#a8a29e',
     rule: c => c.hard >= 4 && c.mineral >= 2
@@ -128,6 +141,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'light-as-aircasserolealacube',
     name: 'Kubo-Windgratin',
     hint: 'Mindestens 3 Mineralien und 2 Pflanzen',
+    image: '/assets/recipes/14.png',
     slots: ['blue_ice', 'blue_ice', 'gray_mini', 'red_root', 'red_root'],
     colorTheme: '#818cf8',
     rule: c => c.mineral >= 3 && c.plant >= 2
@@ -136,6 +150,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'hotpotalacube',
     name: 'Kubo-Feuerbouillabaisse',
     hint: 'Mindestens 3 Pilze und 2 rote Zutaten',
+    image: '/assets/recipes/15.png',
     slots: ['red_mini', 'red_mini', 'gray_shroom', 'blue_mini', 'blue_mini'],
     colorTheme: '#ef4444',
     rule: c => c.mushroom >= 3 && c.red >= 2
@@ -144,6 +159,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'wattarisottoalacube',
     name: 'Kubo-Britzelrisotto',
     hint: 'Mindestens 4 weiche und 3 gelbe Zutaten',
+    image: '/assets/recipes/16.png',
     slots: ['yellow_honey', 'yellow_honey', 'yellow_mini', 'gray_shroom', 'gray_shroom'],
     colorTheme: '#facc15',
     rule: c => c.soft >= 4 && c.yellow >= 3
@@ -152,6 +168,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'getswolesyrupalacube',
     name: 'Kubo-Muskelmilchkaffee',
     hint: 'Mindestens 3 süße Zutaten und 2 Pilze',
+    image: '/assets/recipes/17.png',
     slots: ['blue_mini', 'blue_mini', 'yellow_honey', 'red_mini', 'red_mini'],
     colorTheme: '#f97316',
     rule: c => c.sweet >= 3 && c.mushroom >= 2
@@ -160,6 +177,7 @@ export const RECIPES: InternalRecipe[] = [
     key: 'ambrosiaoflegendsalacube',
     name: 'Kubo-Legendensuppe',
     hint: 'Mit Wundermuschel und wertvollen Zutaten für legendäre Pokémon',
+    image: '/assets/recipes/18.png',
     slots: ['mystic_shell', 'red_root', 'blue_ice', 'yellow_honey', 'gray_shroom'],
     colorTheme: '#ec4899',
     rule: c => c.mystical >= 1

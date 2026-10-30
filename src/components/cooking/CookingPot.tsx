@@ -6,6 +6,7 @@ import { POKEMON_BY_ID } from '../../data/pokemon';
 import { IngredientKey, PotTier } from '../../types/quest';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import confetti from 'canvas-confetti';
 import { Flame, Trash2, Undo2, Check, Sparkles, AlertCircle, Plus, Minus, Search } from 'lucide-react';
 
@@ -196,7 +197,11 @@ export const CookingPot: React.FC = () => {
                 >
                   {ing ? (
                     <>
-                      <span className="text-2xl sm:text-3xl">{ing.icon}</span>
+                      <img
+                        src={ing.image}
+                        alt={ing.name}
+                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-xs"
+                      />
                       <span className="text-[10px] font-bold text-slate-700 truncate max-w-[50px]">
                         {ing.name}
                       </span>
@@ -263,7 +268,11 @@ export const CookingPot: React.FC = () => {
                     className="flex items-center gap-2 text-left flex-1 hover:opacity-80"
                     title={`${ing.name} in den Topf legen`}
                   >
-                    <span className="text-2xl">{ing.icon}</span>
+                    <img
+                      src={ing.image}
+                      alt={ing.name}
+                      className="w-7 h-7 sm:w-8 sm:h-8 object-contain shrink-0 drop-shadow-xs"
+                    />
                     <div className="overflow-hidden">
                       <div className="text-xs font-bold text-slate-800 truncate">{ing.name}</div>
                       <div className="text-[11px] font-black text-amber-600">
@@ -324,7 +333,12 @@ export const CookingPot: React.FC = () => {
                   : 'bg-amber-50 hover:bg-amber-100 border-amber-200 text-amber-900'
               }`}
             >
-              <span>{p.icon}</span> {p.name}
+              <img
+                src={getPokemonSprite(p.id, state.spriteStyle)}
+                alt={p.name}
+                className="w-5 h-5 object-contain"
+              />
+              <span>{p.name}</span>
             </button>
           ))}
         </div>
@@ -357,35 +371,52 @@ export const CookingPot: React.FC = () => {
             return (
               <div
                 key={r.key}
-                className="p-3 rounded-2xl border-2 border-slate-200 hover:border-amber-400 bg-slate-50/50 hover:bg-amber-50/30 flex items-center justify-between gap-2 transition-all"
+                className="p-3 rounded-2xl border-2 border-slate-200 hover:border-amber-400 bg-slate-50/50 hover:bg-amber-50/30 flex items-center justify-between gap-3 transition-all"
               >
-                <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-black text-slate-800">{r.name}</span>
-                    {canAfford ? (
-                      <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
-                        <Check className="w-3 h-3" /> Bereit
-                      </span>
-                    ) : (
-                      <span className="bg-slate-200 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                        Fehlen Zutaten
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-[11px] text-slate-500 mt-0.5">{r.hint}</p>
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  {r.image && (
+                    <img
+                      src={r.image}
+                      alt={r.name}
+                      className="w-12 h-12 object-contain shrink-0 drop-shadow-xs"
+                      loading="lazy"
+                    />
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-sm font-black text-slate-800">{r.name}</span>
+                      {canAfford ? (
+                        <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+                          <Check className="w-3 h-3" /> Bereit
+                        </span>
+                      ) : (
+                        <span className="bg-slate-200 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                          Fehlen Zutaten
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-1">{r.hint}</p>
 
-                  <div className="flex items-center gap-1 mt-1.5">
-                    {r.slots.map((s, idx) => (
-                      <span key={idx} className="text-sm" title={INGREDIENTS[s]?.name}>
-                        {INGREDIENTS[s]?.icon}
-                      </span>
-                    ))}
+                    <div className="flex items-center gap-1.5 mt-1.5">
+                      {r.slots.map((s, idx) => {
+                        const ing = INGREDIENTS[s];
+                        return (
+                          <img
+                            key={idx}
+                            src={ing?.image}
+                            alt={ing?.name}
+                            title={ing?.name}
+                            className="w-5 h-5 object-contain"
+                          />
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
 
                 <button
                   onClick={() => handleFillPreset(r.slots, r.name)}
-                  className="quest-btn quest-btn-yellow text-xs py-1.5 px-3 whitespace-nowrap"
+                  className="quest-btn quest-btn-yellow text-xs py-1.5 px-3 whitespace-nowrap shrink-0"
                 >
                   In Topf
                 </button>
@@ -400,6 +431,13 @@ export const CookingPot: React.FC = () => {
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl border-4 border-amber-400 max-w-lg w-full p-6 shadow-2xl relative text-center">
             <div className="text-4xl mb-2">🎉</div>
+            {cookResult.recipe.image && (
+              <img
+                src={cookResult.recipe.image}
+                alt={cookResult.recipe.name}
+                className="w-20 h-20 mx-auto object-contain drop-shadow-md mb-2"
+              />
+            )}
             <span className="bg-amber-500 text-white font-black text-xs uppercase px-3 py-1 rounded-full">
               Gericht gekocht!
             </span>
@@ -421,10 +459,10 @@ export const CookingPot: React.FC = () => {
                   return (
                     <div
                       key={id}
-                      className="flex items-center gap-1 bg-white px-2 py-1 rounded-xl border border-amber-200 shadow-2xs text-xs font-bold text-slate-700"
+                      className="flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-xl border border-amber-200 shadow-2xs text-xs font-bold text-slate-700"
                     >
                       <img
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                        src={getPokemonSprite(p.id, state.spriteStyle)}
                         alt={p.name}
                         className="w-6 h-6 object-contain"
                         loading="lazy"

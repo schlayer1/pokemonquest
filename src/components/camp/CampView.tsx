@@ -6,6 +6,7 @@ import { IngredientKey, TeamMember } from '../../types/quest';
 import { DecorationAdvisor } from './DecorationAdvisor';
 import { soundService } from '../../services/sound';
 import { ttsService } from '../../services/tts';
+import { getPokemonSprite } from '../../utils/pokemonSprite';
 import { Check, Star, Shield, Swords, Sparkles, Plus, Trash2, Heart, Award, HelpCircle, Landmark } from 'lucide-react';
 
 export const CampView: React.FC = () => {
@@ -180,7 +181,7 @@ export const CampView: React.FC = () => {
                   title={`${p.name} (${isOwned ? 'Gefangen' : 'Noch offen'})`}
                 >
                   <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                    src={getPokemonSprite(p.id, state.spriteStyle)}
                     alt={p.name}
                     className="w-12 h-12 object-contain"
                     loading="lazy"
@@ -253,7 +254,7 @@ export const CampView: React.FC = () => {
 
                         <div className="flex items-center gap-3">
                           <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                            src={getPokemonSprite(p.id, state.spriteStyle)}
                             alt={p.name}
                             className="w-16 h-16 object-contain"
                           />
@@ -366,7 +367,7 @@ export const CampView: React.FC = () => {
                     className="p-3 rounded-2xl border-2 border-amber-300 bg-amber-50/50 flex flex-col items-center justify-between"
                   >
                     <img
-                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                      src={getPokemonSprite(p.id, state.spriteStyle)}
                       alt={p.name}
                       className="w-14 h-14 object-contain"
                     />
@@ -408,7 +409,11 @@ export const CampView: React.FC = () => {
                   className="p-3 rounded-2xl border-2 border-amber-200 bg-amber-50/30 flex items-center justify-between"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">{ing.icon}</span>
+                    <img
+                      src={ing.image}
+                      alt={ing.name}
+                      className="w-7 h-7 object-contain drop-shadow-xs"
+                    />
                     <span className="text-xs font-bold text-slate-800">{ing.name}</span>
                   </div>
 
@@ -509,7 +514,7 @@ export const CampView: React.FC = () => {
                   className="p-2 rounded-2xl border-2 border-slate-200 hover:border-amber-400 flex flex-col items-center justify-center hover:bg-amber-50 transition-all"
                 >
                   <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
+                    src={getPokemonSprite(p.id, state.spriteStyle)}
                     alt={p.name}
                     className="w-10 h-10 object-contain"
                     loading="lazy"

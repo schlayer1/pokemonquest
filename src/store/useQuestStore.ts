@@ -29,6 +29,7 @@ const defaultState: QuestStoreState = {
   sound: true,
   voice: true,
   voicePersona: 'killian',
+  spriteStyle: 'classic', // User preference: 2D classic artwork is default!
   bestEscapeTime: null,
   ownedDecorations: [],
   pmTickets: 50,
@@ -55,7 +56,8 @@ function loadStoredState(): QuestStoreState {
         stickers: Array.isArray(parsed.stickers) ? parsed.stickers : [],
         wishlist: Array.isArray(parsed.wishlist) ? parsed.wishlist : [],
         completedWorlds: Array.isArray(parsed.completedWorlds) ? parsed.completedWorlds : [],
-        voicePersona: parsed.voicePersona === 'katja' ? 'katja' : 'killian'
+        voicePersona: parsed.voicePersona === 'katja' ? 'katja' : 'killian',
+        spriteStyle: parsed.spriteStyle === 'kubo' ? 'kubo' : 'classic'
       };
     }
   } catch {
@@ -201,6 +203,19 @@ export const questStore = {
 
   setVoicePersona(persona: VoicePersona) {
     globalState = { ...globalState, voicePersona: persona };
+    notify();
+  },
+
+  toggleSpriteStyle() {
+    globalState = {
+      ...globalState,
+      spriteStyle: globalState.spriteStyle === 'classic' ? 'kubo' : 'classic'
+    };
+    notify();
+  },
+
+  setSpriteStyle(style: 'classic' | 'kubo') {
+    globalState = { ...globalState, spriteStyle: style };
     notify();
   },
 
