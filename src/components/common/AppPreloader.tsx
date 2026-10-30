@@ -42,6 +42,11 @@ export const AppPreloader: React.FC<AppPreloaderProps> = ({ onStart, isManualChe
   }, [hasStartedLoading, isManualCheck]);
 
   const handleStartAdventure = () => {
+    try {
+      sessionStorage.setItem('quest_session_active', 'true');
+      localStorage.setItem('quest_assets_cached_v2', 'true');
+    } catch {}
+
     // Official user-gesture blessing for mobile Safari & Chrome
     soundService.unlock();
     ttsService.unlock();
