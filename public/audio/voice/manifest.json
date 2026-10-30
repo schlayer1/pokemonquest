@@ -1,0 +1,278 @@
+{
+  "killian": {
+    "count_1": {
+      "file": "/audio/voice/killian/count_1.m4a",
+      "text": "Eins!"
+    },
+    "count_2": {
+      "file": "/audio/voice/killian/count_2.m4a",
+      "text": "Zwei!"
+    },
+    "count_3": {
+      "file": "/audio/voice/killian/count_3.m4a",
+      "text": "Drei!"
+    },
+    "count_4": {
+      "file": "/audio/voice/killian/count_4.m4a",
+      "text": "Vier!"
+    },
+    "count_5": {
+      "file": "/audio/voice/killian/count_5.m4a",
+      "text": "Fünf! Der Topf ist voll!"
+    },
+    "pot_empty": {
+      "file": "/audio/voice/killian/pot_empty.m4a",
+      "text": "Dein Topf ist wieder leer."
+    },
+    "pot_full_warning": {
+      "file": "/audio/voice/killian/pot_full_warning.m4a",
+      "text": "Der Topf ist schon voll. Tippe auf Kochen!"
+    },
+    "pot_iron": {
+      "file": "/audio/voice/killian/pot_iron.m4a",
+      "text": "Eisentopf. Jedes Feld braucht drei Zutaten im Spiel."
+    },
+    "pot_bronze": {
+      "file": "/audio/voice/killian/pot_bronze.m4a",
+      "text": "Bronzetopf. Jedes Feld braucht zehn Zutaten im Spiel."
+    },
+    "pot_silver": {
+      "file": "/audio/voice/killian/pot_silver.m4a",
+      "text": "Silbertopf. Jedes Feld braucht fünfzehn Zutaten im Spiel."
+    },
+    "pot_gold": {
+      "file": "/audio/voice/killian/pot_gold.m4a",
+      "text": "Goldtopf. Jedes Feld braucht zwanzig Zutaten im Spiel."
+    },
+    "cook_start": {
+      "file": "/audio/voice/killian/cook_start.m4a",
+      "text": "Der Topf brodelt! Gleich siehst du, wer angelockt wird!"
+    },
+    "cook_deduct": {
+      "file": "/audio/voice/killian/cook_deduct.m4a",
+      "text": "Zutaten wurden von deinem Vorrat abgezogen."
+    },
+    "cook_undo": {
+      "file": "/audio/voice/killian/cook_undo.m4a",
+      "text": "Zutaten wieder zurückgelegt."
+    },
+    "intro_cooking": {
+      "file": "/audio/voice/killian/intro_cooking.m4a",
+      "text": "Willkommen in deiner Kochschule, Levi! Zähle fünf Zutaten in den Topf. Die Topffarbe bestimmt, wie viele Zutaten du brauchst!"
+    },
+    "intro_pokedex": {
+      "file": "/audio/voice/killian/intro_pokedex.m4a",
+      "text": "Hier ist dein Kanto-Lexikon! Alle 151 Pokémon mit Entwicklungsstufen und ihren Lieblingsgerichten."
+    },
+    "intro_album": {
+      "file": "/audio/voice/killian/intro_album.m4a",
+      "text": "Dein Basislager! Schau dir deine gesammelten Sticker an und stelle dein 3er-Expeditionsteam zusammen."
+    },
+    "intro_worlds": {
+      "file": "/audio/voice/killian/intro_worlds.m4a",
+      "text": "Der Insel-Atlas! Zwölf Welten warten auf dich. Achte immer auf den passenden Typen-Bonus!"
+    },
+    "intro_training": {
+      "file": "/audio/voice/killian/intro_training.m4a",
+      "text": "Levis Trainingslager! Hier lernst du die besten P-Steine, Teilungssteine und Attacken für dein Team."
+    },
+    "intro_escape": {
+      "file": "/audio/voice/killian/intro_escape.m4a",
+      "text": "Levis Reaktions-Schule! Trainiere dein Timing für den rettenden Fluchtknopf gegen mächtige Bosse."
+    },
+    "boss_alert_6": {
+      "file": "/audio/voice/killian/boss_alert_6.m4a",
+      "text": "Achtung! Glurak lädt Flammenwurf auf! Fluchtknopf bereitmachen!"
+    },
+    "boss_alert_130": {
+      "file": "/audio/voice/killian/boss_alert_130.m4a",
+      "text": "Achtung! Garados lädt Hyperstrahl auf! Sofort ausweichen!"
+    },
+    "boss_alert_94": {
+      "file": "/audio/voice/killian/boss_alert_94.m4a",
+      "text": "Achtung! Gengar bereitet den Spukball vor! Bereitmachen!"
+    },
+    "boss_alert_95": {
+      "file": "/audio/voice/killian/boss_alert_95.m4a",
+      "text": "Achtung! Onix setzt Felswurf ein! Gleich fliehen!"
+    },
+    "boss_alert_150": {
+      "file": "/audio/voice/killian/boss_alert_150.m4a",
+      "text": "Achtung! Mewtu lädt Psychostoß auf! Höchste Alarmstufe!"
+    },
+    "dodge_now": {
+      "file": "/audio/voice/killian/dodge_now.m4a",
+      "text": "JETZT FLIEHEN!"
+    },
+    "dodge_success": {
+      "file": "/audio/voice/killian/dodge_success.m4a",
+      "text": "Klasse gemacht, Levi! Dein Team ist dem Angriff ausgewichen!"
+    },
+    "dodge_fail": {
+      "file": "/audio/voice/killian/dodge_fail.m4a",
+      "text": "Oh nein, zu spät! Versuch es gleich noch einmal!"
+    },
+    "dodge_early": {
+      "file": "/audio/voice/killian/dodge_early.m4a",
+      "text": "Zu früh ausgewichen! Warte auf das rote Signal!"
+    },
+    "team_empty": {
+      "file": "/audio/voice/killian/team_empty.m4a",
+      "text": "Dein Team ist noch leer. Wähle drei Freunde für dein Abenteuer aus!"
+    },
+    "team_saved": {
+      "file": "/audio/voice/killian/team_saved.m4a",
+      "text": "Super Levi! Dein Team ist startklar für die nächste Expedition!"
+    },
+    "team_doctor_tip": {
+      "file": "/audio/voice/killian/team_doctor_tip.m4a",
+      "text": "Tipp vom Team-Doktor: Ein Pokémon mit Protzer und drei Teilungs-Steinen stärkt dein ganzes Team!"
+    },
+    "sticker_added": {
+      "file": "/audio/voice/killian/sticker_added.m4a",
+      "text": "Klasse Levi! Ein neuer Sticker für dein Album!"
+    },
+    "sticker_removed": {
+      "file": "/audio/voice/killian/sticker_removed.m4a",
+      "text": "Sticker wieder aus dem Album entfernt."
+    }
+  },
+  "katja": {
+    "count_1": {
+      "file": "/audio/voice/katja/count_1.m4a",
+      "text": "Eins!"
+    },
+    "count_2": {
+      "file": "/audio/voice/katja/count_2.m4a",
+      "text": "Zwei!"
+    },
+    "count_3": {
+      "file": "/audio/voice/katja/count_3.m4a",
+      "text": "Drei!"
+    },
+    "count_4": {
+      "file": "/audio/voice/katja/count_4.m4a",
+      "text": "Vier!"
+    },
+    "count_5": {
+      "file": "/audio/voice/katja/count_5.m4a",
+      "text": "Fünf! Der Topf ist voll!"
+    },
+    "pot_empty": {
+      "file": "/audio/voice/katja/pot_empty.m4a",
+      "text": "Dein Topf ist wieder leer."
+    },
+    "pot_full_warning": {
+      "file": "/audio/voice/katja/pot_full_warning.m4a",
+      "text": "Der Topf ist schon voll. Tippe auf Kochen!"
+    },
+    "pot_iron": {
+      "file": "/audio/voice/katja/pot_iron.m4a",
+      "text": "Eisentopf. Jedes Feld braucht drei Zutaten im Spiel."
+    },
+    "pot_bronze": {
+      "file": "/audio/voice/katja/pot_bronze.m4a",
+      "text": "Bronzetopf. Jedes Feld braucht zehn Zutaten im Spiel."
+    },
+    "pot_silver": {
+      "file": "/audio/voice/katja/pot_silver.m4a",
+      "text": "Silbertopf. Jedes Feld braucht fünfzehn Zutaten im Spiel."
+    },
+    "pot_gold": {
+      "file": "/audio/voice/katja/pot_gold.m4a",
+      "text": "Goldtopf. Jedes Feld braucht zwanzig Zutaten im Spiel."
+    },
+    "cook_start": {
+      "file": "/audio/voice/katja/cook_start.m4a",
+      "text": "Der Topf brodelt! Gleich siehst du, wer angelockt wird!"
+    },
+    "cook_deduct": {
+      "file": "/audio/voice/katja/cook_deduct.m4a",
+      "text": "Zutaten wurden von deinem Vorrat abgezogen."
+    },
+    "cook_undo": {
+      "file": "/audio/voice/katja/cook_undo.m4a",
+      "text": "Zutaten wieder zurückgelegt."
+    },
+    "intro_cooking": {
+      "file": "/audio/voice/katja/intro_cooking.m4a",
+      "text": "Willkommen in deiner Kochschule, Levi! Zähle fünf Zutaten in den Topf. Die Topffarbe bestimmt, wie viele Zutaten du brauchst!"
+    },
+    "intro_pokedex": {
+      "file": "/audio/voice/katja/intro_pokedex.m4a",
+      "text": "Hier ist dein Kanto-Lexikon! Alle 151 Pokémon mit Entwicklungsstufen und ihren Lieblingsgerichten."
+    },
+    "intro_album": {
+      "file": "/audio/voice/katja/intro_album.m4a",
+      "text": "Dein Basislager! Schau dir deine gesammelten Sticker an und stelle dein 3er-Expeditionsteam zusammen."
+    },
+    "intro_worlds": {
+      "file": "/audio/voice/katja/intro_worlds.m4a",
+      "text": "Der Insel-Atlas! Zwölf Welten warten auf dich. Achte immer auf den passenden Typen-Bonus!"
+    },
+    "intro_training": {
+      "file": "/audio/voice/katja/intro_training.m4a",
+      "text": "Levis Trainingslager! Hier lernst du die besten P-Steine, Teilungssteine und Attacken für dein Team."
+    },
+    "intro_escape": {
+      "file": "/audio/voice/katja/intro_escape.m4a",
+      "text": "Levis Reaktions-Schule! Trainiere dein Timing für den rettenden Fluchtknopf gegen mächtige Bosse."
+    },
+    "boss_alert_6": {
+      "file": "/audio/voice/katja/boss_alert_6.m4a",
+      "text": "Achtung! Glurak lädt Flammenwurf auf! Fluchtknopf bereitmachen!"
+    },
+    "boss_alert_130": {
+      "file": "/audio/voice/katja/boss_alert_130.m4a",
+      "text": "Achtung! Garados lädt Hyperstrahl auf! Sofort ausweichen!"
+    },
+    "boss_alert_94": {
+      "file": "/audio/voice/katja/boss_alert_94.m4a",
+      "text": "Achtung! Gengar bereitet den Spukball vor! Bereitmachen!"
+    },
+    "boss_alert_95": {
+      "file": "/audio/voice/katja/boss_alert_95.m4a",
+      "text": "Achtung! Onix setzt Felswurf ein! Gleich fliehen!"
+    },
+    "boss_alert_150": {
+      "file": "/audio/voice/katja/boss_alert_150.m4a",
+      "text": "Achtung! Mewtu lädt Psychostoß auf! Höchste Alarmstufe!"
+    },
+    "dodge_now": {
+      "file": "/audio/voice/katja/dodge_now.m4a",
+      "text": "JETZT FLIEHEN!"
+    },
+    "dodge_success": {
+      "file": "/audio/voice/katja/dodge_success.m4a",
+      "text": "Klasse gemacht, Levi! Dein Team ist dem Angriff ausgewichen!"
+    },
+    "dodge_fail": {
+      "file": "/audio/voice/katja/dodge_fail.m4a",
+      "text": "Oh nein, zu spät! Versuch es gleich noch einmal!"
+    },
+    "dodge_early": {
+      "file": "/audio/voice/katja/dodge_early.m4a",
+      "text": "Zu früh ausgewichen! Warte auf das rote Signal!"
+    },
+    "team_empty": {
+      "file": "/audio/voice/katja/team_empty.m4a",
+      "text": "Dein Team ist noch leer. Wähle drei Freunde für dein Abenteuer aus!"
+    },
+    "team_saved": {
+      "file": "/audio/voice/katja/team_saved.m4a",
+      "text": "Super Levi! Dein Team ist startklar für die nächste Expedition!"
+    },
+    "team_doctor_tip": {
+      "file": "/audio/voice/katja/team_doctor_tip.m4a",
+      "text": "Tipp vom Team-Doktor: Ein Pokémon mit Protzer und drei Teilungs-Steinen stärkt dein ganzes Team!"
+    },
+    "sticker_added": {
+      "file": "/audio/voice/katja/sticker_added.m4a",
+      "text": "Klasse Levi! Ein neuer Sticker für dein Album!"
+    },
+    "sticker_removed": {
+      "file": "/audio/voice/katja/sticker_removed.m4a",
+      "text": "Sticker wieder aus dem Album entfernt."
+    }
+  }
+}
