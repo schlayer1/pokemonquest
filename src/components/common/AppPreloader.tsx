@@ -60,7 +60,7 @@ export const AppPreloader: React.FC<AppPreloaderProps> = ({ onStart, isManualChe
   const percent = progress?.percent || 0;
   const isDone = progress?.isCompleted || false;
   const audioCount = progress?.report.audioReady || 0;
-  const audioTotal = progress?.report.audioTotal || 78;
+  const audioTotal = progress?.report.audioTotal || 810;
   const imagesCount = progress?.report.imagesReady || 0;
   const imagesTotal = progress?.report.imagesTotal || 364;
 

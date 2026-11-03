@@ -124,6 +124,10 @@
       "file": "/audio/voice/killian/team_saved.m4a",
       "text": "Super Levi! Dein Team ist startklar für die nächste Expedition!"
     },
+    "team_ready": {
+      "file": "/audio/voice/killian/team_ready.m4a",
+      "text": "Super Levi! Dein 3er-Expeditionsteam ist startklar für das nächste Abenteuer!"
+    },
     "team_doctor_tip": {
       "file": "/audio/voice/killian/team_doctor_tip.m4a",
       "text": "Tipp vom Team-Doktor: Ein Pokémon mit Protzer und drei Teilungs-Steinen stärkt dein ganzes Team!"
@@ -155,6 +159,1466 @@
     "move_training_tip": {
       "file": "/audio/voice/killian/move_training_tip.m4a",
       "text": "Wähle gleiche Pokémon oder denselben Typ, um die Erfolgschance beim Attacken-Training zu steigern!"
+    },
+    "poke_desc_1": {
+      "file": "/audio/voice/killian/poke_desc_1.m4a",
+      "text": "Bisasam, Nummer 1. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_1": {
+      "file": "/audio/voice/killian/poke_recipe_1.m4a",
+      "text": "Rezept für Bisasam in den Kochtopf geladen!"
+    },
+    "poke_desc_2": {
+      "file": "/audio/voice/killian/poke_desc_2.m4a",
+      "text": "Bisaknosp, Nummer 2. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_2": {
+      "file": "/audio/voice/killian/poke_recipe_2.m4a",
+      "text": "Rezept für Bisaknosp in den Kochtopf geladen!"
+    },
+    "poke_desc_3": {
+      "file": "/audio/voice/killian/poke_desc_3.m4a",
+      "text": "Bisaflor, Nummer 3. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_3": {
+      "file": "/audio/voice/killian/poke_recipe_3.m4a",
+      "text": "Rezept für Bisaflor in den Kochtopf geladen!"
+    },
+    "poke_desc_4": {
+      "file": "/audio/voice/killian/poke_desc_4.m4a",
+      "text": "Glumanda, Nummer 4. Typ: Feuer. Beste Attacke: Feuerwirbel."
+    },
+    "poke_recipe_4": {
+      "file": "/audio/voice/killian/poke_recipe_4.m4a",
+      "text": "Rezept für Glumanda in den Kochtopf geladen!"
+    },
+    "poke_desc_5": {
+      "file": "/audio/voice/killian/poke_desc_5.m4a",
+      "text": "Glutexo, Nummer 5. Typ: Feuer. Beste Attacke: Feuerwirbel."
+    },
+    "poke_recipe_5": {
+      "file": "/audio/voice/killian/poke_recipe_5.m4a",
+      "text": "Rezept für Glutexo in den Kochtopf geladen!"
+    },
+    "poke_desc_6": {
+      "file": "/audio/voice/killian/poke_desc_6.m4a",
+      "text": "Glurak, Nummer 6. Typ: Feuer und Flug. Beste Attacke: Feuersturm."
+    },
+    "poke_recipe_6": {
+      "file": "/audio/voice/killian/poke_recipe_6.m4a",
+      "text": "Rezept für Glurak in den Kochtopf geladen!"
+    },
+    "poke_desc_7": {
+      "file": "/audio/voice/killian/poke_desc_7.m4a",
+      "text": "Schiggy, Nummer 7. Typ: Wasser."
+    },
+    "poke_recipe_7": {
+      "file": "/audio/voice/killian/poke_recipe_7.m4a",
+      "text": "Rezept für Schiggy in den Kochtopf geladen!"
+    },
+    "poke_desc_8": {
+      "file": "/audio/voice/killian/poke_desc_8.m4a",
+      "text": "Schillok, Nummer 8. Typ: Wasser."
+    },
+    "poke_recipe_8": {
+      "file": "/audio/voice/killian/poke_recipe_8.m4a",
+      "text": "Rezept für Schillok in den Kochtopf geladen!"
+    },
+    "poke_desc_9": {
+      "file": "/audio/voice/killian/poke_desc_9.m4a",
+      "text": "Turtok, Nummer 9. Typ: Wasser. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_9": {
+      "file": "/audio/voice/killian/poke_recipe_9.m4a",
+      "text": "Rezept für Turtok in den Kochtopf geladen!"
+    },
+    "poke_desc_10": {
+      "file": "/audio/voice/killian/poke_desc_10.m4a",
+      "text": "Raupy, Nummer 10. Typ: Käfer."
+    },
+    "poke_recipe_10": {
+      "file": "/audio/voice/killian/poke_recipe_10.m4a",
+      "text": "Rezept für Raupy in den Kochtopf geladen!"
+    },
+    "poke_desc_11": {
+      "file": "/audio/voice/killian/poke_desc_11.m4a",
+      "text": "Safcon, Nummer 11. Typ: Käfer."
+    },
+    "poke_recipe_11": {
+      "file": "/audio/voice/killian/poke_recipe_11.m4a",
+      "text": "Rezept für Safcon in den Kochtopf geladen!"
+    },
+    "poke_desc_12": {
+      "file": "/audio/voice/killian/poke_desc_12.m4a",
+      "text": "Smettbo, Nummer 12. Typ: Käfer und Flug."
+    },
+    "poke_recipe_12": {
+      "file": "/audio/voice/killian/poke_recipe_12.m4a",
+      "text": "Rezept für Smettbo in den Kochtopf geladen!"
+    },
+    "poke_desc_13": {
+      "file": "/audio/voice/killian/poke_desc_13.m4a",
+      "text": "Hornliu, Nummer 13. Typ: Käfer und Gift."
+    },
+    "poke_recipe_13": {
+      "file": "/audio/voice/killian/poke_recipe_13.m4a",
+      "text": "Rezept für Hornliu in den Kochtopf geladen!"
+    },
+    "poke_desc_14": {
+      "file": "/audio/voice/killian/poke_desc_14.m4a",
+      "text": "Kokuna, Nummer 14. Typ: Käfer und Gift."
+    },
+    "poke_recipe_14": {
+      "file": "/audio/voice/killian/poke_recipe_14.m4a",
+      "text": "Rezept für Kokuna in den Kochtopf geladen!"
+    },
+    "poke_desc_15": {
+      "file": "/audio/voice/killian/poke_desc_15.m4a",
+      "text": "Bibor, Nummer 15. Typ: Käfer und Gift."
+    },
+    "poke_recipe_15": {
+      "file": "/audio/voice/killian/poke_recipe_15.m4a",
+      "text": "Rezept für Bibor in den Kochtopf geladen!"
+    },
+    "poke_desc_16": {
+      "file": "/audio/voice/killian/poke_desc_16.m4a",
+      "text": "Taubsi, Nummer 16. Typ: Normal und Flug."
+    },
+    "poke_recipe_16": {
+      "file": "/audio/voice/killian/poke_recipe_16.m4a",
+      "text": "Rezept für Taubsi in den Kochtopf geladen!"
+    },
+    "poke_desc_17": {
+      "file": "/audio/voice/killian/poke_desc_17.m4a",
+      "text": "Tauboga, Nummer 17. Typ: Normal und Flug."
+    },
+    "poke_recipe_17": {
+      "file": "/audio/voice/killian/poke_recipe_17.m4a",
+      "text": "Rezept für Tauboga in den Kochtopf geladen!"
+    },
+    "poke_desc_18": {
+      "file": "/audio/voice/killian/poke_desc_18.m4a",
+      "text": "Tauboss, Nummer 18. Typ: Normal und Flug."
+    },
+    "poke_recipe_18": {
+      "file": "/audio/voice/killian/poke_recipe_18.m4a",
+      "text": "Rezept für Tauboss in den Kochtopf geladen!"
+    },
+    "poke_desc_19": {
+      "file": "/audio/voice/killian/poke_desc_19.m4a",
+      "text": "Rattfratz, Nummer 19. Typ: Normal."
+    },
+    "poke_recipe_19": {
+      "file": "/audio/voice/killian/poke_recipe_19.m4a",
+      "text": "Rezept für Rattfratz in den Kochtopf geladen!"
+    },
+    "poke_desc_20": {
+      "file": "/audio/voice/killian/poke_desc_20.m4a",
+      "text": "Rattikarl, Nummer 20. Typ: Normal."
+    },
+    "poke_recipe_20": {
+      "file": "/audio/voice/killian/poke_recipe_20.m4a",
+      "text": "Rezept für Rattikarl in den Kochtopf geladen!"
+    },
+    "poke_desc_21": {
+      "file": "/audio/voice/killian/poke_desc_21.m4a",
+      "text": "Habitak, Nummer 21. Typ: Normal und Flug."
+    },
+    "poke_recipe_21": {
+      "file": "/audio/voice/killian/poke_recipe_21.m4a",
+      "text": "Rezept für Habitak in den Kochtopf geladen!"
+    },
+    "poke_desc_22": {
+      "file": "/audio/voice/killian/poke_desc_22.m4a",
+      "text": "Ibitak, Nummer 22. Typ: Normal und Flug."
+    },
+    "poke_recipe_22": {
+      "file": "/audio/voice/killian/poke_recipe_22.m4a",
+      "text": "Rezept für Ibitak in den Kochtopf geladen!"
+    },
+    "poke_desc_23": {
+      "file": "/audio/voice/killian/poke_desc_23.m4a",
+      "text": "Rettan, Nummer 23. Typ: Gift."
+    },
+    "poke_recipe_23": {
+      "file": "/audio/voice/killian/poke_recipe_23.m4a",
+      "text": "Rezept für Rettan in den Kochtopf geladen!"
+    },
+    "poke_desc_24": {
+      "file": "/audio/voice/killian/poke_desc_24.m4a",
+      "text": "Arbok, Nummer 24. Typ: Gift."
+    },
+    "poke_recipe_24": {
+      "file": "/audio/voice/killian/poke_recipe_24.m4a",
+      "text": "Rezept für Arbok in den Kochtopf geladen!"
+    },
+    "poke_desc_25": {
+      "file": "/audio/voice/killian/poke_desc_25.m4a",
+      "text": "Pikachu, Nummer 25. Typ: Elektro. Beste Attacke: Donnerblitz."
+    },
+    "poke_recipe_25": {
+      "file": "/audio/voice/killian/poke_recipe_25.m4a",
+      "text": "Rezept für Pikachu in den Kochtopf geladen!"
+    },
+    "poke_desc_26": {
+      "file": "/audio/voice/killian/poke_desc_26.m4a",
+      "text": "Raichu, Nummer 26. Typ: Elektro. Beste Attacke: Donnerblitz."
+    },
+    "poke_recipe_26": {
+      "file": "/audio/voice/killian/poke_recipe_26.m4a",
+      "text": "Rezept für Raichu in den Kochtopf geladen!"
+    },
+    "poke_desc_27": {
+      "file": "/audio/voice/killian/poke_desc_27.m4a",
+      "text": "Sandan, Nummer 27. Typ: Boden."
+    },
+    "poke_recipe_27": {
+      "file": "/audio/voice/killian/poke_recipe_27.m4a",
+      "text": "Rezept für Sandan in den Kochtopf geladen!"
+    },
+    "poke_desc_28": {
+      "file": "/audio/voice/killian/poke_desc_28.m4a",
+      "text": "Sandamer, Nummer 28. Typ: Boden."
+    },
+    "poke_recipe_28": {
+      "file": "/audio/voice/killian/poke_recipe_28.m4a",
+      "text": "Rezept für Sandamer in den Kochtopf geladen!"
+    },
+    "poke_desc_29": {
+      "file": "/audio/voice/killian/poke_desc_29.m4a",
+      "text": "Nidoran♀, Nummer 29. Typ: Gift."
+    },
+    "poke_recipe_29": {
+      "file": "/audio/voice/killian/poke_recipe_29.m4a",
+      "text": "Rezept für Nidoran♀ in den Kochtopf geladen!"
+    },
+    "poke_desc_30": {
+      "file": "/audio/voice/killian/poke_desc_30.m4a",
+      "text": "Nidorina, Nummer 30. Typ: Gift."
+    },
+    "poke_recipe_30": {
+      "file": "/audio/voice/killian/poke_recipe_30.m4a",
+      "text": "Rezept für Nidorina in den Kochtopf geladen!"
+    },
+    "poke_desc_31": {
+      "file": "/audio/voice/killian/poke_desc_31.m4a",
+      "text": "Nidoqueen, Nummer 31. Typ: Gift und Boden."
+    },
+    "poke_recipe_31": {
+      "file": "/audio/voice/killian/poke_recipe_31.m4a",
+      "text": "Rezept für Nidoqueen in den Kochtopf geladen!"
+    },
+    "poke_desc_32": {
+      "file": "/audio/voice/killian/poke_desc_32.m4a",
+      "text": "Nidoran♂, Nummer 32. Typ: Gift."
+    },
+    "poke_recipe_32": {
+      "file": "/audio/voice/killian/poke_recipe_32.m4a",
+      "text": "Rezept für Nidoran♂ in den Kochtopf geladen!"
+    },
+    "poke_desc_33": {
+      "file": "/audio/voice/killian/poke_desc_33.m4a",
+      "text": "Nidorino, Nummer 33. Typ: Gift."
+    },
+    "poke_recipe_33": {
+      "file": "/audio/voice/killian/poke_recipe_33.m4a",
+      "text": "Rezept für Nidorino in den Kochtopf geladen!"
+    },
+    "poke_desc_34": {
+      "file": "/audio/voice/killian/poke_desc_34.m4a",
+      "text": "Nidoking, Nummer 34. Typ: Gift und Boden."
+    },
+    "poke_recipe_34": {
+      "file": "/audio/voice/killian/poke_recipe_34.m4a",
+      "text": "Rezept für Nidoking in den Kochtopf geladen!"
+    },
+    "poke_desc_35": {
+      "file": "/audio/voice/killian/poke_desc_35.m4a",
+      "text": "Piepi, Nummer 35. Typ: Fee."
+    },
+    "poke_recipe_35": {
+      "file": "/audio/voice/killian/poke_recipe_35.m4a",
+      "text": "Rezept für Piepi in den Kochtopf geladen!"
+    },
+    "poke_desc_36": {
+      "file": "/audio/voice/killian/poke_desc_36.m4a",
+      "text": "Pixi, Nummer 36. Typ: Fee."
+    },
+    "poke_recipe_36": {
+      "file": "/audio/voice/killian/poke_recipe_36.m4a",
+      "text": "Rezept für Pixi in den Kochtopf geladen!"
+    },
+    "poke_desc_37": {
+      "file": "/audio/voice/killian/poke_desc_37.m4a",
+      "text": "Vulpix, Nummer 37. Typ: Feuer."
+    },
+    "poke_recipe_37": {
+      "file": "/audio/voice/killian/poke_recipe_37.m4a",
+      "text": "Rezept für Vulpix in den Kochtopf geladen!"
+    },
+    "poke_desc_38": {
+      "file": "/audio/voice/killian/poke_desc_38.m4a",
+      "text": "Vulnona, Nummer 38. Typ: Feuer."
+    },
+    "poke_recipe_38": {
+      "file": "/audio/voice/killian/poke_recipe_38.m4a",
+      "text": "Rezept für Vulnona in den Kochtopf geladen!"
+    },
+    "poke_desc_39": {
+      "file": "/audio/voice/killian/poke_desc_39.m4a",
+      "text": "Pummeluff, Nummer 39. Typ: Normal und Fee."
+    },
+    "poke_recipe_39": {
+      "file": "/audio/voice/killian/poke_recipe_39.m4a",
+      "text": "Rezept für Pummeluff in den Kochtopf geladen!"
+    },
+    "poke_desc_40": {
+      "file": "/audio/voice/killian/poke_desc_40.m4a",
+      "text": "Knuddeluff, Nummer 40. Typ: Normal und Fee."
+    },
+    "poke_recipe_40": {
+      "file": "/audio/voice/killian/poke_recipe_40.m4a",
+      "text": "Rezept für Knuddeluff in den Kochtopf geladen!"
+    },
+    "poke_desc_41": {
+      "file": "/audio/voice/killian/poke_desc_41.m4a",
+      "text": "Zubat, Nummer 41. Typ: Gift und Flug."
+    },
+    "poke_recipe_41": {
+      "file": "/audio/voice/killian/poke_recipe_41.m4a",
+      "text": "Rezept für Zubat in den Kochtopf geladen!"
+    },
+    "poke_desc_42": {
+      "file": "/audio/voice/killian/poke_desc_42.m4a",
+      "text": "Golbat, Nummer 42. Typ: Gift und Flug."
+    },
+    "poke_recipe_42": {
+      "file": "/audio/voice/killian/poke_recipe_42.m4a",
+      "text": "Rezept für Golbat in den Kochtopf geladen!"
+    },
+    "poke_desc_43": {
+      "file": "/audio/voice/killian/poke_desc_43.m4a",
+      "text": "Myrapla, Nummer 43. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_43": {
+      "file": "/audio/voice/killian/poke_recipe_43.m4a",
+      "text": "Rezept für Myrapla in den Kochtopf geladen!"
+    },
+    "poke_desc_44": {
+      "file": "/audio/voice/killian/poke_desc_44.m4a",
+      "text": "Duflor, Nummer 44. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_44": {
+      "file": "/audio/voice/killian/poke_recipe_44.m4a",
+      "text": "Rezept für Duflor in den Kochtopf geladen!"
+    },
+    "poke_desc_45": {
+      "file": "/audio/voice/killian/poke_desc_45.m4a",
+      "text": "Giflor, Nummer 45. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_45": {
+      "file": "/audio/voice/killian/poke_recipe_45.m4a",
+      "text": "Rezept für Giflor in den Kochtopf geladen!"
+    },
+    "poke_desc_46": {
+      "file": "/audio/voice/killian/poke_desc_46.m4a",
+      "text": "Paras, Nummer 46. Typ: Käfer und Pflanze."
+    },
+    "poke_recipe_46": {
+      "file": "/audio/voice/killian/poke_recipe_46.m4a",
+      "text": "Rezept für Paras in den Kochtopf geladen!"
+    },
+    "poke_desc_47": {
+      "file": "/audio/voice/killian/poke_desc_47.m4a",
+      "text": "Parasek, Nummer 47. Typ: Käfer und Pflanze."
+    },
+    "poke_recipe_47": {
+      "file": "/audio/voice/killian/poke_recipe_47.m4a",
+      "text": "Rezept für Parasek in den Kochtopf geladen!"
+    },
+    "poke_desc_48": {
+      "file": "/audio/voice/killian/poke_desc_48.m4a",
+      "text": "Bluzuk, Nummer 48. Typ: Käfer und Gift."
+    },
+    "poke_recipe_48": {
+      "file": "/audio/voice/killian/poke_recipe_48.m4a",
+      "text": "Rezept für Bluzuk in den Kochtopf geladen!"
+    },
+    "poke_desc_49": {
+      "file": "/audio/voice/killian/poke_desc_49.m4a",
+      "text": "Omot, Nummer 49. Typ: Käfer und Gift."
+    },
+    "poke_recipe_49": {
+      "file": "/audio/voice/killian/poke_recipe_49.m4a",
+      "text": "Rezept für Omot in den Kochtopf geladen!"
+    },
+    "poke_desc_50": {
+      "file": "/audio/voice/killian/poke_desc_50.m4a",
+      "text": "Digda, Nummer 50. Typ: Boden."
+    },
+    "poke_recipe_50": {
+      "file": "/audio/voice/killian/poke_recipe_50.m4a",
+      "text": "Rezept für Digda in den Kochtopf geladen!"
+    },
+    "poke_desc_51": {
+      "file": "/audio/voice/killian/poke_desc_51.m4a",
+      "text": "Digdri, Nummer 51. Typ: Boden."
+    },
+    "poke_recipe_51": {
+      "file": "/audio/voice/killian/poke_recipe_51.m4a",
+      "text": "Rezept für Digdri in den Kochtopf geladen!"
+    },
+    "poke_desc_52": {
+      "file": "/audio/voice/killian/poke_desc_52.m4a",
+      "text": "Mauzi, Nummer 52. Typ: Normal."
+    },
+    "poke_recipe_52": {
+      "file": "/audio/voice/killian/poke_recipe_52.m4a",
+      "text": "Rezept für Mauzi in den Kochtopf geladen!"
+    },
+    "poke_desc_53": {
+      "file": "/audio/voice/killian/poke_desc_53.m4a",
+      "text": "Snobilikat, Nummer 53. Typ: Normal."
+    },
+    "poke_recipe_53": {
+      "file": "/audio/voice/killian/poke_recipe_53.m4a",
+      "text": "Rezept für Snobilikat in den Kochtopf geladen!"
+    },
+    "poke_desc_54": {
+      "file": "/audio/voice/killian/poke_desc_54.m4a",
+      "text": "Enton, Nummer 54. Typ: Wasser."
+    },
+    "poke_recipe_54": {
+      "file": "/audio/voice/killian/poke_recipe_54.m4a",
+      "text": "Rezept für Enton in den Kochtopf geladen!"
+    },
+    "poke_desc_55": {
+      "file": "/audio/voice/killian/poke_desc_55.m4a",
+      "text": "Entoron, Nummer 55. Typ: Wasser."
+    },
+    "poke_recipe_55": {
+      "file": "/audio/voice/killian/poke_recipe_55.m4a",
+      "text": "Rezept für Entoron in den Kochtopf geladen!"
+    },
+    "poke_desc_56": {
+      "file": "/audio/voice/killian/poke_desc_56.m4a",
+      "text": "Menki, Nummer 56. Typ: Kampf."
+    },
+    "poke_recipe_56": {
+      "file": "/audio/voice/killian/poke_recipe_56.m4a",
+      "text": "Rezept für Menki in den Kochtopf geladen!"
+    },
+    "poke_desc_57": {
+      "file": "/audio/voice/killian/poke_desc_57.m4a",
+      "text": "Rasaff, Nummer 57. Typ: Kampf."
+    },
+    "poke_recipe_57": {
+      "file": "/audio/voice/killian/poke_recipe_57.m4a",
+      "text": "Rezept für Rasaff in den Kochtopf geladen!"
+    },
+    "poke_desc_58": {
+      "file": "/audio/voice/killian/poke_desc_58.m4a",
+      "text": "Fukano, Nummer 58. Typ: Feuer."
+    },
+    "poke_recipe_58": {
+      "file": "/audio/voice/killian/poke_recipe_58.m4a",
+      "text": "Rezept für Fukano in den Kochtopf geladen!"
+    },
+    "poke_desc_59": {
+      "file": "/audio/voice/killian/poke_desc_59.m4a",
+      "text": "Arkani, Nummer 59. Typ: Feuer."
+    },
+    "poke_recipe_59": {
+      "file": "/audio/voice/killian/poke_recipe_59.m4a",
+      "text": "Rezept für Arkani in den Kochtopf geladen!"
+    },
+    "poke_desc_60": {
+      "file": "/audio/voice/killian/poke_desc_60.m4a",
+      "text": "Quapsel, Nummer 60. Typ: Wasser."
+    },
+    "poke_recipe_60": {
+      "file": "/audio/voice/killian/poke_recipe_60.m4a",
+      "text": "Rezept für Quapsel in den Kochtopf geladen!"
+    },
+    "poke_desc_61": {
+      "file": "/audio/voice/killian/poke_desc_61.m4a",
+      "text": "Quaputzi, Nummer 61. Typ: Wasser."
+    },
+    "poke_recipe_61": {
+      "file": "/audio/voice/killian/poke_recipe_61.m4a",
+      "text": "Rezept für Quaputzi in den Kochtopf geladen!"
+    },
+    "poke_desc_62": {
+      "file": "/audio/voice/killian/poke_desc_62.m4a",
+      "text": "Quappo, Nummer 62. Typ: Wasser und Kampf."
+    },
+    "poke_recipe_62": {
+      "file": "/audio/voice/killian/poke_recipe_62.m4a",
+      "text": "Rezept für Quappo in den Kochtopf geladen!"
+    },
+    "poke_desc_63": {
+      "file": "/audio/voice/killian/poke_desc_63.m4a",
+      "text": "Abra, Nummer 63. Typ: Psycho."
+    },
+    "poke_recipe_63": {
+      "file": "/audio/voice/killian/poke_recipe_63.m4a",
+      "text": "Rezept für Abra in den Kochtopf geladen!"
+    },
+    "poke_desc_64": {
+      "file": "/audio/voice/killian/poke_desc_64.m4a",
+      "text": "Kadabra, Nummer 64. Typ: Psycho."
+    },
+    "poke_recipe_64": {
+      "file": "/audio/voice/killian/poke_recipe_64.m4a",
+      "text": "Rezept für Kadabra in den Kochtopf geladen!"
+    },
+    "poke_desc_65": {
+      "file": "/audio/voice/killian/poke_desc_65.m4a",
+      "text": "Simsala, Nummer 65. Typ: Psycho."
+    },
+    "poke_recipe_65": {
+      "file": "/audio/voice/killian/poke_recipe_65.m4a",
+      "text": "Rezept für Simsala in den Kochtopf geladen!"
+    },
+    "poke_desc_66": {
+      "file": "/audio/voice/killian/poke_desc_66.m4a",
+      "text": "Machollo, Nummer 66. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_66": {
+      "file": "/audio/voice/killian/poke_recipe_66.m4a",
+      "text": "Rezept für Machollo in den Kochtopf geladen!"
+    },
+    "poke_desc_67": {
+      "file": "/audio/voice/killian/poke_desc_67.m4a",
+      "text": "Maschock, Nummer 67. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_67": {
+      "file": "/audio/voice/killian/poke_recipe_67.m4a",
+      "text": "Rezept für Maschock in den Kochtopf geladen!"
+    },
+    "poke_desc_68": {
+      "file": "/audio/voice/killian/poke_desc_68.m4a",
+      "text": "Machomei, Nummer 68. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_68": {
+      "file": "/audio/voice/killian/poke_recipe_68.m4a",
+      "text": "Rezept für Machomei in den Kochtopf geladen!"
+    },
+    "poke_desc_69": {
+      "file": "/audio/voice/killian/poke_desc_69.m4a",
+      "text": "Knofensa, Nummer 69. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_69": {
+      "file": "/audio/voice/killian/poke_recipe_69.m4a",
+      "text": "Rezept für Knofensa in den Kochtopf geladen!"
+    },
+    "poke_desc_70": {
+      "file": "/audio/voice/killian/poke_desc_70.m4a",
+      "text": "Ultrigaria, Nummer 70. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_70": {
+      "file": "/audio/voice/killian/poke_recipe_70.m4a",
+      "text": "Rezept für Ultrigaria in den Kochtopf geladen!"
+    },
+    "poke_desc_71": {
+      "file": "/audio/voice/killian/poke_desc_71.m4a",
+      "text": "Sarzenia, Nummer 71. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_71": {
+      "file": "/audio/voice/killian/poke_recipe_71.m4a",
+      "text": "Rezept für Sarzenia in den Kochtopf geladen!"
+    },
+    "poke_desc_72": {
+      "file": "/audio/voice/killian/poke_desc_72.m4a",
+      "text": "Tentacha, Nummer 72. Typ: Wasser und Gift."
+    },
+    "poke_recipe_72": {
+      "file": "/audio/voice/killian/poke_recipe_72.m4a",
+      "text": "Rezept für Tentacha in den Kochtopf geladen!"
+    },
+    "poke_desc_73": {
+      "file": "/audio/voice/killian/poke_desc_73.m4a",
+      "text": "Tentoxa, Nummer 73. Typ: Wasser und Gift."
+    },
+    "poke_recipe_73": {
+      "file": "/audio/voice/killian/poke_recipe_73.m4a",
+      "text": "Rezept für Tentoxa in den Kochtopf geladen!"
+    },
+    "poke_desc_74": {
+      "file": "/audio/voice/killian/poke_desc_74.m4a",
+      "text": "Kleinstein, Nummer 74. Typ: Gestein und Boden."
+    },
+    "poke_recipe_74": {
+      "file": "/audio/voice/killian/poke_recipe_74.m4a",
+      "text": "Rezept für Kleinstein in den Kochtopf geladen!"
+    },
+    "poke_desc_75": {
+      "file": "/audio/voice/killian/poke_desc_75.m4a",
+      "text": "Georok, Nummer 75. Typ: Gestein und Boden."
+    },
+    "poke_recipe_75": {
+      "file": "/audio/voice/killian/poke_recipe_75.m4a",
+      "text": "Rezept für Georok in den Kochtopf geladen!"
+    },
+    "poke_desc_76": {
+      "file": "/audio/voice/killian/poke_desc_76.m4a",
+      "text": "Geowaz, Nummer 76. Typ: Gestein und Boden."
+    },
+    "poke_recipe_76": {
+      "file": "/audio/voice/killian/poke_recipe_76.m4a",
+      "text": "Rezept für Geowaz in den Kochtopf geladen!"
+    },
+    "poke_desc_77": {
+      "file": "/audio/voice/killian/poke_desc_77.m4a",
+      "text": "Ponita, Nummer 77. Typ: Feuer."
+    },
+    "poke_recipe_77": {
+      "file": "/audio/voice/killian/poke_recipe_77.m4a",
+      "text": "Rezept für Ponita in den Kochtopf geladen!"
+    },
+    "poke_desc_78": {
+      "file": "/audio/voice/killian/poke_desc_78.m4a",
+      "text": "Gallopa, Nummer 78. Typ: Feuer."
+    },
+    "poke_recipe_78": {
+      "file": "/audio/voice/killian/poke_recipe_78.m4a",
+      "text": "Rezept für Gallopa in den Kochtopf geladen!"
+    },
+    "poke_desc_79": {
+      "file": "/audio/voice/killian/poke_desc_79.m4a",
+      "text": "Flegmon, Nummer 79. Typ: Wasser und Psycho."
+    },
+    "poke_recipe_79": {
+      "file": "/audio/voice/killian/poke_recipe_79.m4a",
+      "text": "Rezept für Flegmon in den Kochtopf geladen!"
+    },
+    "poke_desc_80": {
+      "file": "/audio/voice/killian/poke_desc_80.m4a",
+      "text": "Lahmus, Nummer 80. Typ: Wasser und Psycho."
+    },
+    "poke_recipe_80": {
+      "file": "/audio/voice/killian/poke_recipe_80.m4a",
+      "text": "Rezept für Lahmus in den Kochtopf geladen!"
+    },
+    "poke_desc_81": {
+      "file": "/audio/voice/killian/poke_desc_81.m4a",
+      "text": "Magnetilo, Nummer 81. Typ: Elektro und Stahl."
+    },
+    "poke_recipe_81": {
+      "file": "/audio/voice/killian/poke_recipe_81.m4a",
+      "text": "Rezept für Magnetilo in den Kochtopf geladen!"
+    },
+    "poke_desc_82": {
+      "file": "/audio/voice/killian/poke_desc_82.m4a",
+      "text": "Magneton, Nummer 82. Typ: Elektro und Stahl."
+    },
+    "poke_recipe_82": {
+      "file": "/audio/voice/killian/poke_recipe_82.m4a",
+      "text": "Rezept für Magneton in den Kochtopf geladen!"
+    },
+    "poke_desc_83": {
+      "file": "/audio/voice/killian/poke_desc_83.m4a",
+      "text": "Porenta, Nummer 83. Typ: Normal und Flug."
+    },
+    "poke_recipe_83": {
+      "file": "/audio/voice/killian/poke_recipe_83.m4a",
+      "text": "Rezept für Porenta in den Kochtopf geladen!"
+    },
+    "poke_desc_84": {
+      "file": "/audio/voice/killian/poke_desc_84.m4a",
+      "text": "Dodu, Nummer 84. Typ: Normal und Flug."
+    },
+    "poke_recipe_84": {
+      "file": "/audio/voice/killian/poke_recipe_84.m4a",
+      "text": "Rezept für Dodu in den Kochtopf geladen!"
+    },
+    "poke_desc_85": {
+      "file": "/audio/voice/killian/poke_desc_85.m4a",
+      "text": "Dodri, Nummer 85. Typ: Normal und Flug."
+    },
+    "poke_recipe_85": {
+      "file": "/audio/voice/killian/poke_recipe_85.m4a",
+      "text": "Rezept für Dodri in den Kochtopf geladen!"
+    },
+    "poke_desc_86": {
+      "file": "/audio/voice/killian/poke_desc_86.m4a",
+      "text": "Jurob, Nummer 86. Typ: Wasser."
+    },
+    "poke_recipe_86": {
+      "file": "/audio/voice/killian/poke_recipe_86.m4a",
+      "text": "Rezept für Jurob in den Kochtopf geladen!"
+    },
+    "poke_desc_87": {
+      "file": "/audio/voice/killian/poke_desc_87.m4a",
+      "text": "Jugong, Nummer 87. Typ: Wasser und Eis."
+    },
+    "poke_recipe_87": {
+      "file": "/audio/voice/killian/poke_recipe_87.m4a",
+      "text": "Rezept für Jugong in den Kochtopf geladen!"
+    },
+    "poke_desc_88": {
+      "file": "/audio/voice/killian/poke_desc_88.m4a",
+      "text": "Sleima, Nummer 88. Typ: Gift."
+    },
+    "poke_recipe_88": {
+      "file": "/audio/voice/killian/poke_recipe_88.m4a",
+      "text": "Rezept für Sleima in den Kochtopf geladen!"
+    },
+    "poke_desc_89": {
+      "file": "/audio/voice/killian/poke_desc_89.m4a",
+      "text": "Sleimok, Nummer 89. Typ: Gift."
+    },
+    "poke_recipe_89": {
+      "file": "/audio/voice/killian/poke_recipe_89.m4a",
+      "text": "Rezept für Sleimok in den Kochtopf geladen!"
+    },
+    "poke_desc_90": {
+      "file": "/audio/voice/killian/poke_desc_90.m4a",
+      "text": "Muschas, Nummer 90. Typ: Wasser."
+    },
+    "poke_recipe_90": {
+      "file": "/audio/voice/killian/poke_recipe_90.m4a",
+      "text": "Rezept für Muschas in den Kochtopf geladen!"
+    },
+    "poke_desc_91": {
+      "file": "/audio/voice/killian/poke_desc_91.m4a",
+      "text": "Austos, Nummer 91. Typ: Wasser und Eis."
+    },
+    "poke_recipe_91": {
+      "file": "/audio/voice/killian/poke_recipe_91.m4a",
+      "text": "Rezept für Austos in den Kochtopf geladen!"
+    },
+    "poke_desc_92": {
+      "file": "/audio/voice/killian/poke_desc_92.m4a",
+      "text": "Nebulak, Nummer 92. Typ: Geist und Gift."
+    },
+    "poke_recipe_92": {
+      "file": "/audio/voice/killian/poke_recipe_92.m4a",
+      "text": "Rezept für Nebulak in den Kochtopf geladen!"
+    },
+    "poke_desc_93": {
+      "file": "/audio/voice/killian/poke_desc_93.m4a",
+      "text": "Alpollo, Nummer 93. Typ: Geist und Gift."
+    },
+    "poke_recipe_93": {
+      "file": "/audio/voice/killian/poke_recipe_93.m4a",
+      "text": "Rezept für Alpollo in den Kochtopf geladen!"
+    },
+    "poke_desc_94": {
+      "file": "/audio/voice/killian/poke_desc_94.m4a",
+      "text": "Gengar, Nummer 94. Typ: Geist und Gift."
+    },
+    "poke_recipe_94": {
+      "file": "/audio/voice/killian/poke_recipe_94.m4a",
+      "text": "Rezept für Gengar in den Kochtopf geladen!"
+    },
+    "poke_desc_95": {
+      "file": "/audio/voice/killian/poke_desc_95.m4a",
+      "text": "Onix, Nummer 95. Typ: Gestein und Boden. Beste Attacke: Steinwurf."
+    },
+    "poke_recipe_95": {
+      "file": "/audio/voice/killian/poke_recipe_95.m4a",
+      "text": "Rezept für Onix in den Kochtopf geladen!"
+    },
+    "poke_desc_96": {
+      "file": "/audio/voice/killian/poke_desc_96.m4a",
+      "text": "Traumato, Nummer 96. Typ: Psycho."
+    },
+    "poke_recipe_96": {
+      "file": "/audio/voice/killian/poke_recipe_96.m4a",
+      "text": "Rezept für Traumato in den Kochtopf geladen!"
+    },
+    "poke_desc_97": {
+      "file": "/audio/voice/killian/poke_desc_97.m4a",
+      "text": "Hypno, Nummer 97. Typ: Psycho."
+    },
+    "poke_recipe_97": {
+      "file": "/audio/voice/killian/poke_recipe_97.m4a",
+      "text": "Rezept für Hypno in den Kochtopf geladen!"
+    },
+    "poke_desc_98": {
+      "file": "/audio/voice/killian/poke_desc_98.m4a",
+      "text": "Krabby, Nummer 98. Typ: Wasser."
+    },
+    "poke_recipe_98": {
+      "file": "/audio/voice/killian/poke_recipe_98.m4a",
+      "text": "Rezept für Krabby in den Kochtopf geladen!"
+    },
+    "poke_desc_99": {
+      "file": "/audio/voice/killian/poke_desc_99.m4a",
+      "text": "Kingler, Nummer 99. Typ: Wasser."
+    },
+    "poke_recipe_99": {
+      "file": "/audio/voice/killian/poke_recipe_99.m4a",
+      "text": "Rezept für Kingler in den Kochtopf geladen!"
+    },
+    "poke_desc_100": {
+      "file": "/audio/voice/killian/poke_desc_100.m4a",
+      "text": "Voltobal, Nummer 100. Typ: Elektro."
+    },
+    "poke_recipe_100": {
+      "file": "/audio/voice/killian/poke_recipe_100.m4a",
+      "text": "Rezept für Voltobal in den Kochtopf geladen!"
+    },
+    "poke_desc_101": {
+      "file": "/audio/voice/killian/poke_desc_101.m4a",
+      "text": "Lektrobal, Nummer 101. Typ: Elektro."
+    },
+    "poke_recipe_101": {
+      "file": "/audio/voice/killian/poke_recipe_101.m4a",
+      "text": "Rezept für Lektrobal in den Kochtopf geladen!"
+    },
+    "poke_desc_102": {
+      "file": "/audio/voice/killian/poke_desc_102.m4a",
+      "text": "Owei, Nummer 102. Typ: Pflanze und Psycho."
+    },
+    "poke_recipe_102": {
+      "file": "/audio/voice/killian/poke_recipe_102.m4a",
+      "text": "Rezept für Owei in den Kochtopf geladen!"
+    },
+    "poke_desc_103": {
+      "file": "/audio/voice/killian/poke_desc_103.m4a",
+      "text": "Kokowei, Nummer 103. Typ: Pflanze und Psycho."
+    },
+    "poke_recipe_103": {
+      "file": "/audio/voice/killian/poke_recipe_103.m4a",
+      "text": "Rezept für Kokowei in den Kochtopf geladen!"
+    },
+    "poke_desc_104": {
+      "file": "/audio/voice/killian/poke_desc_104.m4a",
+      "text": "Tragosso, Nummer 104. Typ: Boden."
+    },
+    "poke_recipe_104": {
+      "file": "/audio/voice/killian/poke_recipe_104.m4a",
+      "text": "Rezept für Tragosso in den Kochtopf geladen!"
+    },
+    "poke_desc_105": {
+      "file": "/audio/voice/killian/poke_desc_105.m4a",
+      "text": "Knogga, Nummer 105. Typ: Boden."
+    },
+    "poke_recipe_105": {
+      "file": "/audio/voice/killian/poke_recipe_105.m4a",
+      "text": "Rezept für Knogga in den Kochtopf geladen!"
+    },
+    "poke_desc_106": {
+      "file": "/audio/voice/killian/poke_desc_106.m4a",
+      "text": "Kicklee, Nummer 106. Typ: Kampf."
+    },
+    "poke_recipe_106": {
+      "file": "/audio/voice/killian/poke_recipe_106.m4a",
+      "text": "Rezept für Kicklee in den Kochtopf geladen!"
+    },
+    "poke_desc_107": {
+      "file": "/audio/voice/killian/poke_desc_107.m4a",
+      "text": "Nockchan, Nummer 107. Typ: Kampf."
+    },
+    "poke_recipe_107": {
+      "file": "/audio/voice/killian/poke_recipe_107.m4a",
+      "text": "Rezept für Nockchan in den Kochtopf geladen!"
+    },
+    "poke_desc_108": {
+      "file": "/audio/voice/killian/poke_desc_108.m4a",
+      "text": "Schlurp, Nummer 108. Typ: Normal."
+    },
+    "poke_recipe_108": {
+      "file": "/audio/voice/killian/poke_recipe_108.m4a",
+      "text": "Rezept für Schlurp in den Kochtopf geladen!"
+    },
+    "poke_desc_109": {
+      "file": "/audio/voice/killian/poke_desc_109.m4a",
+      "text": "Smogon, Nummer 109. Typ: Gift."
+    },
+    "poke_recipe_109": {
+      "file": "/audio/voice/killian/poke_recipe_109.m4a",
+      "text": "Rezept für Smogon in den Kochtopf geladen!"
+    },
+    "poke_desc_110": {
+      "file": "/audio/voice/killian/poke_desc_110.m4a",
+      "text": "Smogmog, Nummer 110. Typ: Gift."
+    },
+    "poke_recipe_110": {
+      "file": "/audio/voice/killian/poke_recipe_110.m4a",
+      "text": "Rezept für Smogmog in den Kochtopf geladen!"
+    },
+    "poke_desc_111": {
+      "file": "/audio/voice/killian/poke_desc_111.m4a",
+      "text": "Rihorn, Nummer 111. Typ: Boden und Gestein."
+    },
+    "poke_recipe_111": {
+      "file": "/audio/voice/killian/poke_recipe_111.m4a",
+      "text": "Rezept für Rihorn in den Kochtopf geladen!"
+    },
+    "poke_desc_112": {
+      "file": "/audio/voice/killian/poke_desc_112.m4a",
+      "text": "Rizeros, Nummer 112. Typ: Boden und Gestein."
+    },
+    "poke_recipe_112": {
+      "file": "/audio/voice/killian/poke_recipe_112.m4a",
+      "text": "Rezept für Rizeros in den Kochtopf geladen!"
+    },
+    "poke_desc_113": {
+      "file": "/audio/voice/killian/poke_desc_113.m4a",
+      "text": "Chaneira, Nummer 113. Typ: Normal."
+    },
+    "poke_recipe_113": {
+      "file": "/audio/voice/killian/poke_recipe_113.m4a",
+      "text": "Rezept für Chaneira in den Kochtopf geladen!"
+    },
+    "poke_desc_114": {
+      "file": "/audio/voice/killian/poke_desc_114.m4a",
+      "text": "Tangela, Nummer 114. Typ: Pflanze."
+    },
+    "poke_recipe_114": {
+      "file": "/audio/voice/killian/poke_recipe_114.m4a",
+      "text": "Rezept für Tangela in den Kochtopf geladen!"
+    },
+    "poke_desc_115": {
+      "file": "/audio/voice/killian/poke_desc_115.m4a",
+      "text": "Kangama, Nummer 115. Typ: Normal."
+    },
+    "poke_recipe_115": {
+      "file": "/audio/voice/killian/poke_recipe_115.m4a",
+      "text": "Rezept für Kangama in den Kochtopf geladen!"
+    },
+    "poke_desc_116": {
+      "file": "/audio/voice/killian/poke_desc_116.m4a",
+      "text": "Seeper, Nummer 116. Typ: Wasser."
+    },
+    "poke_recipe_116": {
+      "file": "/audio/voice/killian/poke_recipe_116.m4a",
+      "text": "Rezept für Seeper in den Kochtopf geladen!"
+    },
+    "poke_desc_117": {
+      "file": "/audio/voice/killian/poke_desc_117.m4a",
+      "text": "Seemon, Nummer 117. Typ: Wasser."
+    },
+    "poke_recipe_117": {
+      "file": "/audio/voice/killian/poke_recipe_117.m4a",
+      "text": "Rezept für Seemon in den Kochtopf geladen!"
+    },
+    "poke_desc_118": {
+      "file": "/audio/voice/killian/poke_desc_118.m4a",
+      "text": "Goldini, Nummer 118. Typ: Wasser."
+    },
+    "poke_recipe_118": {
+      "file": "/audio/voice/killian/poke_recipe_118.m4a",
+      "text": "Rezept für Goldini in den Kochtopf geladen!"
+    },
+    "poke_desc_119": {
+      "file": "/audio/voice/killian/poke_desc_119.m4a",
+      "text": "Golking, Nummer 119. Typ: Wasser."
+    },
+    "poke_recipe_119": {
+      "file": "/audio/voice/killian/poke_recipe_119.m4a",
+      "text": "Rezept für Golking in den Kochtopf geladen!"
+    },
+    "poke_desc_120": {
+      "file": "/audio/voice/killian/poke_desc_120.m4a",
+      "text": "Sterndu, Nummer 120. Typ: Wasser. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_120": {
+      "file": "/audio/voice/killian/poke_recipe_120.m4a",
+      "text": "Rezept für Sterndu in den Kochtopf geladen!"
+    },
+    "poke_desc_121": {
+      "file": "/audio/voice/killian/poke_desc_121.m4a",
+      "text": "Starmie, Nummer 121. Typ: Wasser und Psycho. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_121": {
+      "file": "/audio/voice/killian/poke_recipe_121.m4a",
+      "text": "Rezept für Starmie in den Kochtopf geladen!"
+    },
+    "poke_desc_122": {
+      "file": "/audio/voice/killian/poke_desc_122.m4a",
+      "text": "Pantimos, Nummer 122. Typ: Psycho und Fee."
+    },
+    "poke_recipe_122": {
+      "file": "/audio/voice/killian/poke_recipe_122.m4a",
+      "text": "Rezept für Pantimos in den Kochtopf geladen!"
+    },
+    "poke_desc_123": {
+      "file": "/audio/voice/killian/poke_desc_123.m4a",
+      "text": "Sichlor, Nummer 123. Typ: Käfer und Flug."
+    },
+    "poke_recipe_123": {
+      "file": "/audio/voice/killian/poke_recipe_123.m4a",
+      "text": "Rezept für Sichlor in den Kochtopf geladen!"
+    },
+    "poke_desc_124": {
+      "file": "/audio/voice/killian/poke_desc_124.m4a",
+      "text": "Rossana, Nummer 124. Typ: Eis und Psycho."
+    },
+    "poke_recipe_124": {
+      "file": "/audio/voice/killian/poke_recipe_124.m4a",
+      "text": "Rezept für Rossana in den Kochtopf geladen!"
+    },
+    "poke_desc_125": {
+      "file": "/audio/voice/killian/poke_desc_125.m4a",
+      "text": "Elektek, Nummer 125. Typ: Elektro."
+    },
+    "poke_recipe_125": {
+      "file": "/audio/voice/killian/poke_recipe_125.m4a",
+      "text": "Rezept für Elektek in den Kochtopf geladen!"
+    },
+    "poke_desc_126": {
+      "file": "/audio/voice/killian/poke_desc_126.m4a",
+      "text": "Magmar, Nummer 126. Typ: Feuer."
+    },
+    "poke_recipe_126": {
+      "file": "/audio/voice/killian/poke_recipe_126.m4a",
+      "text": "Rezept für Magmar in den Kochtopf geladen!"
+    },
+    "poke_desc_127": {
+      "file": "/audio/voice/killian/poke_desc_127.m4a",
+      "text": "Pinsir, Nummer 127. Typ: Käfer."
+    },
+    "poke_recipe_127": {
+      "file": "/audio/voice/killian/poke_recipe_127.m4a",
+      "text": "Rezept für Pinsir in den Kochtopf geladen!"
+    },
+    "poke_desc_128": {
+      "file": "/audio/voice/killian/poke_desc_128.m4a",
+      "text": "Tauros, Nummer 128. Typ: Normal."
+    },
+    "poke_recipe_128": {
+      "file": "/audio/voice/killian/poke_recipe_128.m4a",
+      "text": "Rezept für Tauros in den Kochtopf geladen!"
+    },
+    "poke_desc_129": {
+      "file": "/audio/voice/killian/poke_desc_129.m4a",
+      "text": "Karpador, Nummer 129. Typ: Wasser."
+    },
+    "poke_recipe_129": {
+      "file": "/audio/voice/killian/poke_recipe_129.m4a",
+      "text": "Rezept für Karpador in den Kochtopf geladen!"
+    },
+    "poke_desc_130": {
+      "file": "/audio/voice/killian/poke_desc_130.m4a",
+      "text": "Garados, Nummer 130. Typ: Wasser und Flug."
+    },
+    "poke_recipe_130": {
+      "file": "/audio/voice/killian/poke_recipe_130.m4a",
+      "text": "Rezept für Garados in den Kochtopf geladen!"
+    },
+    "poke_desc_131": {
+      "file": "/audio/voice/killian/poke_desc_131.m4a",
+      "text": "Lapras, Nummer 131. Typ: Wasser und Eis."
+    },
+    "poke_recipe_131": {
+      "file": "/audio/voice/killian/poke_recipe_131.m4a",
+      "text": "Rezept für Lapras in den Kochtopf geladen!"
+    },
+    "poke_desc_132": {
+      "file": "/audio/voice/killian/poke_desc_132.m4a",
+      "text": "Ditto, Nummer 132. Typ: Normal."
+    },
+    "poke_recipe_132": {
+      "file": "/audio/voice/killian/poke_recipe_132.m4a",
+      "text": "Rezept für Ditto in den Kochtopf geladen!"
+    },
+    "poke_desc_133": {
+      "file": "/audio/voice/killian/poke_desc_133.m4a",
+      "text": "Evoli, Nummer 133. Typ: Normal."
+    },
+    "poke_recipe_133": {
+      "file": "/audio/voice/killian/poke_recipe_133.m4a",
+      "text": "Rezept für Evoli in den Kochtopf geladen!"
+    },
+    "poke_desc_134": {
+      "file": "/audio/voice/killian/poke_desc_134.m4a",
+      "text": "Aquana, Nummer 134. Typ: Wasser."
+    },
+    "poke_recipe_134": {
+      "file": "/audio/voice/killian/poke_recipe_134.m4a",
+      "text": "Rezept für Aquana in den Kochtopf geladen!"
+    },
+    "poke_desc_135": {
+      "file": "/audio/voice/killian/poke_desc_135.m4a",
+      "text": "Blitza, Nummer 135. Typ: Elektro."
+    },
+    "poke_recipe_135": {
+      "file": "/audio/voice/killian/poke_recipe_135.m4a",
+      "text": "Rezept für Blitza in den Kochtopf geladen!"
+    },
+    "poke_desc_136": {
+      "file": "/audio/voice/killian/poke_desc_136.m4a",
+      "text": "Flamara, Nummer 136. Typ: Feuer."
+    },
+    "poke_recipe_136": {
+      "file": "/audio/voice/killian/poke_recipe_136.m4a",
+      "text": "Rezept für Flamara in den Kochtopf geladen!"
+    },
+    "poke_desc_137": {
+      "file": "/audio/voice/killian/poke_desc_137.m4a",
+      "text": "Porygon, Nummer 137. Typ: Normal."
+    },
+    "poke_recipe_137": {
+      "file": "/audio/voice/killian/poke_recipe_137.m4a",
+      "text": "Rezept für Porygon in den Kochtopf geladen!"
+    },
+    "poke_desc_138": {
+      "file": "/audio/voice/killian/poke_desc_138.m4a",
+      "text": "Amonitas, Nummer 138. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_138": {
+      "file": "/audio/voice/killian/poke_recipe_138.m4a",
+      "text": "Rezept für Amonitas in den Kochtopf geladen!"
+    },
+    "poke_desc_139": {
+      "file": "/audio/voice/killian/poke_desc_139.m4a",
+      "text": "Amoroso, Nummer 139. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_139": {
+      "file": "/audio/voice/killian/poke_recipe_139.m4a",
+      "text": "Rezept für Amoroso in den Kochtopf geladen!"
+    },
+    "poke_desc_140": {
+      "file": "/audio/voice/killian/poke_desc_140.m4a",
+      "text": "Kabuto, Nummer 140. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_140": {
+      "file": "/audio/voice/killian/poke_recipe_140.m4a",
+      "text": "Rezept für Kabuto in den Kochtopf geladen!"
+    },
+    "poke_desc_141": {
+      "file": "/audio/voice/killian/poke_desc_141.m4a",
+      "text": "Kabutops, Nummer 141. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_141": {
+      "file": "/audio/voice/killian/poke_recipe_141.m4a",
+      "text": "Rezept für Kabutops in den Kochtopf geladen!"
+    },
+    "poke_desc_142": {
+      "file": "/audio/voice/killian/poke_desc_142.m4a",
+      "text": "Aerodactyl, Nummer 142. Typ: Gestein und Flug."
+    },
+    "poke_recipe_142": {
+      "file": "/audio/voice/killian/poke_recipe_142.m4a",
+      "text": "Rezept für Aerodactyl in den Kochtopf geladen!"
+    },
+    "poke_desc_143": {
+      "file": "/audio/voice/killian/poke_desc_143.m4a",
+      "text": "Relaxo, Nummer 143. Typ: Normal."
+    },
+    "poke_recipe_143": {
+      "file": "/audio/voice/killian/poke_recipe_143.m4a",
+      "text": "Rezept für Relaxo in den Kochtopf geladen!"
+    },
+    "poke_desc_144": {
+      "file": "/audio/voice/killian/poke_desc_144.m4a",
+      "text": "Arktos, Nummer 144. Typ: Eis und Flug."
+    },
+    "poke_recipe_144": {
+      "file": "/audio/voice/killian/poke_recipe_144.m4a",
+      "text": "Rezept für Arktos in den Kochtopf geladen!"
+    },
+    "poke_desc_145": {
+      "file": "/audio/voice/killian/poke_desc_145.m4a",
+      "text": "Zapdos, Nummer 145. Typ: Elektro und Flug."
+    },
+    "poke_recipe_145": {
+      "file": "/audio/voice/killian/poke_recipe_145.m4a",
+      "text": "Rezept für Zapdos in den Kochtopf geladen!"
+    },
+    "poke_desc_146": {
+      "file": "/audio/voice/killian/poke_desc_146.m4a",
+      "text": "Lavados, Nummer 146. Typ: Feuer und Flug."
+    },
+    "poke_recipe_146": {
+      "file": "/audio/voice/killian/poke_recipe_146.m4a",
+      "text": "Rezept für Lavados in den Kochtopf geladen!"
+    },
+    "poke_desc_147": {
+      "file": "/audio/voice/killian/poke_desc_147.m4a",
+      "text": "Dratini, Nummer 147. Typ: Drache."
+    },
+    "poke_recipe_147": {
+      "file": "/audio/voice/killian/poke_recipe_147.m4a",
+      "text": "Rezept für Dratini in den Kochtopf geladen!"
+    },
+    "poke_desc_148": {
+      "file": "/audio/voice/killian/poke_desc_148.m4a",
+      "text": "Dragonir, Nummer 148. Typ: Drache."
+    },
+    "poke_recipe_148": {
+      "file": "/audio/voice/killian/poke_recipe_148.m4a",
+      "text": "Rezept für Dragonir in den Kochtopf geladen!"
+    },
+    "poke_desc_149": {
+      "file": "/audio/voice/killian/poke_desc_149.m4a",
+      "text": "Dragoran, Nummer 149. Typ: Drache und Flug."
+    },
+    "poke_recipe_149": {
+      "file": "/audio/voice/killian/poke_recipe_149.m4a",
+      "text": "Rezept für Dragoran in den Kochtopf geladen!"
+    },
+    "poke_desc_150": {
+      "file": "/audio/voice/killian/poke_desc_150.m4a",
+      "text": "Mewtu, Nummer 150. Typ: Psycho. Beste Attacke: Psychokinese."
+    },
+    "poke_recipe_150": {
+      "file": "/audio/voice/killian/poke_recipe_150.m4a",
+      "text": "Rezept für Mewtu in den Kochtopf geladen!"
+    },
+    "poke_desc_151": {
+      "file": "/audio/voice/killian/poke_desc_151.m4a",
+      "text": "Mew, Nummer 151. Typ: Psycho."
+    },
+    "poke_recipe_151": {
+      "file": "/audio/voice/killian/poke_recipe_151.m4a",
+      "text": "Rezept für Mew in den Kochtopf geladen!"
+    },
+    "recipe_preset_mulliganstewalacube": {
+      "file": "/audio/voice/killian/recipe_preset_mulliganstewalacube.m4a",
+      "text": "Kubo-Suppe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mulliganstewalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_mulliganstewalacube.m4a",
+      "text": "Kubo-Suppe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_redstewalacube": {
+      "file": "/audio/voice/killian/recipe_preset_redstewalacube.m4a",
+      "text": "Roter Kubo-Eintopf. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_redstewalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_redstewalacube.m4a",
+      "text": "Roter Kubo-Eintopf gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_bluesodaalacube": {
+      "file": "/audio/voice/killian/recipe_preset_bluesodaalacube.m4a",
+      "text": "Blauer Kubo-Saft. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_bluesodaalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_bluesodaalacube.m4a",
+      "text": "Blauer Kubo-Saft gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_yellowcurryalacube": {
+      "file": "/audio/voice/killian/recipe_preset_yellowcurryalacube.m4a",
+      "text": "Gelbes Kubo-Curry. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_yellowcurryalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_yellowcurryalacube.m4a",
+      "text": "Gelbes Kubo-Curry gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_grayporridgealacube": {
+      "file": "/audio/voice/killian/recipe_preset_grayporridgealacube.m4a",
+      "text": "Weißer Kubo-Auflauf. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_grayporridgealacube": {
+      "file": "/audio/voice/killian/recipe_cooked_grayporridgealacube.m4a",
+      "text": "Weißer Kubo-Auflauf gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_mouth-wateringdipalacube": {
+      "file": "/audio/voice/killian/recipe_preset_mouth-wateringdipalacube.m4a",
+      "text": "Kubo-Wasserbrei. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mouth-wateringdipalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_mouth-wateringdipalacube.m4a",
+      "text": "Kubo-Wasserbrei gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_plaincrepealacube": {
+      "file": "/audio/voice/killian/recipe_preset_plaincrepealacube.m4a",
+      "text": "Kubo-Seidencrêpe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_plaincrepealacube": {
+      "file": "/audio/voice/killian/recipe_cooked_plaincrepealacube.m4a",
+      "text": "Kubo-Seidencrêpe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_sludgesoupalacube": {
+      "file": "/audio/voice/killian/recipe_preset_sludgesoupalacube.m4a",
+      "text": "Kubo-Schleimbrühe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_sludgesoupalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_sludgesoupalacube.m4a",
+      "text": "Kubo-Schleimbrühe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_mudpiealacube": {
+      "file": "/audio/voice/killian/recipe_preset_mudpiealacube.m4a",
+      "text": "Kubo-Lehmbouillon. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mudpiealacube": {
+      "file": "/audio/voice/killian/recipe_cooked_mudpiealacube.m4a",
+      "text": "Kubo-Lehmbouillon gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_veggiesmoothiealacube": {
+      "file": "/audio/voice/killian/recipe_preset_veggiesmoothiealacube.m4a",
+      "text": "Kubo-Vitalsmoothie. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_veggiesmoothiealacube": {
+      "file": "/audio/voice/killian/recipe_cooked_veggiesmoothiealacube.m4a",
+      "text": "Kubo-Vitalsmoothie gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_honeynectaralacube": {
+      "file": "/audio/voice/killian/recipe_preset_honeynectaralacube.m4a",
+      "text": "Kubo-Honigfondue. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_honeynectaralacube": {
+      "file": "/audio/voice/killian/recipe_cooked_honeynectaralacube.m4a",
+      "text": "Kubo-Honigfondue gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_brainfoodalacube": {
+      "file": "/audio/voice/killian/recipe_preset_brainfoodalacube.m4a",
+      "text": "Kubo-Mentalgeschnetzeltes. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_brainfoodalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_brainfoodalacube.m4a",
+      "text": "Kubo-Mentalgeschnetzeltes gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_stonesoupalacube": {
+      "file": "/audio/voice/killian/recipe_preset_stonesoupalacube.m4a",
+      "text": "Kubo-Felsengulasch. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_stonesoupalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_stonesoupalacube.m4a",
+      "text": "Kubo-Felsengulasch gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_light-as-aircasserolealacube": {
+      "file": "/audio/voice/killian/recipe_preset_light-as-aircasserolealacube.m4a",
+      "text": "Kubo-Windgratin. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_light-as-aircasserolealacube": {
+      "file": "/audio/voice/killian/recipe_cooked_light-as-aircasserolealacube.m4a",
+      "text": "Kubo-Windgratin gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_hotpotalacube": {
+      "file": "/audio/voice/killian/recipe_preset_hotpotalacube.m4a",
+      "text": "Kubo-Feuerbouillabaisse. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_hotpotalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_hotpotalacube.m4a",
+      "text": "Kubo-Feuerbouillabaisse gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_wattarisottoalacube": {
+      "file": "/audio/voice/killian/recipe_preset_wattarisottoalacube.m4a",
+      "text": "Kubo-Britzelrisotto. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_wattarisottoalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_wattarisottoalacube.m4a",
+      "text": "Kubo-Britzelrisotto gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_getswolesyrupalacube": {
+      "file": "/audio/voice/killian/recipe_preset_getswolesyrupalacube.m4a",
+      "text": "Kubo-Muskelmilchkaffee. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_getswolesyrupalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_getswolesyrupalacube.m4a",
+      "text": "Kubo-Muskelmilchkaffee gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_ambrosiaoflegendsalacube": {
+      "file": "/audio/voice/killian/recipe_preset_ambrosiaoflegendsalacube.m4a",
+      "text": "Kubo-Legendensuppe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_ambrosiaoflegendsalacube": {
+      "file": "/audio/voice/killian/recipe_cooked_ambrosiaoflegendsalacube.m4a",
+      "text": "Kubo-Legendensuppe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "world_desc_1": {
+      "file": "/audio/voice/killian/world_desc_1.m4a",
+      "text": "Welt 1. Die erste Wiese. Hier hilft besonders der Typ Kampf. Am Ende wartet Boss Rattikarl!"
+    },
+    "world_desc_2": {
+      "file": "/audio/voice/killian/world_desc_2.m4a",
+      "text": "Welt 2. Der dunkle Hain. Hier hilft besonders der Typ Feuer. Am Ende wartet Boss Smettbo und Bibor!"
+    },
+    "world_desc_3": {
+      "file": "/audio/voice/killian/world_desc_3.m4a",
+      "text": "Welt 3. Der Fluss. Hier hilft besonders der Typ Pflanze. Am Ende wartet Boss Quappo!"
+    },
+    "world_desc_4": {
+      "file": "/audio/voice/killian/world_desc_4.m4a",
+      "text": "Welt 4. Der trockene Gipfel. Hier hilft besonders der Typ Flug. Am Ende wartet Boss Machomei!"
+    },
+    "world_desc_5": {
+      "file": "/audio/voice/killian/world_desc_5.m4a",
+      "text": "Welt 5. Die Höhle. Hier hilft besonders der Typ Wasser. Am Ende wartet Boss Geowaz!"
+    },
+    "world_desc_6": {
+      "file": "/audio/voice/killian/world_desc_6.m4a",
+      "text": "Welt 6. Die Stachelebene. Hier hilft besonders der Typ Käfer. Am Ende wartet Boss Simsala und Relaxo!"
+    },
+    "world_desc_7": {
+      "file": "/audio/voice/killian/world_desc_7.m4a",
+      "text": "Welt 7. Das Sumpfgebiet. Hier hilft besonders der Typ Gestein. Am Ende wartet Boss Sichlor und Pinsir!"
+    },
+    "world_desc_8": {
+      "file": "/audio/voice/killian/world_desc_8.m4a",
+      "text": "Welt 8. Das stille Hochland. Hier hilft besonders der Typ Boden. Am Ende wartet Boss Nidoking und Nidoqueen!"
+    },
+    "world_desc_9": {
+      "file": "/audio/voice/killian/world_desc_9.m4a",
+      "text": "Welt 9. Das Nachtgebiet. Hier hilft besonders der Typ Psycho. Am Ende wartet Boss Gengar!"
+    },
+    "world_desc_10": {
+      "file": "/audio/voice/killian/world_desc_10.m4a",
+      "text": "Welt 10. Der ferne Fjord. Hier hilft besonders der Typ Elektro. Am Ende wartet Boss Garados und Dragoran!"
+    },
+    "world_desc_11": {
+      "file": "/audio/voice/killian/world_desc_11.m4a",
+      "text": "Welt 11. Die Legendenkammer. Hier hilft jedes deiner stärksten Pokémon. Am Ende wartet Boss Mewtu!"
+    },
+    "world_desc_12": {
+      "file": "/audio/voice/killian/world_desc_12.m4a",
+      "text": "Welt 12. Die Zufallsinsel. Hier hilft jedes deiner stärksten Pokémon. Am Ende wartet Boss Mew!"
+    },
+    "knowledge_0": {
+      "file": "/audio/voice/killian/knowledge_0.m4a",
+      "text": "Kraftsteine: Angriff & Leben. Rote Angriffssteine stärken den Angriff. Blaue KP-Steine geben deinem Pokémon mehr Leben. Fülle die freien Plätze und halte eine gute Balance!"
+    },
+    "knowledge_1": {
+      "file": "/audio/voice/killian/knowledge_1.m4a",
+      "text": "Teilungs-Stein (Sharing Stone). An Buff-Attacken wie Protzer teilt er 25% des Effekts mit deinen beiden Freunden. Mit 3 Steinen teilen sich alle 75% mehr Kraft und Schutz!"
+    },
+    "knowledge_2": {
+      "file": "/audio/voice/killian/knowledge_2.m4a",
+      "text": "Trefferheilung (Hit Healing). Der wertvollste P-Stein-Zusatz! Bei jedem ausgeteilten Treffer heilt sich dein Pokémon selbst. Ab Welt 10 sind 5–10% Trefferheilung Pflicht!"
+    },
+    "knowledge_3": {
+      "file": "/audio/voice/killian/knowledge_3.m4a",
+      "text": "Breiten- und Streusteine. Breiten-Steine machen z.B. Hydropumpe und Rankenhieb riesig, damit du ganze Gegnergruppen auf einmal triffst."
+    },
+    "knowledge_4": {
+      "file": "/audio/voice/killian/knowledge_4.m4a",
+      "text": "Wartezeit-Stein. Verkürzt die Abklingzeit deiner mächtigsten Attacken, damit dein Pokémon fast ohne Pause angreifen kann."
+    },
+    "knowledge_5": {
+      "file": "/audio/voice/killian/knowledge_5.m4a",
+      "text": "Bingo-Boni. Eine volle 3er-Reihe im Kraft-Amulett aktiviert einen mächtigen Bingo-Bonus (z.B. -20% Wartezeit oder +500 Angriff!)."
+    },
+    "knowledge_6": {
+      "file": "/audio/voice/killian/knowledge_6.m4a",
+      "text": "Hydropumpe. Die stärkste Spezial-Attacke im ganzen Spiel! Starmie, Entoron oder Golking können sie lernen. Trifft Gegner mit mehreren Wassersäulen."
+    },
+    "knowledge_7": {
+      "file": "/audio/voice/killian/knowledge_7.m4a",
+      "text": "Rankenhieb. Extrem starker Pflanzen-Nahkampf. Bisaflor und Sarzenia schlagen damit blitzschnell zu."
+    },
+    "knowledge_8": {
+      "file": "/audio/voice/killian/knowledge_8.m4a",
+      "text": "Protzer (Bulk Up). Stärkt Angriff und Abwehr. Ein Maschok oder Machomei mit 3 Teilungssteinen macht dein ganzes Team unverwundbar."
+    },
+    "knowledge_9": {
+      "file": "/audio/voice/killian/knowledge_9.m4a",
+      "text": "Steinwurf & Felswurf. Großartiger Gesteins-Angriff für Onix oder Georok. Bringt viel Wucht und wirft Gegner zurück."
+    },
+    "knowledge_10": {
+      "file": "/audio/voice/killian/knowledge_10.m4a",
+      "text": "Eine oder zwei Attacken?. Pokémon mit nur EINER Attacke haben 3 Plätze für Move-Steine! Oft ist 1 verstärkte Attacke viel stärker als 2 schwächere."
+    },
+    "knowledge_11": {
+      "file": "/audio/voice/killian/knowledge_11.m4a",
+      "text": "Der Topf entscheidet über Basis-Werte. Pokémon aus dem Silber- oder Goldtopf starten mit viel höheren Basiswerten und besseren P-Stein-Plätzen als aus dem Eisentopf!"
+    },
+    "knowledge_12": {
+      "file": "/audio/voice/killian/knowledge_12.m4a",
+      "text": "Das Geheimnis von Evoli. Auf Level 36 entscheidet die Anzahl deiner angelegten Steine: Mehr rote Angriffssteine = Flamara, mehr blaue KP-Steine = Aquana, gleich viele = Blitza!"
+    },
+    "knowledge_13": {
+      "file": "/audio/voice/killian/knowledge_13.m4a",
+      "text": "Der Lebensrettende Flucht-Knopf. Wenn der Boss rot aufleuchtet, drücke unten rechts auf den gelben Fluchtknopf! Dein Team rennt auseinander und weicht dem K.O.-Treffer aus."
+    },
+    "knowledge_14": {
+      "file": "/audio/voice/killian/knowledge_14.m4a",
+      "text": "Deko im Pokémon-Markt. Kaufe im Markt zuerst Dekorationen, die dir dauerhaft mehr Zutaten (z.B. Glurak-Fackel oder Turtok-Brunnen) einbringen!"
     }
   },
   "katja": {
@@ -282,6 +1746,10 @@
       "file": "/audio/voice/katja/team_saved.m4a",
       "text": "Super Levi! Dein Team ist startklar für die nächste Expedition!"
     },
+    "team_ready": {
+      "file": "/audio/voice/katja/team_ready.m4a",
+      "text": "Super Levi! Dein 3er-Expeditionsteam ist startklar für das nächste Abenteuer!"
+    },
     "team_doctor_tip": {
       "file": "/audio/voice/katja/team_doctor_tip.m4a",
       "text": "Tipp vom Team-Doktor: Ein Pokémon mit Protzer und drei Teilungs-Steinen stärkt dein ganzes Team!"
@@ -313,6 +1781,1466 @@
     "move_training_tip": {
       "file": "/audio/voice/katja/move_training_tip.m4a",
       "text": "Wähle gleiche Pokémon oder denselben Typ, um die Erfolgschance beim Attacken-Training zu steigern!"
+    },
+    "poke_desc_1": {
+      "file": "/audio/voice/katja/poke_desc_1.m4a",
+      "text": "Bisasam, Nummer 1. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_1": {
+      "file": "/audio/voice/katja/poke_recipe_1.m4a",
+      "text": "Rezept für Bisasam in den Kochtopf geladen!"
+    },
+    "poke_desc_2": {
+      "file": "/audio/voice/katja/poke_desc_2.m4a",
+      "text": "Bisaknosp, Nummer 2. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_2": {
+      "file": "/audio/voice/katja/poke_recipe_2.m4a",
+      "text": "Rezept für Bisaknosp in den Kochtopf geladen!"
+    },
+    "poke_desc_3": {
+      "file": "/audio/voice/katja/poke_desc_3.m4a",
+      "text": "Bisaflor, Nummer 3. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_3": {
+      "file": "/audio/voice/katja/poke_recipe_3.m4a",
+      "text": "Rezept für Bisaflor in den Kochtopf geladen!"
+    },
+    "poke_desc_4": {
+      "file": "/audio/voice/katja/poke_desc_4.m4a",
+      "text": "Glumanda, Nummer 4. Typ: Feuer. Beste Attacke: Feuerwirbel."
+    },
+    "poke_recipe_4": {
+      "file": "/audio/voice/katja/poke_recipe_4.m4a",
+      "text": "Rezept für Glumanda in den Kochtopf geladen!"
+    },
+    "poke_desc_5": {
+      "file": "/audio/voice/katja/poke_desc_5.m4a",
+      "text": "Glutexo, Nummer 5. Typ: Feuer. Beste Attacke: Feuerwirbel."
+    },
+    "poke_recipe_5": {
+      "file": "/audio/voice/katja/poke_recipe_5.m4a",
+      "text": "Rezept für Glutexo in den Kochtopf geladen!"
+    },
+    "poke_desc_6": {
+      "file": "/audio/voice/katja/poke_desc_6.m4a",
+      "text": "Glurak, Nummer 6. Typ: Feuer und Flug. Beste Attacke: Feuersturm."
+    },
+    "poke_recipe_6": {
+      "file": "/audio/voice/katja/poke_recipe_6.m4a",
+      "text": "Rezept für Glurak in den Kochtopf geladen!"
+    },
+    "poke_desc_7": {
+      "file": "/audio/voice/katja/poke_desc_7.m4a",
+      "text": "Schiggy, Nummer 7. Typ: Wasser."
+    },
+    "poke_recipe_7": {
+      "file": "/audio/voice/katja/poke_recipe_7.m4a",
+      "text": "Rezept für Schiggy in den Kochtopf geladen!"
+    },
+    "poke_desc_8": {
+      "file": "/audio/voice/katja/poke_desc_8.m4a",
+      "text": "Schillok, Nummer 8. Typ: Wasser."
+    },
+    "poke_recipe_8": {
+      "file": "/audio/voice/katja/poke_recipe_8.m4a",
+      "text": "Rezept für Schillok in den Kochtopf geladen!"
+    },
+    "poke_desc_9": {
+      "file": "/audio/voice/katja/poke_desc_9.m4a",
+      "text": "Turtok, Nummer 9. Typ: Wasser. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_9": {
+      "file": "/audio/voice/katja/poke_recipe_9.m4a",
+      "text": "Rezept für Turtok in den Kochtopf geladen!"
+    },
+    "poke_desc_10": {
+      "file": "/audio/voice/katja/poke_desc_10.m4a",
+      "text": "Raupy, Nummer 10. Typ: Käfer."
+    },
+    "poke_recipe_10": {
+      "file": "/audio/voice/katja/poke_recipe_10.m4a",
+      "text": "Rezept für Raupy in den Kochtopf geladen!"
+    },
+    "poke_desc_11": {
+      "file": "/audio/voice/katja/poke_desc_11.m4a",
+      "text": "Safcon, Nummer 11. Typ: Käfer."
+    },
+    "poke_recipe_11": {
+      "file": "/audio/voice/katja/poke_recipe_11.m4a",
+      "text": "Rezept für Safcon in den Kochtopf geladen!"
+    },
+    "poke_desc_12": {
+      "file": "/audio/voice/katja/poke_desc_12.m4a",
+      "text": "Smettbo, Nummer 12. Typ: Käfer und Flug."
+    },
+    "poke_recipe_12": {
+      "file": "/audio/voice/katja/poke_recipe_12.m4a",
+      "text": "Rezept für Smettbo in den Kochtopf geladen!"
+    },
+    "poke_desc_13": {
+      "file": "/audio/voice/katja/poke_desc_13.m4a",
+      "text": "Hornliu, Nummer 13. Typ: Käfer und Gift."
+    },
+    "poke_recipe_13": {
+      "file": "/audio/voice/katja/poke_recipe_13.m4a",
+      "text": "Rezept für Hornliu in den Kochtopf geladen!"
+    },
+    "poke_desc_14": {
+      "file": "/audio/voice/katja/poke_desc_14.m4a",
+      "text": "Kokuna, Nummer 14. Typ: Käfer und Gift."
+    },
+    "poke_recipe_14": {
+      "file": "/audio/voice/katja/poke_recipe_14.m4a",
+      "text": "Rezept für Kokuna in den Kochtopf geladen!"
+    },
+    "poke_desc_15": {
+      "file": "/audio/voice/katja/poke_desc_15.m4a",
+      "text": "Bibor, Nummer 15. Typ: Käfer und Gift."
+    },
+    "poke_recipe_15": {
+      "file": "/audio/voice/katja/poke_recipe_15.m4a",
+      "text": "Rezept für Bibor in den Kochtopf geladen!"
+    },
+    "poke_desc_16": {
+      "file": "/audio/voice/katja/poke_desc_16.m4a",
+      "text": "Taubsi, Nummer 16. Typ: Normal und Flug."
+    },
+    "poke_recipe_16": {
+      "file": "/audio/voice/katja/poke_recipe_16.m4a",
+      "text": "Rezept für Taubsi in den Kochtopf geladen!"
+    },
+    "poke_desc_17": {
+      "file": "/audio/voice/katja/poke_desc_17.m4a",
+      "text": "Tauboga, Nummer 17. Typ: Normal und Flug."
+    },
+    "poke_recipe_17": {
+      "file": "/audio/voice/katja/poke_recipe_17.m4a",
+      "text": "Rezept für Tauboga in den Kochtopf geladen!"
+    },
+    "poke_desc_18": {
+      "file": "/audio/voice/katja/poke_desc_18.m4a",
+      "text": "Tauboss, Nummer 18. Typ: Normal und Flug."
+    },
+    "poke_recipe_18": {
+      "file": "/audio/voice/katja/poke_recipe_18.m4a",
+      "text": "Rezept für Tauboss in den Kochtopf geladen!"
+    },
+    "poke_desc_19": {
+      "file": "/audio/voice/katja/poke_desc_19.m4a",
+      "text": "Rattfratz, Nummer 19. Typ: Normal."
+    },
+    "poke_recipe_19": {
+      "file": "/audio/voice/katja/poke_recipe_19.m4a",
+      "text": "Rezept für Rattfratz in den Kochtopf geladen!"
+    },
+    "poke_desc_20": {
+      "file": "/audio/voice/katja/poke_desc_20.m4a",
+      "text": "Rattikarl, Nummer 20. Typ: Normal."
+    },
+    "poke_recipe_20": {
+      "file": "/audio/voice/katja/poke_recipe_20.m4a",
+      "text": "Rezept für Rattikarl in den Kochtopf geladen!"
+    },
+    "poke_desc_21": {
+      "file": "/audio/voice/katja/poke_desc_21.m4a",
+      "text": "Habitak, Nummer 21. Typ: Normal und Flug."
+    },
+    "poke_recipe_21": {
+      "file": "/audio/voice/katja/poke_recipe_21.m4a",
+      "text": "Rezept für Habitak in den Kochtopf geladen!"
+    },
+    "poke_desc_22": {
+      "file": "/audio/voice/katja/poke_desc_22.m4a",
+      "text": "Ibitak, Nummer 22. Typ: Normal und Flug."
+    },
+    "poke_recipe_22": {
+      "file": "/audio/voice/katja/poke_recipe_22.m4a",
+      "text": "Rezept für Ibitak in den Kochtopf geladen!"
+    },
+    "poke_desc_23": {
+      "file": "/audio/voice/katja/poke_desc_23.m4a",
+      "text": "Rettan, Nummer 23. Typ: Gift."
+    },
+    "poke_recipe_23": {
+      "file": "/audio/voice/katja/poke_recipe_23.m4a",
+      "text": "Rezept für Rettan in den Kochtopf geladen!"
+    },
+    "poke_desc_24": {
+      "file": "/audio/voice/katja/poke_desc_24.m4a",
+      "text": "Arbok, Nummer 24. Typ: Gift."
+    },
+    "poke_recipe_24": {
+      "file": "/audio/voice/katja/poke_recipe_24.m4a",
+      "text": "Rezept für Arbok in den Kochtopf geladen!"
+    },
+    "poke_desc_25": {
+      "file": "/audio/voice/katja/poke_desc_25.m4a",
+      "text": "Pikachu, Nummer 25. Typ: Elektro. Beste Attacke: Donnerblitz."
+    },
+    "poke_recipe_25": {
+      "file": "/audio/voice/katja/poke_recipe_25.m4a",
+      "text": "Rezept für Pikachu in den Kochtopf geladen!"
+    },
+    "poke_desc_26": {
+      "file": "/audio/voice/katja/poke_desc_26.m4a",
+      "text": "Raichu, Nummer 26. Typ: Elektro. Beste Attacke: Donnerblitz."
+    },
+    "poke_recipe_26": {
+      "file": "/audio/voice/katja/poke_recipe_26.m4a",
+      "text": "Rezept für Raichu in den Kochtopf geladen!"
+    },
+    "poke_desc_27": {
+      "file": "/audio/voice/katja/poke_desc_27.m4a",
+      "text": "Sandan, Nummer 27. Typ: Boden."
+    },
+    "poke_recipe_27": {
+      "file": "/audio/voice/katja/poke_recipe_27.m4a",
+      "text": "Rezept für Sandan in den Kochtopf geladen!"
+    },
+    "poke_desc_28": {
+      "file": "/audio/voice/katja/poke_desc_28.m4a",
+      "text": "Sandamer, Nummer 28. Typ: Boden."
+    },
+    "poke_recipe_28": {
+      "file": "/audio/voice/katja/poke_recipe_28.m4a",
+      "text": "Rezept für Sandamer in den Kochtopf geladen!"
+    },
+    "poke_desc_29": {
+      "file": "/audio/voice/katja/poke_desc_29.m4a",
+      "text": "Nidoran♀, Nummer 29. Typ: Gift."
+    },
+    "poke_recipe_29": {
+      "file": "/audio/voice/katja/poke_recipe_29.m4a",
+      "text": "Rezept für Nidoran♀ in den Kochtopf geladen!"
+    },
+    "poke_desc_30": {
+      "file": "/audio/voice/katja/poke_desc_30.m4a",
+      "text": "Nidorina, Nummer 30. Typ: Gift."
+    },
+    "poke_recipe_30": {
+      "file": "/audio/voice/katja/poke_recipe_30.m4a",
+      "text": "Rezept für Nidorina in den Kochtopf geladen!"
+    },
+    "poke_desc_31": {
+      "file": "/audio/voice/katja/poke_desc_31.m4a",
+      "text": "Nidoqueen, Nummer 31. Typ: Gift und Boden."
+    },
+    "poke_recipe_31": {
+      "file": "/audio/voice/katja/poke_recipe_31.m4a",
+      "text": "Rezept für Nidoqueen in den Kochtopf geladen!"
+    },
+    "poke_desc_32": {
+      "file": "/audio/voice/katja/poke_desc_32.m4a",
+      "text": "Nidoran♂, Nummer 32. Typ: Gift."
+    },
+    "poke_recipe_32": {
+      "file": "/audio/voice/katja/poke_recipe_32.m4a",
+      "text": "Rezept für Nidoran♂ in den Kochtopf geladen!"
+    },
+    "poke_desc_33": {
+      "file": "/audio/voice/katja/poke_desc_33.m4a",
+      "text": "Nidorino, Nummer 33. Typ: Gift."
+    },
+    "poke_recipe_33": {
+      "file": "/audio/voice/katja/poke_recipe_33.m4a",
+      "text": "Rezept für Nidorino in den Kochtopf geladen!"
+    },
+    "poke_desc_34": {
+      "file": "/audio/voice/katja/poke_desc_34.m4a",
+      "text": "Nidoking, Nummer 34. Typ: Gift und Boden."
+    },
+    "poke_recipe_34": {
+      "file": "/audio/voice/katja/poke_recipe_34.m4a",
+      "text": "Rezept für Nidoking in den Kochtopf geladen!"
+    },
+    "poke_desc_35": {
+      "file": "/audio/voice/katja/poke_desc_35.m4a",
+      "text": "Piepi, Nummer 35. Typ: Fee."
+    },
+    "poke_recipe_35": {
+      "file": "/audio/voice/katja/poke_recipe_35.m4a",
+      "text": "Rezept für Piepi in den Kochtopf geladen!"
+    },
+    "poke_desc_36": {
+      "file": "/audio/voice/katja/poke_desc_36.m4a",
+      "text": "Pixi, Nummer 36. Typ: Fee."
+    },
+    "poke_recipe_36": {
+      "file": "/audio/voice/katja/poke_recipe_36.m4a",
+      "text": "Rezept für Pixi in den Kochtopf geladen!"
+    },
+    "poke_desc_37": {
+      "file": "/audio/voice/katja/poke_desc_37.m4a",
+      "text": "Vulpix, Nummer 37. Typ: Feuer."
+    },
+    "poke_recipe_37": {
+      "file": "/audio/voice/katja/poke_recipe_37.m4a",
+      "text": "Rezept für Vulpix in den Kochtopf geladen!"
+    },
+    "poke_desc_38": {
+      "file": "/audio/voice/katja/poke_desc_38.m4a",
+      "text": "Vulnona, Nummer 38. Typ: Feuer."
+    },
+    "poke_recipe_38": {
+      "file": "/audio/voice/katja/poke_recipe_38.m4a",
+      "text": "Rezept für Vulnona in den Kochtopf geladen!"
+    },
+    "poke_desc_39": {
+      "file": "/audio/voice/katja/poke_desc_39.m4a",
+      "text": "Pummeluff, Nummer 39. Typ: Normal und Fee."
+    },
+    "poke_recipe_39": {
+      "file": "/audio/voice/katja/poke_recipe_39.m4a",
+      "text": "Rezept für Pummeluff in den Kochtopf geladen!"
+    },
+    "poke_desc_40": {
+      "file": "/audio/voice/katja/poke_desc_40.m4a",
+      "text": "Knuddeluff, Nummer 40. Typ: Normal und Fee."
+    },
+    "poke_recipe_40": {
+      "file": "/audio/voice/katja/poke_recipe_40.m4a",
+      "text": "Rezept für Knuddeluff in den Kochtopf geladen!"
+    },
+    "poke_desc_41": {
+      "file": "/audio/voice/katja/poke_desc_41.m4a",
+      "text": "Zubat, Nummer 41. Typ: Gift und Flug."
+    },
+    "poke_recipe_41": {
+      "file": "/audio/voice/katja/poke_recipe_41.m4a",
+      "text": "Rezept für Zubat in den Kochtopf geladen!"
+    },
+    "poke_desc_42": {
+      "file": "/audio/voice/katja/poke_desc_42.m4a",
+      "text": "Golbat, Nummer 42. Typ: Gift und Flug."
+    },
+    "poke_recipe_42": {
+      "file": "/audio/voice/katja/poke_recipe_42.m4a",
+      "text": "Rezept für Golbat in den Kochtopf geladen!"
+    },
+    "poke_desc_43": {
+      "file": "/audio/voice/katja/poke_desc_43.m4a",
+      "text": "Myrapla, Nummer 43. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_43": {
+      "file": "/audio/voice/katja/poke_recipe_43.m4a",
+      "text": "Rezept für Myrapla in den Kochtopf geladen!"
+    },
+    "poke_desc_44": {
+      "file": "/audio/voice/katja/poke_desc_44.m4a",
+      "text": "Duflor, Nummer 44. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_44": {
+      "file": "/audio/voice/katja/poke_recipe_44.m4a",
+      "text": "Rezept für Duflor in den Kochtopf geladen!"
+    },
+    "poke_desc_45": {
+      "file": "/audio/voice/katja/poke_desc_45.m4a",
+      "text": "Giflor, Nummer 45. Typ: Pflanze und Gift."
+    },
+    "poke_recipe_45": {
+      "file": "/audio/voice/katja/poke_recipe_45.m4a",
+      "text": "Rezept für Giflor in den Kochtopf geladen!"
+    },
+    "poke_desc_46": {
+      "file": "/audio/voice/katja/poke_desc_46.m4a",
+      "text": "Paras, Nummer 46. Typ: Käfer und Pflanze."
+    },
+    "poke_recipe_46": {
+      "file": "/audio/voice/katja/poke_recipe_46.m4a",
+      "text": "Rezept für Paras in den Kochtopf geladen!"
+    },
+    "poke_desc_47": {
+      "file": "/audio/voice/katja/poke_desc_47.m4a",
+      "text": "Parasek, Nummer 47. Typ: Käfer und Pflanze."
+    },
+    "poke_recipe_47": {
+      "file": "/audio/voice/katja/poke_recipe_47.m4a",
+      "text": "Rezept für Parasek in den Kochtopf geladen!"
+    },
+    "poke_desc_48": {
+      "file": "/audio/voice/katja/poke_desc_48.m4a",
+      "text": "Bluzuk, Nummer 48. Typ: Käfer und Gift."
+    },
+    "poke_recipe_48": {
+      "file": "/audio/voice/katja/poke_recipe_48.m4a",
+      "text": "Rezept für Bluzuk in den Kochtopf geladen!"
+    },
+    "poke_desc_49": {
+      "file": "/audio/voice/katja/poke_desc_49.m4a",
+      "text": "Omot, Nummer 49. Typ: Käfer und Gift."
+    },
+    "poke_recipe_49": {
+      "file": "/audio/voice/katja/poke_recipe_49.m4a",
+      "text": "Rezept für Omot in den Kochtopf geladen!"
+    },
+    "poke_desc_50": {
+      "file": "/audio/voice/katja/poke_desc_50.m4a",
+      "text": "Digda, Nummer 50. Typ: Boden."
+    },
+    "poke_recipe_50": {
+      "file": "/audio/voice/katja/poke_recipe_50.m4a",
+      "text": "Rezept für Digda in den Kochtopf geladen!"
+    },
+    "poke_desc_51": {
+      "file": "/audio/voice/katja/poke_desc_51.m4a",
+      "text": "Digdri, Nummer 51. Typ: Boden."
+    },
+    "poke_recipe_51": {
+      "file": "/audio/voice/katja/poke_recipe_51.m4a",
+      "text": "Rezept für Digdri in den Kochtopf geladen!"
+    },
+    "poke_desc_52": {
+      "file": "/audio/voice/katja/poke_desc_52.m4a",
+      "text": "Mauzi, Nummer 52. Typ: Normal."
+    },
+    "poke_recipe_52": {
+      "file": "/audio/voice/katja/poke_recipe_52.m4a",
+      "text": "Rezept für Mauzi in den Kochtopf geladen!"
+    },
+    "poke_desc_53": {
+      "file": "/audio/voice/katja/poke_desc_53.m4a",
+      "text": "Snobilikat, Nummer 53. Typ: Normal."
+    },
+    "poke_recipe_53": {
+      "file": "/audio/voice/katja/poke_recipe_53.m4a",
+      "text": "Rezept für Snobilikat in den Kochtopf geladen!"
+    },
+    "poke_desc_54": {
+      "file": "/audio/voice/katja/poke_desc_54.m4a",
+      "text": "Enton, Nummer 54. Typ: Wasser."
+    },
+    "poke_recipe_54": {
+      "file": "/audio/voice/katja/poke_recipe_54.m4a",
+      "text": "Rezept für Enton in den Kochtopf geladen!"
+    },
+    "poke_desc_55": {
+      "file": "/audio/voice/katja/poke_desc_55.m4a",
+      "text": "Entoron, Nummer 55. Typ: Wasser."
+    },
+    "poke_recipe_55": {
+      "file": "/audio/voice/katja/poke_recipe_55.m4a",
+      "text": "Rezept für Entoron in den Kochtopf geladen!"
+    },
+    "poke_desc_56": {
+      "file": "/audio/voice/katja/poke_desc_56.m4a",
+      "text": "Menki, Nummer 56. Typ: Kampf."
+    },
+    "poke_recipe_56": {
+      "file": "/audio/voice/katja/poke_recipe_56.m4a",
+      "text": "Rezept für Menki in den Kochtopf geladen!"
+    },
+    "poke_desc_57": {
+      "file": "/audio/voice/katja/poke_desc_57.m4a",
+      "text": "Rasaff, Nummer 57. Typ: Kampf."
+    },
+    "poke_recipe_57": {
+      "file": "/audio/voice/katja/poke_recipe_57.m4a",
+      "text": "Rezept für Rasaff in den Kochtopf geladen!"
+    },
+    "poke_desc_58": {
+      "file": "/audio/voice/katja/poke_desc_58.m4a",
+      "text": "Fukano, Nummer 58. Typ: Feuer."
+    },
+    "poke_recipe_58": {
+      "file": "/audio/voice/katja/poke_recipe_58.m4a",
+      "text": "Rezept für Fukano in den Kochtopf geladen!"
+    },
+    "poke_desc_59": {
+      "file": "/audio/voice/katja/poke_desc_59.m4a",
+      "text": "Arkani, Nummer 59. Typ: Feuer."
+    },
+    "poke_recipe_59": {
+      "file": "/audio/voice/katja/poke_recipe_59.m4a",
+      "text": "Rezept für Arkani in den Kochtopf geladen!"
+    },
+    "poke_desc_60": {
+      "file": "/audio/voice/katja/poke_desc_60.m4a",
+      "text": "Quapsel, Nummer 60. Typ: Wasser."
+    },
+    "poke_recipe_60": {
+      "file": "/audio/voice/katja/poke_recipe_60.m4a",
+      "text": "Rezept für Quapsel in den Kochtopf geladen!"
+    },
+    "poke_desc_61": {
+      "file": "/audio/voice/katja/poke_desc_61.m4a",
+      "text": "Quaputzi, Nummer 61. Typ: Wasser."
+    },
+    "poke_recipe_61": {
+      "file": "/audio/voice/katja/poke_recipe_61.m4a",
+      "text": "Rezept für Quaputzi in den Kochtopf geladen!"
+    },
+    "poke_desc_62": {
+      "file": "/audio/voice/katja/poke_desc_62.m4a",
+      "text": "Quappo, Nummer 62. Typ: Wasser und Kampf."
+    },
+    "poke_recipe_62": {
+      "file": "/audio/voice/katja/poke_recipe_62.m4a",
+      "text": "Rezept für Quappo in den Kochtopf geladen!"
+    },
+    "poke_desc_63": {
+      "file": "/audio/voice/katja/poke_desc_63.m4a",
+      "text": "Abra, Nummer 63. Typ: Psycho."
+    },
+    "poke_recipe_63": {
+      "file": "/audio/voice/katja/poke_recipe_63.m4a",
+      "text": "Rezept für Abra in den Kochtopf geladen!"
+    },
+    "poke_desc_64": {
+      "file": "/audio/voice/katja/poke_desc_64.m4a",
+      "text": "Kadabra, Nummer 64. Typ: Psycho."
+    },
+    "poke_recipe_64": {
+      "file": "/audio/voice/katja/poke_recipe_64.m4a",
+      "text": "Rezept für Kadabra in den Kochtopf geladen!"
+    },
+    "poke_desc_65": {
+      "file": "/audio/voice/katja/poke_desc_65.m4a",
+      "text": "Simsala, Nummer 65. Typ: Psycho."
+    },
+    "poke_recipe_65": {
+      "file": "/audio/voice/katja/poke_recipe_65.m4a",
+      "text": "Rezept für Simsala in den Kochtopf geladen!"
+    },
+    "poke_desc_66": {
+      "file": "/audio/voice/katja/poke_desc_66.m4a",
+      "text": "Machollo, Nummer 66. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_66": {
+      "file": "/audio/voice/katja/poke_recipe_66.m4a",
+      "text": "Rezept für Machollo in den Kochtopf geladen!"
+    },
+    "poke_desc_67": {
+      "file": "/audio/voice/katja/poke_desc_67.m4a",
+      "text": "Maschock, Nummer 67. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_67": {
+      "file": "/audio/voice/katja/poke_recipe_67.m4a",
+      "text": "Rezept für Maschock in den Kochtopf geladen!"
+    },
+    "poke_desc_68": {
+      "file": "/audio/voice/katja/poke_desc_68.m4a",
+      "text": "Machomei, Nummer 68. Typ: Kampf. Beste Attacke: Protzer."
+    },
+    "poke_recipe_68": {
+      "file": "/audio/voice/katja/poke_recipe_68.m4a",
+      "text": "Rezept für Machomei in den Kochtopf geladen!"
+    },
+    "poke_desc_69": {
+      "file": "/audio/voice/katja/poke_desc_69.m4a",
+      "text": "Knofensa, Nummer 69. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_69": {
+      "file": "/audio/voice/katja/poke_recipe_69.m4a",
+      "text": "Rezept für Knofensa in den Kochtopf geladen!"
+    },
+    "poke_desc_70": {
+      "file": "/audio/voice/katja/poke_desc_70.m4a",
+      "text": "Ultrigaria, Nummer 70. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_70": {
+      "file": "/audio/voice/katja/poke_recipe_70.m4a",
+      "text": "Rezept für Ultrigaria in den Kochtopf geladen!"
+    },
+    "poke_desc_71": {
+      "file": "/audio/voice/katja/poke_desc_71.m4a",
+      "text": "Sarzenia, Nummer 71. Typ: Pflanze und Gift. Beste Attacke: Rankenhieb."
+    },
+    "poke_recipe_71": {
+      "file": "/audio/voice/katja/poke_recipe_71.m4a",
+      "text": "Rezept für Sarzenia in den Kochtopf geladen!"
+    },
+    "poke_desc_72": {
+      "file": "/audio/voice/katja/poke_desc_72.m4a",
+      "text": "Tentacha, Nummer 72. Typ: Wasser und Gift."
+    },
+    "poke_recipe_72": {
+      "file": "/audio/voice/katja/poke_recipe_72.m4a",
+      "text": "Rezept für Tentacha in den Kochtopf geladen!"
+    },
+    "poke_desc_73": {
+      "file": "/audio/voice/katja/poke_desc_73.m4a",
+      "text": "Tentoxa, Nummer 73. Typ: Wasser und Gift."
+    },
+    "poke_recipe_73": {
+      "file": "/audio/voice/katja/poke_recipe_73.m4a",
+      "text": "Rezept für Tentoxa in den Kochtopf geladen!"
+    },
+    "poke_desc_74": {
+      "file": "/audio/voice/katja/poke_desc_74.m4a",
+      "text": "Kleinstein, Nummer 74. Typ: Gestein und Boden."
+    },
+    "poke_recipe_74": {
+      "file": "/audio/voice/katja/poke_recipe_74.m4a",
+      "text": "Rezept für Kleinstein in den Kochtopf geladen!"
+    },
+    "poke_desc_75": {
+      "file": "/audio/voice/katja/poke_desc_75.m4a",
+      "text": "Georok, Nummer 75. Typ: Gestein und Boden."
+    },
+    "poke_recipe_75": {
+      "file": "/audio/voice/katja/poke_recipe_75.m4a",
+      "text": "Rezept für Georok in den Kochtopf geladen!"
+    },
+    "poke_desc_76": {
+      "file": "/audio/voice/katja/poke_desc_76.m4a",
+      "text": "Geowaz, Nummer 76. Typ: Gestein und Boden."
+    },
+    "poke_recipe_76": {
+      "file": "/audio/voice/katja/poke_recipe_76.m4a",
+      "text": "Rezept für Geowaz in den Kochtopf geladen!"
+    },
+    "poke_desc_77": {
+      "file": "/audio/voice/katja/poke_desc_77.m4a",
+      "text": "Ponita, Nummer 77. Typ: Feuer."
+    },
+    "poke_recipe_77": {
+      "file": "/audio/voice/katja/poke_recipe_77.m4a",
+      "text": "Rezept für Ponita in den Kochtopf geladen!"
+    },
+    "poke_desc_78": {
+      "file": "/audio/voice/katja/poke_desc_78.m4a",
+      "text": "Gallopa, Nummer 78. Typ: Feuer."
+    },
+    "poke_recipe_78": {
+      "file": "/audio/voice/katja/poke_recipe_78.m4a",
+      "text": "Rezept für Gallopa in den Kochtopf geladen!"
+    },
+    "poke_desc_79": {
+      "file": "/audio/voice/katja/poke_desc_79.m4a",
+      "text": "Flegmon, Nummer 79. Typ: Wasser und Psycho."
+    },
+    "poke_recipe_79": {
+      "file": "/audio/voice/katja/poke_recipe_79.m4a",
+      "text": "Rezept für Flegmon in den Kochtopf geladen!"
+    },
+    "poke_desc_80": {
+      "file": "/audio/voice/katja/poke_desc_80.m4a",
+      "text": "Lahmus, Nummer 80. Typ: Wasser und Psycho."
+    },
+    "poke_recipe_80": {
+      "file": "/audio/voice/katja/poke_recipe_80.m4a",
+      "text": "Rezept für Lahmus in den Kochtopf geladen!"
+    },
+    "poke_desc_81": {
+      "file": "/audio/voice/katja/poke_desc_81.m4a",
+      "text": "Magnetilo, Nummer 81. Typ: Elektro und Stahl."
+    },
+    "poke_recipe_81": {
+      "file": "/audio/voice/katja/poke_recipe_81.m4a",
+      "text": "Rezept für Magnetilo in den Kochtopf geladen!"
+    },
+    "poke_desc_82": {
+      "file": "/audio/voice/katja/poke_desc_82.m4a",
+      "text": "Magneton, Nummer 82. Typ: Elektro und Stahl."
+    },
+    "poke_recipe_82": {
+      "file": "/audio/voice/katja/poke_recipe_82.m4a",
+      "text": "Rezept für Magneton in den Kochtopf geladen!"
+    },
+    "poke_desc_83": {
+      "file": "/audio/voice/katja/poke_desc_83.m4a",
+      "text": "Porenta, Nummer 83. Typ: Normal und Flug."
+    },
+    "poke_recipe_83": {
+      "file": "/audio/voice/katja/poke_recipe_83.m4a",
+      "text": "Rezept für Porenta in den Kochtopf geladen!"
+    },
+    "poke_desc_84": {
+      "file": "/audio/voice/katja/poke_desc_84.m4a",
+      "text": "Dodu, Nummer 84. Typ: Normal und Flug."
+    },
+    "poke_recipe_84": {
+      "file": "/audio/voice/katja/poke_recipe_84.m4a",
+      "text": "Rezept für Dodu in den Kochtopf geladen!"
+    },
+    "poke_desc_85": {
+      "file": "/audio/voice/katja/poke_desc_85.m4a",
+      "text": "Dodri, Nummer 85. Typ: Normal und Flug."
+    },
+    "poke_recipe_85": {
+      "file": "/audio/voice/katja/poke_recipe_85.m4a",
+      "text": "Rezept für Dodri in den Kochtopf geladen!"
+    },
+    "poke_desc_86": {
+      "file": "/audio/voice/katja/poke_desc_86.m4a",
+      "text": "Jurob, Nummer 86. Typ: Wasser."
+    },
+    "poke_recipe_86": {
+      "file": "/audio/voice/katja/poke_recipe_86.m4a",
+      "text": "Rezept für Jurob in den Kochtopf geladen!"
+    },
+    "poke_desc_87": {
+      "file": "/audio/voice/katja/poke_desc_87.m4a",
+      "text": "Jugong, Nummer 87. Typ: Wasser und Eis."
+    },
+    "poke_recipe_87": {
+      "file": "/audio/voice/katja/poke_recipe_87.m4a",
+      "text": "Rezept für Jugong in den Kochtopf geladen!"
+    },
+    "poke_desc_88": {
+      "file": "/audio/voice/katja/poke_desc_88.m4a",
+      "text": "Sleima, Nummer 88. Typ: Gift."
+    },
+    "poke_recipe_88": {
+      "file": "/audio/voice/katja/poke_recipe_88.m4a",
+      "text": "Rezept für Sleima in den Kochtopf geladen!"
+    },
+    "poke_desc_89": {
+      "file": "/audio/voice/katja/poke_desc_89.m4a",
+      "text": "Sleimok, Nummer 89. Typ: Gift."
+    },
+    "poke_recipe_89": {
+      "file": "/audio/voice/katja/poke_recipe_89.m4a",
+      "text": "Rezept für Sleimok in den Kochtopf geladen!"
+    },
+    "poke_desc_90": {
+      "file": "/audio/voice/katja/poke_desc_90.m4a",
+      "text": "Muschas, Nummer 90. Typ: Wasser."
+    },
+    "poke_recipe_90": {
+      "file": "/audio/voice/katja/poke_recipe_90.m4a",
+      "text": "Rezept für Muschas in den Kochtopf geladen!"
+    },
+    "poke_desc_91": {
+      "file": "/audio/voice/katja/poke_desc_91.m4a",
+      "text": "Austos, Nummer 91. Typ: Wasser und Eis."
+    },
+    "poke_recipe_91": {
+      "file": "/audio/voice/katja/poke_recipe_91.m4a",
+      "text": "Rezept für Austos in den Kochtopf geladen!"
+    },
+    "poke_desc_92": {
+      "file": "/audio/voice/katja/poke_desc_92.m4a",
+      "text": "Nebulak, Nummer 92. Typ: Geist und Gift."
+    },
+    "poke_recipe_92": {
+      "file": "/audio/voice/katja/poke_recipe_92.m4a",
+      "text": "Rezept für Nebulak in den Kochtopf geladen!"
+    },
+    "poke_desc_93": {
+      "file": "/audio/voice/katja/poke_desc_93.m4a",
+      "text": "Alpollo, Nummer 93. Typ: Geist und Gift."
+    },
+    "poke_recipe_93": {
+      "file": "/audio/voice/katja/poke_recipe_93.m4a",
+      "text": "Rezept für Alpollo in den Kochtopf geladen!"
+    },
+    "poke_desc_94": {
+      "file": "/audio/voice/katja/poke_desc_94.m4a",
+      "text": "Gengar, Nummer 94. Typ: Geist und Gift."
+    },
+    "poke_recipe_94": {
+      "file": "/audio/voice/katja/poke_recipe_94.m4a",
+      "text": "Rezept für Gengar in den Kochtopf geladen!"
+    },
+    "poke_desc_95": {
+      "file": "/audio/voice/katja/poke_desc_95.m4a",
+      "text": "Onix, Nummer 95. Typ: Gestein und Boden. Beste Attacke: Steinwurf."
+    },
+    "poke_recipe_95": {
+      "file": "/audio/voice/katja/poke_recipe_95.m4a",
+      "text": "Rezept für Onix in den Kochtopf geladen!"
+    },
+    "poke_desc_96": {
+      "file": "/audio/voice/katja/poke_desc_96.m4a",
+      "text": "Traumato, Nummer 96. Typ: Psycho."
+    },
+    "poke_recipe_96": {
+      "file": "/audio/voice/katja/poke_recipe_96.m4a",
+      "text": "Rezept für Traumato in den Kochtopf geladen!"
+    },
+    "poke_desc_97": {
+      "file": "/audio/voice/katja/poke_desc_97.m4a",
+      "text": "Hypno, Nummer 97. Typ: Psycho."
+    },
+    "poke_recipe_97": {
+      "file": "/audio/voice/katja/poke_recipe_97.m4a",
+      "text": "Rezept für Hypno in den Kochtopf geladen!"
+    },
+    "poke_desc_98": {
+      "file": "/audio/voice/katja/poke_desc_98.m4a",
+      "text": "Krabby, Nummer 98. Typ: Wasser."
+    },
+    "poke_recipe_98": {
+      "file": "/audio/voice/katja/poke_recipe_98.m4a",
+      "text": "Rezept für Krabby in den Kochtopf geladen!"
+    },
+    "poke_desc_99": {
+      "file": "/audio/voice/katja/poke_desc_99.m4a",
+      "text": "Kingler, Nummer 99. Typ: Wasser."
+    },
+    "poke_recipe_99": {
+      "file": "/audio/voice/katja/poke_recipe_99.m4a",
+      "text": "Rezept für Kingler in den Kochtopf geladen!"
+    },
+    "poke_desc_100": {
+      "file": "/audio/voice/katja/poke_desc_100.m4a",
+      "text": "Voltobal, Nummer 100. Typ: Elektro."
+    },
+    "poke_recipe_100": {
+      "file": "/audio/voice/katja/poke_recipe_100.m4a",
+      "text": "Rezept für Voltobal in den Kochtopf geladen!"
+    },
+    "poke_desc_101": {
+      "file": "/audio/voice/katja/poke_desc_101.m4a",
+      "text": "Lektrobal, Nummer 101. Typ: Elektro."
+    },
+    "poke_recipe_101": {
+      "file": "/audio/voice/katja/poke_recipe_101.m4a",
+      "text": "Rezept für Lektrobal in den Kochtopf geladen!"
+    },
+    "poke_desc_102": {
+      "file": "/audio/voice/katja/poke_desc_102.m4a",
+      "text": "Owei, Nummer 102. Typ: Pflanze und Psycho."
+    },
+    "poke_recipe_102": {
+      "file": "/audio/voice/katja/poke_recipe_102.m4a",
+      "text": "Rezept für Owei in den Kochtopf geladen!"
+    },
+    "poke_desc_103": {
+      "file": "/audio/voice/katja/poke_desc_103.m4a",
+      "text": "Kokowei, Nummer 103. Typ: Pflanze und Psycho."
+    },
+    "poke_recipe_103": {
+      "file": "/audio/voice/katja/poke_recipe_103.m4a",
+      "text": "Rezept für Kokowei in den Kochtopf geladen!"
+    },
+    "poke_desc_104": {
+      "file": "/audio/voice/katja/poke_desc_104.m4a",
+      "text": "Tragosso, Nummer 104. Typ: Boden."
+    },
+    "poke_recipe_104": {
+      "file": "/audio/voice/katja/poke_recipe_104.m4a",
+      "text": "Rezept für Tragosso in den Kochtopf geladen!"
+    },
+    "poke_desc_105": {
+      "file": "/audio/voice/katja/poke_desc_105.m4a",
+      "text": "Knogga, Nummer 105. Typ: Boden."
+    },
+    "poke_recipe_105": {
+      "file": "/audio/voice/katja/poke_recipe_105.m4a",
+      "text": "Rezept für Knogga in den Kochtopf geladen!"
+    },
+    "poke_desc_106": {
+      "file": "/audio/voice/katja/poke_desc_106.m4a",
+      "text": "Kicklee, Nummer 106. Typ: Kampf."
+    },
+    "poke_recipe_106": {
+      "file": "/audio/voice/katja/poke_recipe_106.m4a",
+      "text": "Rezept für Kicklee in den Kochtopf geladen!"
+    },
+    "poke_desc_107": {
+      "file": "/audio/voice/katja/poke_desc_107.m4a",
+      "text": "Nockchan, Nummer 107. Typ: Kampf."
+    },
+    "poke_recipe_107": {
+      "file": "/audio/voice/katja/poke_recipe_107.m4a",
+      "text": "Rezept für Nockchan in den Kochtopf geladen!"
+    },
+    "poke_desc_108": {
+      "file": "/audio/voice/katja/poke_desc_108.m4a",
+      "text": "Schlurp, Nummer 108. Typ: Normal."
+    },
+    "poke_recipe_108": {
+      "file": "/audio/voice/katja/poke_recipe_108.m4a",
+      "text": "Rezept für Schlurp in den Kochtopf geladen!"
+    },
+    "poke_desc_109": {
+      "file": "/audio/voice/katja/poke_desc_109.m4a",
+      "text": "Smogon, Nummer 109. Typ: Gift."
+    },
+    "poke_recipe_109": {
+      "file": "/audio/voice/katja/poke_recipe_109.m4a",
+      "text": "Rezept für Smogon in den Kochtopf geladen!"
+    },
+    "poke_desc_110": {
+      "file": "/audio/voice/katja/poke_desc_110.m4a",
+      "text": "Smogmog, Nummer 110. Typ: Gift."
+    },
+    "poke_recipe_110": {
+      "file": "/audio/voice/katja/poke_recipe_110.m4a",
+      "text": "Rezept für Smogmog in den Kochtopf geladen!"
+    },
+    "poke_desc_111": {
+      "file": "/audio/voice/katja/poke_desc_111.m4a",
+      "text": "Rihorn, Nummer 111. Typ: Boden und Gestein."
+    },
+    "poke_recipe_111": {
+      "file": "/audio/voice/katja/poke_recipe_111.m4a",
+      "text": "Rezept für Rihorn in den Kochtopf geladen!"
+    },
+    "poke_desc_112": {
+      "file": "/audio/voice/katja/poke_desc_112.m4a",
+      "text": "Rizeros, Nummer 112. Typ: Boden und Gestein."
+    },
+    "poke_recipe_112": {
+      "file": "/audio/voice/katja/poke_recipe_112.m4a",
+      "text": "Rezept für Rizeros in den Kochtopf geladen!"
+    },
+    "poke_desc_113": {
+      "file": "/audio/voice/katja/poke_desc_113.m4a",
+      "text": "Chaneira, Nummer 113. Typ: Normal."
+    },
+    "poke_recipe_113": {
+      "file": "/audio/voice/katja/poke_recipe_113.m4a",
+      "text": "Rezept für Chaneira in den Kochtopf geladen!"
+    },
+    "poke_desc_114": {
+      "file": "/audio/voice/katja/poke_desc_114.m4a",
+      "text": "Tangela, Nummer 114. Typ: Pflanze."
+    },
+    "poke_recipe_114": {
+      "file": "/audio/voice/katja/poke_recipe_114.m4a",
+      "text": "Rezept für Tangela in den Kochtopf geladen!"
+    },
+    "poke_desc_115": {
+      "file": "/audio/voice/katja/poke_desc_115.m4a",
+      "text": "Kangama, Nummer 115. Typ: Normal."
+    },
+    "poke_recipe_115": {
+      "file": "/audio/voice/katja/poke_recipe_115.m4a",
+      "text": "Rezept für Kangama in den Kochtopf geladen!"
+    },
+    "poke_desc_116": {
+      "file": "/audio/voice/katja/poke_desc_116.m4a",
+      "text": "Seeper, Nummer 116. Typ: Wasser."
+    },
+    "poke_recipe_116": {
+      "file": "/audio/voice/katja/poke_recipe_116.m4a",
+      "text": "Rezept für Seeper in den Kochtopf geladen!"
+    },
+    "poke_desc_117": {
+      "file": "/audio/voice/katja/poke_desc_117.m4a",
+      "text": "Seemon, Nummer 117. Typ: Wasser."
+    },
+    "poke_recipe_117": {
+      "file": "/audio/voice/katja/poke_recipe_117.m4a",
+      "text": "Rezept für Seemon in den Kochtopf geladen!"
+    },
+    "poke_desc_118": {
+      "file": "/audio/voice/katja/poke_desc_118.m4a",
+      "text": "Goldini, Nummer 118. Typ: Wasser."
+    },
+    "poke_recipe_118": {
+      "file": "/audio/voice/katja/poke_recipe_118.m4a",
+      "text": "Rezept für Goldini in den Kochtopf geladen!"
+    },
+    "poke_desc_119": {
+      "file": "/audio/voice/katja/poke_desc_119.m4a",
+      "text": "Golking, Nummer 119. Typ: Wasser."
+    },
+    "poke_recipe_119": {
+      "file": "/audio/voice/katja/poke_recipe_119.m4a",
+      "text": "Rezept für Golking in den Kochtopf geladen!"
+    },
+    "poke_desc_120": {
+      "file": "/audio/voice/katja/poke_desc_120.m4a",
+      "text": "Sterndu, Nummer 120. Typ: Wasser. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_120": {
+      "file": "/audio/voice/katja/poke_recipe_120.m4a",
+      "text": "Rezept für Sterndu in den Kochtopf geladen!"
+    },
+    "poke_desc_121": {
+      "file": "/audio/voice/katja/poke_desc_121.m4a",
+      "text": "Starmie, Nummer 121. Typ: Wasser und Psycho. Beste Attacke: Hydropumpe."
+    },
+    "poke_recipe_121": {
+      "file": "/audio/voice/katja/poke_recipe_121.m4a",
+      "text": "Rezept für Starmie in den Kochtopf geladen!"
+    },
+    "poke_desc_122": {
+      "file": "/audio/voice/katja/poke_desc_122.m4a",
+      "text": "Pantimos, Nummer 122. Typ: Psycho und Fee."
+    },
+    "poke_recipe_122": {
+      "file": "/audio/voice/katja/poke_recipe_122.m4a",
+      "text": "Rezept für Pantimos in den Kochtopf geladen!"
+    },
+    "poke_desc_123": {
+      "file": "/audio/voice/katja/poke_desc_123.m4a",
+      "text": "Sichlor, Nummer 123. Typ: Käfer und Flug."
+    },
+    "poke_recipe_123": {
+      "file": "/audio/voice/katja/poke_recipe_123.m4a",
+      "text": "Rezept für Sichlor in den Kochtopf geladen!"
+    },
+    "poke_desc_124": {
+      "file": "/audio/voice/katja/poke_desc_124.m4a",
+      "text": "Rossana, Nummer 124. Typ: Eis und Psycho."
+    },
+    "poke_recipe_124": {
+      "file": "/audio/voice/katja/poke_recipe_124.m4a",
+      "text": "Rezept für Rossana in den Kochtopf geladen!"
+    },
+    "poke_desc_125": {
+      "file": "/audio/voice/katja/poke_desc_125.m4a",
+      "text": "Elektek, Nummer 125. Typ: Elektro."
+    },
+    "poke_recipe_125": {
+      "file": "/audio/voice/katja/poke_recipe_125.m4a",
+      "text": "Rezept für Elektek in den Kochtopf geladen!"
+    },
+    "poke_desc_126": {
+      "file": "/audio/voice/katja/poke_desc_126.m4a",
+      "text": "Magmar, Nummer 126. Typ: Feuer."
+    },
+    "poke_recipe_126": {
+      "file": "/audio/voice/katja/poke_recipe_126.m4a",
+      "text": "Rezept für Magmar in den Kochtopf geladen!"
+    },
+    "poke_desc_127": {
+      "file": "/audio/voice/katja/poke_desc_127.m4a",
+      "text": "Pinsir, Nummer 127. Typ: Käfer."
+    },
+    "poke_recipe_127": {
+      "file": "/audio/voice/katja/poke_recipe_127.m4a",
+      "text": "Rezept für Pinsir in den Kochtopf geladen!"
+    },
+    "poke_desc_128": {
+      "file": "/audio/voice/katja/poke_desc_128.m4a",
+      "text": "Tauros, Nummer 128. Typ: Normal."
+    },
+    "poke_recipe_128": {
+      "file": "/audio/voice/katja/poke_recipe_128.m4a",
+      "text": "Rezept für Tauros in den Kochtopf geladen!"
+    },
+    "poke_desc_129": {
+      "file": "/audio/voice/katja/poke_desc_129.m4a",
+      "text": "Karpador, Nummer 129. Typ: Wasser."
+    },
+    "poke_recipe_129": {
+      "file": "/audio/voice/katja/poke_recipe_129.m4a",
+      "text": "Rezept für Karpador in den Kochtopf geladen!"
+    },
+    "poke_desc_130": {
+      "file": "/audio/voice/katja/poke_desc_130.m4a",
+      "text": "Garados, Nummer 130. Typ: Wasser und Flug."
+    },
+    "poke_recipe_130": {
+      "file": "/audio/voice/katja/poke_recipe_130.m4a",
+      "text": "Rezept für Garados in den Kochtopf geladen!"
+    },
+    "poke_desc_131": {
+      "file": "/audio/voice/katja/poke_desc_131.m4a",
+      "text": "Lapras, Nummer 131. Typ: Wasser und Eis."
+    },
+    "poke_recipe_131": {
+      "file": "/audio/voice/katja/poke_recipe_131.m4a",
+      "text": "Rezept für Lapras in den Kochtopf geladen!"
+    },
+    "poke_desc_132": {
+      "file": "/audio/voice/katja/poke_desc_132.m4a",
+      "text": "Ditto, Nummer 132. Typ: Normal."
+    },
+    "poke_recipe_132": {
+      "file": "/audio/voice/katja/poke_recipe_132.m4a",
+      "text": "Rezept für Ditto in den Kochtopf geladen!"
+    },
+    "poke_desc_133": {
+      "file": "/audio/voice/katja/poke_desc_133.m4a",
+      "text": "Evoli, Nummer 133. Typ: Normal."
+    },
+    "poke_recipe_133": {
+      "file": "/audio/voice/katja/poke_recipe_133.m4a",
+      "text": "Rezept für Evoli in den Kochtopf geladen!"
+    },
+    "poke_desc_134": {
+      "file": "/audio/voice/katja/poke_desc_134.m4a",
+      "text": "Aquana, Nummer 134. Typ: Wasser."
+    },
+    "poke_recipe_134": {
+      "file": "/audio/voice/katja/poke_recipe_134.m4a",
+      "text": "Rezept für Aquana in den Kochtopf geladen!"
+    },
+    "poke_desc_135": {
+      "file": "/audio/voice/katja/poke_desc_135.m4a",
+      "text": "Blitza, Nummer 135. Typ: Elektro."
+    },
+    "poke_recipe_135": {
+      "file": "/audio/voice/katja/poke_recipe_135.m4a",
+      "text": "Rezept für Blitza in den Kochtopf geladen!"
+    },
+    "poke_desc_136": {
+      "file": "/audio/voice/katja/poke_desc_136.m4a",
+      "text": "Flamara, Nummer 136. Typ: Feuer."
+    },
+    "poke_recipe_136": {
+      "file": "/audio/voice/katja/poke_recipe_136.m4a",
+      "text": "Rezept für Flamara in den Kochtopf geladen!"
+    },
+    "poke_desc_137": {
+      "file": "/audio/voice/katja/poke_desc_137.m4a",
+      "text": "Porygon, Nummer 137. Typ: Normal."
+    },
+    "poke_recipe_137": {
+      "file": "/audio/voice/katja/poke_recipe_137.m4a",
+      "text": "Rezept für Porygon in den Kochtopf geladen!"
+    },
+    "poke_desc_138": {
+      "file": "/audio/voice/katja/poke_desc_138.m4a",
+      "text": "Amonitas, Nummer 138. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_138": {
+      "file": "/audio/voice/katja/poke_recipe_138.m4a",
+      "text": "Rezept für Amonitas in den Kochtopf geladen!"
+    },
+    "poke_desc_139": {
+      "file": "/audio/voice/katja/poke_desc_139.m4a",
+      "text": "Amoroso, Nummer 139. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_139": {
+      "file": "/audio/voice/katja/poke_recipe_139.m4a",
+      "text": "Rezept für Amoroso in den Kochtopf geladen!"
+    },
+    "poke_desc_140": {
+      "file": "/audio/voice/katja/poke_desc_140.m4a",
+      "text": "Kabuto, Nummer 140. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_140": {
+      "file": "/audio/voice/katja/poke_recipe_140.m4a",
+      "text": "Rezept für Kabuto in den Kochtopf geladen!"
+    },
+    "poke_desc_141": {
+      "file": "/audio/voice/katja/poke_desc_141.m4a",
+      "text": "Kabutops, Nummer 141. Typ: Gestein und Wasser."
+    },
+    "poke_recipe_141": {
+      "file": "/audio/voice/katja/poke_recipe_141.m4a",
+      "text": "Rezept für Kabutops in den Kochtopf geladen!"
+    },
+    "poke_desc_142": {
+      "file": "/audio/voice/katja/poke_desc_142.m4a",
+      "text": "Aerodactyl, Nummer 142. Typ: Gestein und Flug."
+    },
+    "poke_recipe_142": {
+      "file": "/audio/voice/katja/poke_recipe_142.m4a",
+      "text": "Rezept für Aerodactyl in den Kochtopf geladen!"
+    },
+    "poke_desc_143": {
+      "file": "/audio/voice/katja/poke_desc_143.m4a",
+      "text": "Relaxo, Nummer 143. Typ: Normal."
+    },
+    "poke_recipe_143": {
+      "file": "/audio/voice/katja/poke_recipe_143.m4a",
+      "text": "Rezept für Relaxo in den Kochtopf geladen!"
+    },
+    "poke_desc_144": {
+      "file": "/audio/voice/katja/poke_desc_144.m4a",
+      "text": "Arktos, Nummer 144. Typ: Eis und Flug."
+    },
+    "poke_recipe_144": {
+      "file": "/audio/voice/katja/poke_recipe_144.m4a",
+      "text": "Rezept für Arktos in den Kochtopf geladen!"
+    },
+    "poke_desc_145": {
+      "file": "/audio/voice/katja/poke_desc_145.m4a",
+      "text": "Zapdos, Nummer 145. Typ: Elektro und Flug."
+    },
+    "poke_recipe_145": {
+      "file": "/audio/voice/katja/poke_recipe_145.m4a",
+      "text": "Rezept für Zapdos in den Kochtopf geladen!"
+    },
+    "poke_desc_146": {
+      "file": "/audio/voice/katja/poke_desc_146.m4a",
+      "text": "Lavados, Nummer 146. Typ: Feuer und Flug."
+    },
+    "poke_recipe_146": {
+      "file": "/audio/voice/katja/poke_recipe_146.m4a",
+      "text": "Rezept für Lavados in den Kochtopf geladen!"
+    },
+    "poke_desc_147": {
+      "file": "/audio/voice/katja/poke_desc_147.m4a",
+      "text": "Dratini, Nummer 147. Typ: Drache."
+    },
+    "poke_recipe_147": {
+      "file": "/audio/voice/katja/poke_recipe_147.m4a",
+      "text": "Rezept für Dratini in den Kochtopf geladen!"
+    },
+    "poke_desc_148": {
+      "file": "/audio/voice/katja/poke_desc_148.m4a",
+      "text": "Dragonir, Nummer 148. Typ: Drache."
+    },
+    "poke_recipe_148": {
+      "file": "/audio/voice/katja/poke_recipe_148.m4a",
+      "text": "Rezept für Dragonir in den Kochtopf geladen!"
+    },
+    "poke_desc_149": {
+      "file": "/audio/voice/katja/poke_desc_149.m4a",
+      "text": "Dragoran, Nummer 149. Typ: Drache und Flug."
+    },
+    "poke_recipe_149": {
+      "file": "/audio/voice/katja/poke_recipe_149.m4a",
+      "text": "Rezept für Dragoran in den Kochtopf geladen!"
+    },
+    "poke_desc_150": {
+      "file": "/audio/voice/katja/poke_desc_150.m4a",
+      "text": "Mewtu, Nummer 150. Typ: Psycho. Beste Attacke: Psychokinese."
+    },
+    "poke_recipe_150": {
+      "file": "/audio/voice/katja/poke_recipe_150.m4a",
+      "text": "Rezept für Mewtu in den Kochtopf geladen!"
+    },
+    "poke_desc_151": {
+      "file": "/audio/voice/katja/poke_desc_151.m4a",
+      "text": "Mew, Nummer 151. Typ: Psycho."
+    },
+    "poke_recipe_151": {
+      "file": "/audio/voice/katja/poke_recipe_151.m4a",
+      "text": "Rezept für Mew in den Kochtopf geladen!"
+    },
+    "recipe_preset_mulliganstewalacube": {
+      "file": "/audio/voice/katja/recipe_preset_mulliganstewalacube.m4a",
+      "text": "Kubo-Suppe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mulliganstewalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_mulliganstewalacube.m4a",
+      "text": "Kubo-Suppe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_redstewalacube": {
+      "file": "/audio/voice/katja/recipe_preset_redstewalacube.m4a",
+      "text": "Roter Kubo-Eintopf. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_redstewalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_redstewalacube.m4a",
+      "text": "Roter Kubo-Eintopf gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_bluesodaalacube": {
+      "file": "/audio/voice/katja/recipe_preset_bluesodaalacube.m4a",
+      "text": "Blauer Kubo-Saft. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_bluesodaalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_bluesodaalacube.m4a",
+      "text": "Blauer Kubo-Saft gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_yellowcurryalacube": {
+      "file": "/audio/voice/katja/recipe_preset_yellowcurryalacube.m4a",
+      "text": "Gelbes Kubo-Curry. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_yellowcurryalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_yellowcurryalacube.m4a",
+      "text": "Gelbes Kubo-Curry gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_grayporridgealacube": {
+      "file": "/audio/voice/katja/recipe_preset_grayporridgealacube.m4a",
+      "text": "Weißer Kubo-Auflauf. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_grayporridgealacube": {
+      "file": "/audio/voice/katja/recipe_cooked_grayporridgealacube.m4a",
+      "text": "Weißer Kubo-Auflauf gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_mouth-wateringdipalacube": {
+      "file": "/audio/voice/katja/recipe_preset_mouth-wateringdipalacube.m4a",
+      "text": "Kubo-Wasserbrei. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mouth-wateringdipalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_mouth-wateringdipalacube.m4a",
+      "text": "Kubo-Wasserbrei gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_plaincrepealacube": {
+      "file": "/audio/voice/katja/recipe_preset_plaincrepealacube.m4a",
+      "text": "Kubo-Seidencrêpe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_plaincrepealacube": {
+      "file": "/audio/voice/katja/recipe_cooked_plaincrepealacube.m4a",
+      "text": "Kubo-Seidencrêpe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_sludgesoupalacube": {
+      "file": "/audio/voice/katja/recipe_preset_sludgesoupalacube.m4a",
+      "text": "Kubo-Schleimbrühe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_sludgesoupalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_sludgesoupalacube.m4a",
+      "text": "Kubo-Schleimbrühe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_mudpiealacube": {
+      "file": "/audio/voice/katja/recipe_preset_mudpiealacube.m4a",
+      "text": "Kubo-Lehmbouillon. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_mudpiealacube": {
+      "file": "/audio/voice/katja/recipe_cooked_mudpiealacube.m4a",
+      "text": "Kubo-Lehmbouillon gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_veggiesmoothiealacube": {
+      "file": "/audio/voice/katja/recipe_preset_veggiesmoothiealacube.m4a",
+      "text": "Kubo-Vitalsmoothie. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_veggiesmoothiealacube": {
+      "file": "/audio/voice/katja/recipe_cooked_veggiesmoothiealacube.m4a",
+      "text": "Kubo-Vitalsmoothie gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_honeynectaralacube": {
+      "file": "/audio/voice/katja/recipe_preset_honeynectaralacube.m4a",
+      "text": "Kubo-Honigfondue. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_honeynectaralacube": {
+      "file": "/audio/voice/katja/recipe_cooked_honeynectaralacube.m4a",
+      "text": "Kubo-Honigfondue gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_brainfoodalacube": {
+      "file": "/audio/voice/katja/recipe_preset_brainfoodalacube.m4a",
+      "text": "Kubo-Mentalgeschnetzeltes. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_brainfoodalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_brainfoodalacube.m4a",
+      "text": "Kubo-Mentalgeschnetzeltes gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_stonesoupalacube": {
+      "file": "/audio/voice/katja/recipe_preset_stonesoupalacube.m4a",
+      "text": "Kubo-Felsengulasch. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_stonesoupalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_stonesoupalacube.m4a",
+      "text": "Kubo-Felsengulasch gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_light-as-aircasserolealacube": {
+      "file": "/audio/voice/katja/recipe_preset_light-as-aircasserolealacube.m4a",
+      "text": "Kubo-Windgratin. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_light-as-aircasserolealacube": {
+      "file": "/audio/voice/katja/recipe_cooked_light-as-aircasserolealacube.m4a",
+      "text": "Kubo-Windgratin gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_hotpotalacube": {
+      "file": "/audio/voice/katja/recipe_preset_hotpotalacube.m4a",
+      "text": "Kubo-Feuerbouillabaisse. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_hotpotalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_hotpotalacube.m4a",
+      "text": "Kubo-Feuerbouillabaisse gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_wattarisottoalacube": {
+      "file": "/audio/voice/katja/recipe_preset_wattarisottoalacube.m4a",
+      "text": "Kubo-Britzelrisotto. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_wattarisottoalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_wattarisottoalacube.m4a",
+      "text": "Kubo-Britzelrisotto gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_getswolesyrupalacube": {
+      "file": "/audio/voice/katja/recipe_preset_getswolesyrupalacube.m4a",
+      "text": "Kubo-Muskelmilchkaffee. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_getswolesyrupalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_getswolesyrupalacube.m4a",
+      "text": "Kubo-Muskelmilchkaffee gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "recipe_preset_ambrosiaoflegendsalacube": {
+      "file": "/audio/voice/katja/recipe_preset_ambrosiaoflegendsalacube.m4a",
+      "text": "Kubo-Legendensuppe. Fünf Zutaten liegen im Topf."
+    },
+    "recipe_cooked_ambrosiaoflegendsalacube": {
+      "file": "/audio/voice/katja/recipe_cooked_ambrosiaoflegendsalacube.m4a",
+      "text": "Kubo-Legendensuppe gekocht! Gleich siehst du, wer angelockt wird!"
+    },
+    "world_desc_1": {
+      "file": "/audio/voice/katja/world_desc_1.m4a",
+      "text": "Welt 1. Die erste Wiese. Hier hilft besonders der Typ Kampf. Am Ende wartet Boss Rattikarl!"
+    },
+    "world_desc_2": {
+      "file": "/audio/voice/katja/world_desc_2.m4a",
+      "text": "Welt 2. Der dunkle Hain. Hier hilft besonders der Typ Feuer. Am Ende wartet Boss Smettbo und Bibor!"
+    },
+    "world_desc_3": {
+      "file": "/audio/voice/katja/world_desc_3.m4a",
+      "text": "Welt 3. Der Fluss. Hier hilft besonders der Typ Pflanze. Am Ende wartet Boss Quappo!"
+    },
+    "world_desc_4": {
+      "file": "/audio/voice/katja/world_desc_4.m4a",
+      "text": "Welt 4. Der trockene Gipfel. Hier hilft besonders der Typ Flug. Am Ende wartet Boss Machomei!"
+    },
+    "world_desc_5": {
+      "file": "/audio/voice/katja/world_desc_5.m4a",
+      "text": "Welt 5. Die Höhle. Hier hilft besonders der Typ Wasser. Am Ende wartet Boss Geowaz!"
+    },
+    "world_desc_6": {
+      "file": "/audio/voice/katja/world_desc_6.m4a",
+      "text": "Welt 6. Die Stachelebene. Hier hilft besonders der Typ Käfer. Am Ende wartet Boss Simsala und Relaxo!"
+    },
+    "world_desc_7": {
+      "file": "/audio/voice/katja/world_desc_7.m4a",
+      "text": "Welt 7. Das Sumpfgebiet. Hier hilft besonders der Typ Gestein. Am Ende wartet Boss Sichlor und Pinsir!"
+    },
+    "world_desc_8": {
+      "file": "/audio/voice/katja/world_desc_8.m4a",
+      "text": "Welt 8. Das stille Hochland. Hier hilft besonders der Typ Boden. Am Ende wartet Boss Nidoking und Nidoqueen!"
+    },
+    "world_desc_9": {
+      "file": "/audio/voice/katja/world_desc_9.m4a",
+      "text": "Welt 9. Das Nachtgebiet. Hier hilft besonders der Typ Psycho. Am Ende wartet Boss Gengar!"
+    },
+    "world_desc_10": {
+      "file": "/audio/voice/katja/world_desc_10.m4a",
+      "text": "Welt 10. Der ferne Fjord. Hier hilft besonders der Typ Elektro. Am Ende wartet Boss Garados und Dragoran!"
+    },
+    "world_desc_11": {
+      "file": "/audio/voice/katja/world_desc_11.m4a",
+      "text": "Welt 11. Die Legendenkammer. Hier hilft jedes deiner stärksten Pokémon. Am Ende wartet Boss Mewtu!"
+    },
+    "world_desc_12": {
+      "file": "/audio/voice/katja/world_desc_12.m4a",
+      "text": "Welt 12. Die Zufallsinsel. Hier hilft jedes deiner stärksten Pokémon. Am Ende wartet Boss Mew!"
+    },
+    "knowledge_0": {
+      "file": "/audio/voice/katja/knowledge_0.m4a",
+      "text": "Kraftsteine: Angriff & Leben. Rote Angriffssteine stärken den Angriff. Blaue KP-Steine geben deinem Pokémon mehr Leben. Fülle die freien Plätze und halte eine gute Balance!"
+    },
+    "knowledge_1": {
+      "file": "/audio/voice/katja/knowledge_1.m4a",
+      "text": "Teilungs-Stein (Sharing Stone). An Buff-Attacken wie Protzer teilt er 25% des Effekts mit deinen beiden Freunden. Mit 3 Steinen teilen sich alle 75% mehr Kraft und Schutz!"
+    },
+    "knowledge_2": {
+      "file": "/audio/voice/katja/knowledge_2.m4a",
+      "text": "Trefferheilung (Hit Healing). Der wertvollste P-Stein-Zusatz! Bei jedem ausgeteilten Treffer heilt sich dein Pokémon selbst. Ab Welt 10 sind 5–10% Trefferheilung Pflicht!"
+    },
+    "knowledge_3": {
+      "file": "/audio/voice/katja/knowledge_3.m4a",
+      "text": "Breiten- und Streusteine. Breiten-Steine machen z.B. Hydropumpe und Rankenhieb riesig, damit du ganze Gegnergruppen auf einmal triffst."
+    },
+    "knowledge_4": {
+      "file": "/audio/voice/katja/knowledge_4.m4a",
+      "text": "Wartezeit-Stein. Verkürzt die Abklingzeit deiner mächtigsten Attacken, damit dein Pokémon fast ohne Pause angreifen kann."
+    },
+    "knowledge_5": {
+      "file": "/audio/voice/katja/knowledge_5.m4a",
+      "text": "Bingo-Boni. Eine volle 3er-Reihe im Kraft-Amulett aktiviert einen mächtigen Bingo-Bonus (z.B. -20% Wartezeit oder +500 Angriff!)."
+    },
+    "knowledge_6": {
+      "file": "/audio/voice/katja/knowledge_6.m4a",
+      "text": "Hydropumpe. Die stärkste Spezial-Attacke im ganzen Spiel! Starmie, Entoron oder Golking können sie lernen. Trifft Gegner mit mehreren Wassersäulen."
+    },
+    "knowledge_7": {
+      "file": "/audio/voice/katja/knowledge_7.m4a",
+      "text": "Rankenhieb. Extrem starker Pflanzen-Nahkampf. Bisaflor und Sarzenia schlagen damit blitzschnell zu."
+    },
+    "knowledge_8": {
+      "file": "/audio/voice/katja/knowledge_8.m4a",
+      "text": "Protzer (Bulk Up). Stärkt Angriff und Abwehr. Ein Maschok oder Machomei mit 3 Teilungssteinen macht dein ganzes Team unverwundbar."
+    },
+    "knowledge_9": {
+      "file": "/audio/voice/katja/knowledge_9.m4a",
+      "text": "Steinwurf & Felswurf. Großartiger Gesteins-Angriff für Onix oder Georok. Bringt viel Wucht und wirft Gegner zurück."
+    },
+    "knowledge_10": {
+      "file": "/audio/voice/katja/knowledge_10.m4a",
+      "text": "Eine oder zwei Attacken?. Pokémon mit nur EINER Attacke haben 3 Plätze für Move-Steine! Oft ist 1 verstärkte Attacke viel stärker als 2 schwächere."
+    },
+    "knowledge_11": {
+      "file": "/audio/voice/katja/knowledge_11.m4a",
+      "text": "Der Topf entscheidet über Basis-Werte. Pokémon aus dem Silber- oder Goldtopf starten mit viel höheren Basiswerten und besseren P-Stein-Plätzen als aus dem Eisentopf!"
+    },
+    "knowledge_12": {
+      "file": "/audio/voice/katja/knowledge_12.m4a",
+      "text": "Das Geheimnis von Evoli. Auf Level 36 entscheidet die Anzahl deiner angelegten Steine: Mehr rote Angriffssteine = Flamara, mehr blaue KP-Steine = Aquana, gleich viele = Blitza!"
+    },
+    "knowledge_13": {
+      "file": "/audio/voice/katja/knowledge_13.m4a",
+      "text": "Der Lebensrettende Flucht-Knopf. Wenn der Boss rot aufleuchtet, drücke unten rechts auf den gelben Fluchtknopf! Dein Team rennt auseinander und weicht dem K.O.-Treffer aus."
+    },
+    "knowledge_14": {
+      "file": "/audio/voice/katja/knowledge_14.m4a",
+      "text": "Deko im Pokémon-Markt. Kaufe im Markt zuerst Dekorationen, die dir dauerhaft mehr Zutaten (z.B. Glurak-Fackel oder Turtok-Brunnen) einbringen!"
     }
   }
 }

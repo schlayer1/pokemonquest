@@ -128,10 +128,10 @@ class AssetPreloader {
 
     const imagesTotal = allImageUrls.length; // 364
     let imagesReady = 0;
-    const audioTotal = 78; // 39 Killian + 39 Katja
+    let audioTotal = 810; // 405 Killian + 405 Katja
     let audioReady = 0;
 
-    const grandTotal = 1 + audioTotal + imagesTotal; // 1 manifest + 78 audio + 364 images = 443
+    let grandTotal = 1 + audioTotal + imagesTotal; // 1 manifest + 810 audio + 364 images = 1175
     let grandLoaded = 0;
 
     const reportProgress = (phase: string, currentFile?: string) => {
@@ -169,10 +169,15 @@ class AssetPreloader {
     grandLoaded++;
     if (!manifest) {
       errors.push('Stimmen-Manifest konnte nicht geladen werden');
+    } else {
+      const killianCount = Object.keys(manifest.killian || {}).length;
+      const katjaCount = Object.keys(manifest.katja || {}).length;
+      audioTotal = killianCount + katjaCount;
+      grandTotal = 1 + audioTotal + imagesTotal;
     }
 
-    // Phase 2: Preload and cache all 78 Edge-TTS voice files
-    reportProgress('Lade 78 Edge-TTS Sprachdateien (Killian & Katja)...');
+    // Phase 2: Preload and cache all 810 Edge-TTS voice files
+    reportProgress(`Lade ${audioTotal} Edge-TTS Sprachdateien (Killian & Katja)...`);
     try {
       const voiceResult = await ttsService.preloadVoiceFiles((loaded, total, currentKey) => {
         audioReady = loaded;

@@ -109,8 +109,8 @@ class TTSService {
     let loaded = 0;
     const missing: string[] = [];
 
-    // Preload audio files with concurrency limit
-    const batchSize = 6;
+    // Preload audio files with high concurrency
+    const batchSize = 24;
     for (let i = 0; i < itemsToLoad.length; i += batchSize) {
       const batch = itemsToLoad.slice(i, i + batchSize);
       await Promise.all(

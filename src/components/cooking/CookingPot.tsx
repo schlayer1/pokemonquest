@@ -92,8 +92,11 @@ export const CookingPot: React.FC = () => {
         });
       }
 
-      const voiceText = `${result.recipe.name}! Dein Gericht ist ${result.qualityLabel.toLowerCase()}.`;
-      ttsService.speakText(voiceText, state.voicePersona, state.voice);
+      const played = ttsService.playKey(`recipe_cooked_${result.recipe.key}`, state.voicePersona, state.voice);
+      if (!played) {
+        const voiceText = `${result.recipe.name}! Dein Gericht ist ${result.qualityLabel.toLowerCase()}.`;
+        ttsService.speakText(voiceText, state.voicePersona, state.voice);
+      }
     }, 1400);
   };
 
@@ -118,11 +121,13 @@ export const CookingPot: React.FC = () => {
     ttsService.playKey('cook_undo', state.voicePersona, state.voice);
   };
 
-  const handleFillPreset = (slots: IngredientKey[], recipeName?: string) => {
+  const handleFillPreset = (slots: IngredientKey[], recipeKey?: string, recipeName?: string) => {
     if (isCooking) return;
     soundService.play('tap');
     setPotIngredients([...slots]);
-    if (recipeName) {
+    if (recipeKey) {
+      ttsService.playKey(`recipe_preset_${recipeKey}`, state.voicePersona, state.voice);
+    } else if (recipeName) {
       ttsService.speakText(`${recipeName}. Fünf Zutaten liegen im Topf.`, state.voicePersona, state.voice);
     }
   };
@@ -137,13 +142,8 @@ export const CookingPot: React.FC = () => {
 
     // Find best proven recipe that attracts this pokemon!
     const rec = recipeForPokemon(id, state.stock, state.pot, state.stockReady);
-    handleFillPreset(rec.slots, rec.name);
-
-    const base = POKEMON_BY_ID.get(p.base) || p;
-    const msg = `${rec.name} für ${base.name} vorbereitet! ${
-      p.id !== p.base ? `${p.name} entsteht durch Entwicklung. ` : ''
-    }Fünf Zutaten liegen im Topf.`;
-    ttsService.speakText(msg, state.voicePersona, state.voice);
+    setPotIngredients([...rec.slots]);
+    ttsService.playKey(`poke_recipe_${id}`, state.voicePersona, state.voice);
   };
 
   return (
@@ -526,7 +526,7 @@ export const CookingPot: React.FC = () => {
                 </div>
 
                 <button
-                  onClick={() => handleFillPreset(r.slots, r.name)}
+                  onClick={() => handleFillPreset(r.slots, r.key, r.name)}
                   className="quest-btn quest-btn-yellow text-xs py-1.5 px-3 whitespace-nowrap shrink-0"
                 >
                   In Topf

@@ -12,9 +12,12 @@ export const TrainingCamp: React.FC = () => {
   const [state] = useQuestStore();
   const [activeSection, setActiveSection] = useState<'stones' | 'moves' | 'training' | 'bingos' | 'tips'>('stones');
 
-  const speakTip = (title: string, desc: string) => {
+  const speakTip = (key: string, title?: string, desc?: string) => {
     soundService.play('tap');
-    ttsService.speakText(`${title}. ${desc}`, state.voicePersona, state.voice);
+    const played = ttsService.playKey(key, state.voicePersona, state.voice);
+    if (!played && title) {
+      ttsService.speakText(`${title}. ${desc || ''}`, state.voicePersona, state.voice);
+    }
   };
 
   return (
@@ -108,7 +111,7 @@ export const TrainingCamp: React.FC = () => {
                     <p className="text-xs text-slate-600 leading-relaxed">{c.desc}</p>
                   </div>
                   <button
-                    onClick={() => speakTip(c.title, c.desc)}
+                    onClick={() => speakTip(`knowledge_${i}`, c.title, c.desc)}
                     className="p-1.5 text-purple-700 hover:bg-purple-100 rounded-lg shrink-0"
                     title="Vorlesen"
                   >
@@ -184,7 +187,7 @@ export const TrainingCamp: React.FC = () => {
                   <p className="text-xs text-slate-600 leading-relaxed">{c.desc}</p>
                 </div>
                 <button
-                  onClick={() => speakTip(c.title, c.desc)}
+                  onClick={() => speakTip(`knowledge_${11 + i}`, c.title, c.desc)}
                   className="p-1.5 text-amber-700 hover:bg-amber-100 rounded-lg shrink-0"
                   title="Vorlesen"
                 >

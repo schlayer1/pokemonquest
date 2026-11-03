@@ -50,8 +50,7 @@ export const CampView: React.FC<CampViewProps> = ({ onLoadRecipeToPot }) => {
       ttsService.playKey('team_empty', state.voicePersona, state.voice);
       return;
     }
-    const names = members.map(m => POKEMON_BY_ID.get(m.id)?.name || '').join(', ');
-    ttsService.speakText(`Dein Team: ${names}. Bereit für das Abenteuer!`, state.voicePersona, state.voice);
+    ttsService.playKey('team_ready', state.voicePersona, state.voice);
   };
 
   const handleLoadRecipe = (pokemonId: number) => {
@@ -60,11 +59,10 @@ export const CampView: React.FC<CampViewProps> = ({ onLoadRecipeToPot }) => {
     const match = recipeForPokemon(pokemonId, state.stock, state.pot, state.stockReady);
     if (!match) {
       soundService.play('fail');
-      ttsService.speakText(`Kein Rezept für ${p.name} gefunden`, state.voicePersona, state.voice);
       return;
     }
     soundService.play('victory');
-    ttsService.speakText(`Rezept für ${p.name} in den Kochtopf geladen!`, state.voicePersona, state.voice);
+    ttsService.playKey(`poke_recipe_${pokemonId}`, state.voicePersona, state.voice);
     if (onLoadRecipeToPot) {
       onLoadRecipeToPot(match.slots, pokemonId);
     }

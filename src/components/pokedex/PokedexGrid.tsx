@@ -42,11 +42,7 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
 
   const handleSpeakPokemon = (p: Pokemon) => {
     soundService.play('tap');
-    const typeNames = p.types.map(t => TYPES[t]?.name).join(' und ');
-    const text = `${p.name}, Nummer ${p.id}. Typ: ${typeNames}. ${
-      p.bestMove ? `Beste Attacke: ${p.bestMove}.` : ''
-    }`;
-    ttsService.speakText(text, state.voicePersona, state.voice);
+    ttsService.playKey(`poke_desc_${p.id}`, state.voicePersona, state.voice);
   };
 
   const openEvolutionModal = (p: Pokemon) => {
@@ -61,12 +57,7 @@ export const PokedexGrid: React.FC<PokedexGridProps> = ({ onLoadRecipeToPot }) =
     if (!p) return;
     const rec = recipeForPokemon(id, state.stock, state.pot, state.stockReady);
     store.queueRecipe(rec.slots, id);
-
-    const base = POKEMON_BY_ID.get(p.base) || p;
-    const msg = `Rezept für ${base.name} vorbereitet! ${
-      p.id !== p.base ? `${p.name} entsteht durch Entwicklung. ` : ''
-    }Ab in die Küche!`;
-    ttsService.speakText(msg, state.voicePersona, state.voice);
+    ttsService.playKey(`poke_recipe_${id}`, state.voicePersona, state.voice);
 
     if (onLoadRecipeToPot) {
       onLoadRecipeToPot(rec.slots, id);

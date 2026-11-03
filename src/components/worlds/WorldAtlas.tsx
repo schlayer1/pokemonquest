@@ -25,14 +25,7 @@ export const WorldAtlas: React.FC = () => {
 
   const handleSpeakWorld = (worldId: number) => {
     soundService.play('tap');
-    const w = WORLDS.find(x => x.id === worldId);
-    if (!w) return;
-    const bonusType = w.bonus.toLowerCase() as PokemonType;
-    const bonusName = TYPES[bonusType]?.name || w.bonus;
-    const bossNames = w.bosses.map(id => POKEMON_BY_ID.get(id)?.name || '').join(' und ');
-
-    const text = `Welt ${w.id}. ${w.germanName}. Hier hilft besonders der Typ ${bonusName}. Am Ende wartet Boss ${bossNames}!`;
-    ttsService.speakText(text, state.voicePersona, state.voice);
+    ttsService.playKey(`world_desc_${worldId}`, state.voicePersona, state.voice);
   };
 
   const activeWorld = WORLDS.find(w => w.id === state.world) || WORLDS[0];

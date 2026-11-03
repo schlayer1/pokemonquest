@@ -39,7 +39,7 @@ export const AssetHealthModal: React.FC<AssetHealthModalProps> = ({ onClose }) =
   };
 
   const audioReady = report?.report.audioReady || 0;
-  const audioTotal = report?.report.audioTotal || 78;
+  const audioTotal = report?.report.audioTotal || 810;
   const imagesReady = report?.report.imagesReady || 0;
   const imagesTotal = report?.report.imagesTotal || 364;
   const grandReady = audioReady + imagesReady;
@@ -101,7 +101,7 @@ export const AssetHealthModal: React.FC<AssetHealthModalProps> = ({ onClose }) =
               <div>
                 <div className="text-xs font-bold text-slate-800">Edge-TTS Sprachausgabe</div>
                 <div className="text-[11px] text-slate-500">
-                  Killian & Katja (alle 78 Sprachdateien)
+                  Killian & Katja (alle 810 Sprachdateien: 151 Pokémon, Rezepte, Welten & Guides)
                 </div>
               </div>
             </div>
