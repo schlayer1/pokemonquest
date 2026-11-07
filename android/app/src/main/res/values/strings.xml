@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Pokémon Quest Meister-Handbuch</string>
+    <string name="title_activity_main">Pokémon Quest Meister-Handbuch</string>
+    <string name="package_name">com.levi.pokemonquest.handbuch</string>
+    <string name="custom_url_scheme">com.levi.pokemonquest.handbuch</string>
+</resources>

@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'assets/bosses/*.png', 'audio/voice/**/*.m4a'],
+      includeAssets: ['favicon.svg', 'icons/*.png'],
       manifest: {
         name: 'Levis Pokémon Quest Meister-Handbuch',
         short_name: 'QuestHandbuch',
@@ -46,12 +46,40 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,json,m4a}'],
-        maximumFileSizeToCacheInBytes: 35 * 1024 * 1024,
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,json}'],
+        maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
         runtimeCaching: [
+          {
+            urlPattern: /\.(?:m4a|mp3|wav)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'voice-audio-cache',
+              expiration: {
+                maxEntries: 1000,
+                maxAgeSeconds: 365 * 24 * 60 * 60 // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+          {
+            urlPattern: /\/assets\/.*\.(?:png|webp|svg|jpg)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'game-assets-cache',
+              expiration: {
+                maxEntries: 600,
+                maxAgeSeconds: 365 * 24 * 60 * 60
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
           {
             urlPattern: /^https:\/\/raw\.githubusercontent\.com\/PokeAPI\/sprites\/.*/i,
             handler: 'CacheFirst',

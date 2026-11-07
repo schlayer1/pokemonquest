@@ -28,33 +28,33 @@ export const App: React.FC = () => {
 
   // Background asset priming & audio wake-up when switching apps
   useEffect(() => {
-    // Prime the in-memory audio & image cache silently in the background
+    // Prime the core assets quickly without blocking the main thread
     assetPreloader.startPreload().catch(() => {});
+
+    const unlockAudio = () => {
+      soundService.unlock();
+      ttsService.unlock();
+    };
 
     // Revive audio context when returning to the app from Pokemon Quest
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
-        soundService.unlock();
-        ttsService.unlock();
+        unlockAudio();
+        // Also attach a one-time touch listener to guarantee resume on user gesture
+        window.addEventListener('pointerdown', unlockAudio, { once: true, passive: true });
+        window.addEventListener('touchstart', unlockAudio, { once: true, passive: true });
       }
     };
 
-    // Unlock on first touch/click in case the browser suspended media
-    const handleFirstTouch = () => {
-      soundService.unlock();
-      ttsService.unlock();
-      window.removeEventListener('touchstart', handleFirstTouch);
-      window.removeEventListener('click', handleFirstTouch);
-    };
-
+    // Unlock on initial interaction
+    window.addEventListener('pointerdown', unlockAudio, { once: true, passive: true });
+    window.addEventListener('touchstart', unlockAudio, { once: true, passive: true });
     document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('touchstart', handleFirstTouch, { passive: true });
-    window.addEventListener('click', handleFirstTouch, { passive: true });
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('touchstart', handleFirstTouch);
-      window.removeEventListener('click', handleFirstTouch);
+      window.removeEventListener('pointerdown', unlockAudio);
+      window.removeEventListener('touchstart', unlockAudio);
     };
   }, []);
 

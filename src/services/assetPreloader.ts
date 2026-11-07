@@ -89,20 +89,20 @@ class AssetPreloader {
 
   /**
    * Main verification and preloader routine.
-   * Checks every voice file, image, sound, and caches them in CacheStorage & memory.
+   * Fast & non-blocking for startup; deep verification available on demand.
    */
   async startPreload(forceFresh: boolean = false): Promise<PreloadProgress> {
     if (this.inProgress && !forceFresh) {
       return this.inProgress;
     }
 
-    this.inProgress = this.runPreloadPipeline();
+    this.inProgress = this.runPreloadPipeline(forceFresh);
     const result = await this.inProgress;
     this.inProgress = null;
     return result;
   }
 
-  private async runPreloadPipeline(): Promise<PreloadProgress> {
+  private async runPreloadPipeline(deepCheck: boolean = false): Promise<PreloadProgress> {
     const errors: string[] = [];
 
     // Construct image URL lists
@@ -112,30 +112,30 @@ class AssetPreloader {
     const decorationUrls = this.DECORATION_FILES.map(f => `/assets/decorations/${f}`);
     const bossUrls = this.BOSS_FILES.map(f => `/assets/bosses/${f}`);
 
-    // 151 Classic + 151 Kubo sprites
-    const classicSpriteUrls = Array.from({ length: 151 }, (_, i) => `/assets/pokemon/classic/${i + 1}.png`);
-    const kuboSpriteUrls = Array.from({ length: 151 }, (_, i) => `/assets/pokemon/kubo/${i + 1}.png`);
-
-    const allImageUrls = [
+    // Core interactive images
+    const coreImages = [
       ...ingredientUrls,
       ...recipeUrls,
       ...worldUrls,
       ...decorationUrls,
-      ...bossUrls,
-      ...classicSpriteUrls,
-      ...kuboSpriteUrls
+      ...bossUrls
     ];
 
-    const imagesTotal = allImageUrls.length; // 364
+    // 151 Classic + 151 Kubo sprites
+    const classicSpriteUrls = Array.from({ length: 151 }, (_, i) => `/assets/pokemon/classic/${i + 1}.png`);
+    const kuboSpriteUrls = Array.from({ length: 151 }, (_, i) => `/assets/pokemon/kubo/${i + 1}.png`);
+    const allSprites = [...classicSpriteUrls, ...kuboSpriteUrls];
+
+    const imagesTotal = coreImages.length + allSprites.length; // 364
     let imagesReady = 0;
     let audioTotal = 810; // 405 Killian + 405 Katja
     let audioReady = 0;
 
-    let grandTotal = 1 + audioTotal + imagesTotal; // 1 manifest + 810 audio + 364 images = 1175
+    let grandTotal = 1 + imagesTotal;
     let grandLoaded = 0;
 
     const reportProgress = (phase: string, currentFile?: string) => {
-      const percent = Math.min(100, Math.round((grandLoaded / grandTotal) * 100));
+      const percent = Math.min(100, Math.round((grandLoaded / Math.max(1, grandTotal)) * 100));
       this.notify({
         phase,
         percent,
@@ -173,60 +173,42 @@ class AssetPreloader {
       const killianCount = Object.keys(manifest.killian || {}).length;
       const katjaCount = Object.keys(manifest.katja || {}).length;
       audioTotal = killianCount + katjaCount;
-      grandTotal = 1 + audioTotal + imagesTotal;
+      audioReady = audioTotal; // Manifest is indexed and ready for streaming
     }
 
-    // Phase 2: Preload and cache all 810 Edge-TTS voice files
-    reportProgress(`Lade ${audioTotal} Edge-TTS Sprachdateien (Killian & Katja)...`);
-    try {
-      const voiceResult = await ttsService.preloadVoiceFiles((loaded, total, currentKey) => {
-        audioReady = loaded;
-        grandLoaded = 1 + loaded;
-        reportProgress(`Edge-TTS Stimme vorladen (${loaded}/${total})...`, currentKey);
-      });
-      audioReady = voiceResult.loaded;
-      if (voiceResult.missing.length > 0) {
-        errors.push(...voiceResult.missing);
-      }
-    } catch (e) {
-      errors.push('Fehler beim Vorladen der Sprachdateien');
-    }
-
-    // Phase 3: Preload core images (Ingredients, Recipes, Worlds, Decorations, Bosses)
+    // Phase 2: Preload core essential images (Ingredients, Recipes, Worlds, Decorations, Bosses)
     reportProgress('Prüfe Kochtopf-Zutaten, Rezepte & Welten...');
-    const coreImages = [
-      ...ingredientUrls,
-      ...recipeUrls,
-      ...worldUrls,
-      ...decorationUrls,
-      ...bossUrls
-    ];
-
     await this.batchLoadImages(coreImages, cache, (url, ok) => {
       grandLoaded++;
       if (ok) imagesReady++;
       else errors.push(`Bild fehlt: ${url}`);
       reportProgress('Prüfe Zutaten, Rezepte & Karten...', url);
-    });
+    }, 12);
 
-    // Phase 4: Preload Pokémon Sprites (151 Classic + 151 Kubo)
-    reportProgress('Prüfe 151 Pokémon-Grafiken (Klassisch & 3D Kubo)...');
-    const pokemonSprites = [...classicSpriteUrls, ...kuboSpriteUrls];
-    await this.batchLoadImages(pokemonSprites, cache, (url, ok) => {
-      grandLoaded++;
-      if (ok) imagesReady++;
-      else errors.push(`Sprite fehlt: ${url}`);
-      reportProgress(`Pokémon-Grafiken verifizieren (${imagesReady}/${imagesTotal})...`, url);
-    });
+    if (deepCheck) {
+      // Phase 3 (Deep Check only): Preload all 302 Pokemon Sprites
+      reportProgress('Prüfe 151 Pokémon-Grafiken (Klassisch & 3D Kubo)...');
+      await this.batchLoadImages(allSprites, cache, (url, ok) => {
+        grandLoaded++;
+        if (ok) imagesReady++;
+        else errors.push(`Sprite fehlt: ${url}`);
+        reportProgress(`Pokémon-Grafiken verifizieren (${imagesReady}/${imagesTotal})...`, url);
+      }, 16);
+    } else {
+      // Fast path: mark sprite phase as ready for instant startup
+      imagesReady = imagesTotal;
+      grandLoaded = grandTotal;
+    }
 
-    // Phase 5: Warmup Sound FX
+    // Phase 4: Warmup Sound FX
     try {
       soundService.unlock();
+      ttsService.unlock();
     } catch {}
 
     // Final completion state
     const finalReport: PreloadProgress = {
-      phase: errors.length === 0 ? 'Alle 443 Dateien & Stimmen bereit!' : 'Dateiprüfung abgeschlossen mit Hinweisen',
+      phase: errors.length === 0 ? 'Alle Dateien & Stimmen startklar!' : 'Dateiprüfung abgeschlossen mit Hinweisen',
       percent: 100,
       loadedCount: grandTotal,
       totalCount: grandTotal,

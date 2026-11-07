@@ -3,13 +3,13 @@ class SoundService {
 
   private getContext(): AudioContext | null {
     if (typeof window === 'undefined') return null;
-    if (!this.ctx) {
+    if (!this.ctx || this.ctx.state === 'closed') {
       const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       if (AudioCtx) {
         this.ctx = new AudioCtx();
       }
     }
-    if (this.ctx && this.ctx.state === 'suspended') {
+    if (this.ctx && (this.ctx.state === 'suspended' || (this.ctx.state as string) === 'interrupted')) {
       this.ctx.resume().catch(() => {});
     }
     return this.ctx;
@@ -18,7 +18,7 @@ class SoundService {
   unlock() {
     try {
       const c = this.getContext();
-      if (c && c.state === 'suspended') {
+      if (c && (c.state === 'suspended' || (c.state as string) === 'interrupted')) {
         c.resume().catch(() => {});
       }
     } catch {}
@@ -28,6 +28,20 @@ class SoundService {
     try {
       const c = this.getContext();
       if (!c) return;
+
+      if (c.state === 'suspended' || (c.state as string) === 'interrupted') {
+        c.resume().then(() => this.synthesize(c, effect)).catch(() => {});
+        return;
+      }
+
+      this.synthesize(c, effect);
+    } catch {
+      // AudioContext policy
+    }
+  }
+
+  private synthesize(c: AudioContext, effect: 'tap' | 'drop' | 'empty' | 'victory' | 'dodge' | 'alarm' | 'fail' | 'boil') {
+    try {
       const t = c.currentTime;
 
       if (effect === 'tap') {
@@ -67,7 +81,6 @@ class SoundService {
         osc.start(t);
         osc.stop(t + 0.18);
       } else if (effect === 'dodge') {
-        // Fast swoosh
         const osc = c.createOscillator();
         const g = c.createGain();
         osc.type = 'sine';
@@ -80,7 +93,6 @@ class SoundService {
         osc.start(t);
         osc.stop(t + 0.12);
       } else if (effect === 'alarm') {
-        // Warning siren
         const osc = c.createOscillator();
         const g = c.createGain();
         osc.type = 'square';
@@ -93,7 +105,6 @@ class SoundService {
         osc.start(t);
         osc.stop(t + 0.18);
       } else if (effect === 'victory') {
-        // Triad fanfare
         const notes = [523.25, 659.25, 783.99, 1046.5];
         notes.forEach((freq, i) => {
           const osc = c.createOscillator();
@@ -135,9 +146,7 @@ class SoundService {
           osc.stop(t + delay + 0.04);
         }
       }
-    } catch {
-      // AudioContext policy
-    }
+    } catch {}
   }
 }
 

@@ -8,15 +8,14 @@ interface ManifestItem {
 export type VoiceManifest = Record<VoicePersona, Record<string, ManifestItem>>;
 
 class TTSService {
-  private currentAudio: HTMLAudioElement | null = null;
+  private player: HTMLAudioElement | null = null;
   private manifest: VoiceManifest | null = null;
   private manifestLoading: Promise<VoiceManifest | null> | null = null;
-  private audioCache: Map<string, HTMLAudioElement> = new Map();
   private isUnlocked: boolean = false;
   private preferredVoices: { killian?: SpeechSynthesisVoice; katja?: SpeechSynthesisVoice } = {};
+  private currentResolve: ((value: boolean) => void) | null = null;
 
   constructor() {
-    // Eagerly initiate manifest loading and voice enumeration in browser
     if (typeof window !== 'undefined') {
       this.loadManifest().catch(() => {});
       this.initVoices();
@@ -52,10 +51,39 @@ class TTSService {
   }
 
   /**
-   * Unlock browser audio playback within a high-priority user gesture.
+   * Lazily get or initialize the single shared HTMLAudioElement.
+   * Reusing one element prevents mobile OS audio decoder exhaustion (max 16-32 channels).
+   */
+  private getPlayer(): HTMLAudioElement | null {
+    if (typeof window === 'undefined') return null;
+    if (!this.player) {
+      this.player = new Audio();
+      this.player.preload = 'auto';
+
+      this.player.addEventListener('ended', () => {
+        if (this.currentResolve) {
+          const res = this.currentResolve;
+          this.currentResolve = null;
+          res(true);
+        }
+      });
+
+      this.player.addEventListener('error', () => {
+        if (this.currentResolve) {
+          const res = this.currentResolve;
+          this.currentResolve = null;
+          res(false);
+        }
+      });
+    }
+    return this.player;
+  }
+
+  /**
+   * Unlock browser audio playback within a user gesture.
    */
   unlock() {
-    if (this.isUnlocked || typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;
     this.isUnlocked = true;
 
     try {
@@ -85,18 +113,22 @@ class TTSService {
   }
 
   /**
-   * Preloads all audio files defined in the manifest into memory & browser cache.
+   * Safely preloads voice files into browser HTTP/ServiceWorker cache via fetch.
+   * Does NOT instantiate Audio elements to prevent hardware decoder exhaustion!
    */
   async preloadVoiceFiles(
-    onProgress?: (loaded: number, total: number, currentKey: string) => void
+    onProgress?: (loaded: number, total: number, currentKey: string) => void,
+    personaOnly?: VoicePersona
   ): Promise<{ loaded: number; total: number; missing: string[] }> {
     const manifest = await this.loadManifest();
     if (!manifest) {
       return { loaded: 0, total: 0, missing: ['manifest.json missing'] };
     }
 
+    const personasToLoad: VoicePersona[] = personaOnly ? [personaOnly] : ['killian', 'katja'];
     const itemsToLoad: Array<{ persona: VoicePersona; key: string; file: string }> = [];
-    for (const persona of ['killian', 'katja'] as VoicePersona[]) {
+
+    for (const persona of personasToLoad) {
       const keys = manifest[persona] || {};
       for (const [key, item] of Object.entries(keys)) {
         if (item.file) {
@@ -109,16 +141,20 @@ class TTSService {
     let loaded = 0;
     const missing: string[] = [];
 
-    // Preload audio files with high concurrency
-    const batchSize = 24;
+    // Preload audio files gently with moderate batch size to protect CPU & network
+    const batchSize = 8;
     for (let i = 0; i < itemsToLoad.length; i += batchSize) {
       const batch = itemsToLoad.slice(i, i + batchSize);
       await Promise.all(
         batch.map(async item => {
-          const success = await this.preloadSingleFile(item.file);
-          if (success) {
-            loaded++;
-          } else {
+          try {
+            const res = await fetch(item.file, { cache: 'force-cache' });
+            if (res.ok) {
+              loaded++;
+            } else {
+              missing.push(`${item.persona}/${item.key}: ${item.file}`);
+            }
+          } catch {
             missing.push(`${item.persona}/${item.key}: ${item.file}`);
           }
           if (onProgress) {
@@ -131,80 +167,32 @@ class TTSService {
     return { loaded, total, missing };
   }
 
-  private preloadSingleFile(fileUrl: string): Promise<boolean> {
-    if (this.audioCache.has(fileUrl)) return Promise.resolve(true);
-
-    return new Promise(resolve => {
-      try {
-        const audio = new Audio();
-        audio.preload = 'auto';
-        audio.src = fileUrl;
-
-        let settled = false;
-        const done = (ok: boolean) => {
-          if (settled) return;
-          settled = true;
-          cleanup();
-          if (ok) {
-            this.audioCache.set(fileUrl, audio);
-          }
-          resolve(ok);
-        };
-
-        const onCanPlay = () => done(true);
-        const onError = () => done(false);
-
-        const cleanup = () => {
-          audio.removeEventListener('canplaythrough', onCanPlay);
-          audio.removeEventListener('loadeddata', onCanPlay);
-          audio.removeEventListener('error', onError);
-        };
-
-        audio.addEventListener('canplaythrough', onCanPlay, { once: true });
-        audio.addEventListener('loadeddata', onCanPlay, { once: true });
-        audio.addEventListener('error', onError, { once: true });
-
-        // If browser already had it cached in memory:
-        if (audio.readyState >= 2) {
-          done(true);
-          return;
-        }
-
-        audio.load();
-
-        // Safety fallback timeout in case neither event fires
-        setTimeout(() => {
-          if (!settled) {
-            // If it reached at least metadata, it's considered valid
-            done(audio.readyState >= 1);
-          }
-        }, 3000);
-      } catch {
-        resolve(false);
-      }
-    });
-  }
-
   stop() {
-    if (this.currentAudio) {
-      this.currentAudio.pause();
-      this.currentAudio.currentTime = 0;
-      this.currentAudio = null;
+    if (this.player) {
+      try {
+        this.player.pause();
+        this.player.currentTime = 0;
+      } catch {}
+    }
+    if (this.currentResolve) {
+      const res = this.currentResolve;
+      this.currentResolve = null;
+      res(false);
     }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+      try {
+        window.speechSynthesis.cancel();
+      } catch {}
     }
   }
 
   /**
-   * Play pre-recorded Edge-TTS audio file.
-   * Runs synchronously inside user gesture when manifest and audio are preloaded.
+   * Play pre-recorded Edge-TTS audio file using the single shared audio player.
    */
   async playKey(key: string, persona: VoicePersona = 'killian', enabled: boolean = true): Promise<boolean> {
     if (!enabled) return false;
     this.stop();
 
-    // Fast synchronous path if manifest is already in memory
     let manifest = this.manifest;
     if (!manifest) {
       manifest = await this.loadManifest();
@@ -215,47 +203,23 @@ class TTSService {
       return false;
     }
 
-    const fileUrl = item.file;
-    let audio = this.audioCache.get(fileUrl);
-    if (!audio) {
-      audio = new Audio(fileUrl);
-      audio.preload = 'auto';
-      this.audioCache.set(fileUrl, audio);
-    }
-
-    this.currentAudio = audio;
-    audio.currentTime = 0;
+    const player = this.getPlayer();
+    if (!player) return false;
 
     return new Promise<boolean>(resolve => {
-      const onEnded = () => {
-        this.currentAudio = null;
-        cleanup();
-        resolve(true);
-      };
+      this.currentResolve = resolve;
 
-      const onError = () => {
-        this.currentAudio = null;
-        cleanup();
-        // Fallback to speech synthesis if audio file failed
-        this.speakText(item.text, persona, enabled);
-        resolve(false);
-      };
+      // Point player to audio file and trigger playback
+      player.src = item.file!;
+      player.currentTime = 0;
 
-      const cleanup = () => {
-        audio!.removeEventListener('ended', onEnded);
-        audio!.removeEventListener('error', onError);
-      };
-
-      audio.addEventListener('ended', onEnded, { once: true });
-      audio.addEventListener('error', onError, { once: true });
-
-      const playPromise = audio.play();
+      const playPromise = player.play();
       if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          // Play was prevented or user gesture was lost
-          cleanup();
-          this.currentAudio = null;
-          // Fallback to speech synthesis
+        playPromise.catch(() => {
+          // Play was prevented or user gesture was lost - fallback to Web Speech
+          if (this.currentResolve === resolve) {
+            this.currentResolve = null;
+          }
           this.speakText(item.text, persona, enabled);
           resolve(false);
         });
